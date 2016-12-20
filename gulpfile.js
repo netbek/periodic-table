@@ -83,7 +83,7 @@ gulp.task('build-data', function (cb) {
 
       if (wikidataIndex > -1) {
         row.symbol = wikidata[1][wikidataIndex];
-        row.name = wikidata[1][wikidataIndex];
+        row.name = wikidata[2][wikidataIndex];
         row.group = wikidata[4][wikidataIndex] ? Number(wikidata[4][wikidataIndex]) : '';
         row.period = wikidata[5][wikidataIndex] ? Number(wikidata[5][wikidataIndex]) : '';
       }
