@@ -1,294 +1,294 @@
 - atomicNumber: 1
   symbol: H
   name: H
-  atomicMass: 1.00794
+  atomicMass: '1.01'
   electronegativity: 2.2
   group: 1
   period: 1
 - atomicNumber: 2
   symbol: He
   name: He
-  atomicMass: 4.002602
+  atomicMass: '4'
   electronegativity: 0
   group: 18
   period: 1
 - atomicNumber: 3
   symbol: Li
   name: Li
-  atomicMass: 6.941
+  atomicMass: '6.94'
   electronegativity: 0.98
   group: 1
   period: 2
 - atomicNumber: 4
   symbol: Be
   name: Be
-  atomicMass: 9.012182
+  atomicMass: '9.01'
   electronegativity: 1.57
   group: 2
   period: 2
 - atomicNumber: 5
   symbol: B
   name: B
-  atomicMass: 10.811
+  atomicMass: '10.81'
   electronegativity: 2.04
   group: 13
   period: 2
 - atomicNumber: 6
   symbol: C
   name: C
-  atomicMass: 12.0107
+  atomicMass: '12.01'
   electronegativity: 2.55
   group: 14
   period: 2
 - atomicNumber: 7
   symbol: 'N'
   name: 'N'
-  atomicMass: 14.0067
+  atomicMass: '14.01'
   electronegativity: 3.04
   group: 15
   period: 2
 - atomicNumber: 8
   symbol: O
   name: O
-  atomicMass: 15.9994
+  atomicMass: '16'
   electronegativity: 3.44
   group: 16
   period: 2
 - atomicNumber: 9
   symbol: F
   name: F
-  atomicMass: 18.9984032
+  atomicMass: '19'
   electronegativity: 3.98
   group: 17
   period: 2
 - atomicNumber: 10
   symbol: Ne
   name: Ne
-  atomicMass: 20.1797
+  atomicMass: '20.18'
   electronegativity: 0
   group: 18
   period: 2
 - atomicNumber: 11
   symbol: Na
   name: Na
-  atomicMass: 22.98976928
+  atomicMass: '22.99'
   electronegativity: 0.93
   group: 1
   period: 3
 - atomicNumber: 12
   symbol: Mg
   name: Mg
-  atomicMass: 24.305
+  atomicMass: '24.31'
   electronegativity: 1.31
   group: 2
   period: 3
 - atomicNumber: 13
   symbol: Al
   name: Al
-  atomicMass: 26.9815386
+  atomicMass: '26.98'
   electronegativity: 1.61
   group: 13
   period: 3
 - atomicNumber: 14
   symbol: Si
   name: Si
-  atomicMass: 28.0855
+  atomicMass: '28.09'
   electronegativity: 1.9
   group: 14
   period: 3
 - atomicNumber: 15
   symbol: P
   name: P
-  atomicMass: 30.973762
+  atomicMass: '30.97'
   electronegativity: 2.19
   group: 15
   period: 3
 - atomicNumber: 16
   symbol: S
   name: S
-  atomicMass: 32.065
+  atomicMass: '32.07'
   electronegativity: 2.58
   group: 16
   period: 3
 - atomicNumber: 17
   symbol: Cl
   name: Cl
-  atomicMass: 35.453
+  atomicMass: '35.45'
   electronegativity: 3.16
   group: 17
   period: 3
 - atomicNumber: 18
   symbol: Ar
   name: Ar
-  atomicMass: 39.948
+  atomicMass: '39.95'
   electronegativity: 0
   group: 18
   period: 3
 - atomicNumber: 19
   symbol: K
   name: K
-  atomicMass: 39.0983
+  atomicMass: '39.1'
   electronegativity: 0.82
   group: 1
   period: 4
 - atomicNumber: 20
   symbol: Ca
   name: Ca
-  atomicMass: 40.078
+  atomicMass: '40.08'
   electronegativity: 1
   group: 2
   period: 4
 - atomicNumber: 21
   symbol: Sc
   name: Sc
-  atomicMass: 44.955912
+  atomicMass: '44.96'
   electronegativity: 1.36
   group: 3
   period: 4
 - atomicNumber: 22
   symbol: Ti
   name: Ti
-  atomicMass: 47.867
+  atomicMass: '47.87'
   electronegativity: 1.54
   group: 4
   period: 4
 - atomicNumber: 23
   symbol: V
   name: V
-  atomicMass: 50.9415
+  atomicMass: '50.94'
   electronegativity: 1.63
   group: 5
   period: 4
 - atomicNumber: 24
   symbol: Cr
   name: Cr
-  atomicMass: 51.9961
+  atomicMass: '52'
   electronegativity: 1.66
   group: 6
   period: 4
 - atomicNumber: 25
   symbol: Mn
   name: Mn
-  atomicMass: 54.938045
+  atomicMass: '54.94'
   electronegativity: 1.55
   group: 7
   period: 4
 - atomicNumber: 26
   symbol: Fe
   name: Fe
-  atomicMass: 55.845
+  atomicMass: '55.85'
   electronegativity: 1.83
   group: 8
   period: 4
 - atomicNumber: 27
   symbol: Co
   name: Co
-  atomicMass: 58.933195
+  atomicMass: '58.93'
   electronegativity: 1.88
   group: 9
   period: 4
 - atomicNumber: 28
   symbol: Ni
   name: Ni
-  atomicMass: 58.6934
+  atomicMass: '58.69'
   electronegativity: 1.91
   group: 10
   period: 4
 - atomicNumber: 29
   symbol: Cu
   name: Cu
-  atomicMass: 63.546
+  atomicMass: '63.55'
   electronegativity: 1.9
   group: 11
   period: 4
 - atomicNumber: 30
   symbol: Zn
   name: Zn
-  atomicMass: 65.38
+  atomicMass: '65.38'
   electronegativity: 1.65
   group: 12
   period: 4
 - atomicNumber: 31
   symbol: Ga
   name: Ga
-  atomicMass: 69.723
+  atomicMass: '69.72'
   electronegativity: 1.81
   group: 13
   period: 4
 - atomicNumber: 32
   symbol: Ge
   name: Ge
-  atomicMass: 72.64
+  atomicMass: '72.64'
   electronegativity: 2.01
   group: 14
   period: 4
 - atomicNumber: 33
   symbol: As
   name: As
-  atomicMass: 74.9216
+  atomicMass: '74.92'
   electronegativity: 2.18
   group: 15
   period: 4
 - atomicNumber: 34
   symbol: Se
   name: Se
-  atomicMass: 78.96
+  atomicMass: '78.96'
   electronegativity: 2.55
   group: 16
   period: 4
 - atomicNumber: 35
   symbol: Br
   name: Br
-  atomicMass: 79.904
+  atomicMass: '79.9'
   electronegativity: 2.96
   group: 17
   period: 4
 - atomicNumber: 36
   symbol: Kr
   name: Kr
-  atomicMass: 83.798
+  atomicMass: '83.8'
   electronegativity: 0
   group: 18
   period: 4
 - atomicNumber: 37
   symbol: Rb
   name: Rb
-  atomicMass: 85.4678
+  atomicMass: '85.47'
   electronegativity: 0.82
   group: 1
   period: 5
 - atomicNumber: 38
   symbol: Sr
   name: Sr
-  atomicMass: 87.62
+  atomicMass: '87.62'
   electronegativity: 0.95
   group: 2
   period: 5
 - atomicNumber: 39
   symbol: 'Y'
   name: 'Y'
-  atomicMass: 88.90585
+  atomicMass: '88.91'
   electronegativity: 1.22
   group: 3
   period: 5
 - atomicNumber: 40
   symbol: Zr
   name: Zr
-  atomicMass: 91.224
+  atomicMass: '91.22'
   electronegativity: 1.33
   group: 4
   period: 5
 - atomicNumber: 41
   symbol: Nb
   name: Nb
-  atomicMass: 92.90638
+  atomicMass: '92.91'
   electronegativity: 1.6
   group: 5
   period: 5
 - atomicNumber: 42
   symbol: Mo
   name: Mo
-  atomicMass: 95.96
+  atomicMass: '95.96'
   electronegativity: 2.16
   group: 6
   period: 5
@@ -302,119 +302,119 @@
 - atomicNumber: 44
   symbol: Ru
   name: Ru
-  atomicMass: 101.07
+  atomicMass: '101.07'
   electronegativity: 2.2
   group: 8
   period: 5
 - atomicNumber: 45
   symbol: Rh
   name: Rh
-  atomicMass: 102.9055
+  atomicMass: '102.91'
   electronegativity: 2.28
   group: 9
   period: 5
 - atomicNumber: 46
   symbol: Pd
   name: Pd
-  atomicMass: 106.42
+  atomicMass: '106.42'
   electronegativity: 2.2
   group: 10
   period: 5
 - atomicNumber: 47
   symbol: Ag
   name: Ag
-  atomicMass: 107.8682
+  atomicMass: '107.87'
   electronegativity: 1.93
   group: 11
   period: 5
 - atomicNumber: 48
   symbol: Cd
   name: Cd
-  atomicMass: 112.411
+  atomicMass: '112.41'
   electronegativity: 1.69
   group: 12
   period: 5
 - atomicNumber: 49
   symbol: In
   name: In
-  atomicMass: 114.818
+  atomicMass: '114.82'
   electronegativity: 1.78
   group: 13
   period: 5
 - atomicNumber: 50
   symbol: Sn
   name: Sn
-  atomicMass: 118.71
+  atomicMass: '118.71'
   electronegativity: 1.96
   group: 14
   period: 5
 - atomicNumber: 51
   symbol: Sb
   name: Sb
-  atomicMass: 121.76
+  atomicMass: '121.76'
   electronegativity: 2.05
   group: 15
   period: 5
 - atomicNumber: 52
   symbol: Te
   name: Te
-  atomicMass: 127.6
+  atomicMass: '127.6'
   electronegativity: 2.1
   group: 16
   period: 5
 - atomicNumber: 53
   symbol: I
   name: I
-  atomicMass: 126.90447
+  atomicMass: '126.9'
   electronegativity: 2.66
   group: 17
   period: 5
 - atomicNumber: 54
   symbol: Xe
   name: Xe
-  atomicMass: 131.293
+  atomicMass: '131.29'
   electronegativity: 0
   group: 18
   period: 5
 - atomicNumber: 55
   symbol: Cs
   name: Cs
-  atomicMass: 132.9054519
+  atomicMass: '132.91'
   electronegativity: 0.79
   group: 1
   period: 6
 - atomicNumber: 56
   symbol: Ba
   name: Ba
-  atomicMass: 137.327
+  atomicMass: '137.33'
   electronegativity: 0.89
   group: 2
   period: 6
 - atomicNumber: 57
   symbol: La
   name: La
-  atomicMass: 138.90547
+  atomicMass: '138.91'
   electronegativity: 1.1
   group: ''
   period: 6
 - atomicNumber: 58
   symbol: Ce
   name: Ce
-  atomicMass: 140.116
+  atomicMass: '140.12'
   electronegativity: 1.12
   group: ''
   period: 6
 - atomicNumber: 59
   symbol: Pr
   name: Pr
-  atomicMass: 140.90765
+  atomicMass: '140.91'
   electronegativity: 1.13
   group: ''
   period: 6
 - atomicNumber: 60
   symbol: Nd
   name: Nd
-  atomicMass: 144.242
+  atomicMass: '144.24'
   electronegativity: 1.14
   group: ''
   period: 6
@@ -428,154 +428,154 @@
 - atomicNumber: 62
   symbol: Sm
   name: Sm
-  atomicMass: 150.36
+  atomicMass: '150.36'
   electronegativity: 1.17
   group: ''
   period: 6
 - atomicNumber: 63
   symbol: Eu
   name: Eu
-  atomicMass: 151.964
+  atomicMass: '151.96'
   electronegativity: 1.2
   group: ''
   period: 6
 - atomicNumber: 64
   symbol: Gd
   name: Gd
-  atomicMass: 157.25
+  atomicMass: '157.25'
   electronegativity: 1.2
   group: ''
   period: 6
 - atomicNumber: 65
   symbol: Tb
   name: Tb
-  atomicMass: 158.92535
+  atomicMass: '158.93'
   electronegativity: 1.2
   group: ''
   period: 6
 - atomicNumber: 66
   symbol: Dy
   name: Dy
-  atomicMass: 162.5
+  atomicMass: '162.5'
   electronegativity: 1.22
   group: ''
   period: 6
 - atomicNumber: 67
   symbol: Ho
   name: Ho
-  atomicMass: 164.93032
+  atomicMass: '164.93'
   electronegativity: 1.23
   group: ''
   period: 6
 - atomicNumber: 68
   symbol: Er
   name: Er
-  atomicMass: 167.259
+  atomicMass: '167.26'
   electronegativity: 1.24
   group: ''
   period: 6
 - atomicNumber: 69
   symbol: Tm
   name: Tm
-  atomicMass: 168.93421
+  atomicMass: '168.93'
   electronegativity: 1.25
   group: ''
   period: 6
 - atomicNumber: 70
   symbol: Yb
   name: Yb
-  atomicMass: 173.054
+  atomicMass: '173.05'
   electronegativity: 1.1
   group: ''
   period: 6
 - atomicNumber: 71
   symbol: Lu
   name: Lu
-  atomicMass: 174.9668
+  atomicMass: '174.97'
   electronegativity: 1.27
   group: 3
   period: 6
 - atomicNumber: 72
   symbol: Hf
   name: Hf
-  atomicMass: 178.49
+  atomicMass: '178.49'
   electronegativity: 1.3
   group: 4
   period: 6
 - atomicNumber: 73
   symbol: Ta
   name: Ta
-  atomicMass: 180.94788
+  atomicMass: '180.95'
   electronegativity: 1.5
   group: 5
   period: 6
 - atomicNumber: 74
   symbol: W
   name: W
-  atomicMass: 183.84
+  atomicMass: '183.84'
   electronegativity: 2.36
   group: 6
   period: 6
 - atomicNumber: 75
   symbol: Re
   name: Re
-  atomicMass: 186.207
+  atomicMass: '186.21'
   electronegativity: 1.9
   group: 7
   period: 6
 - atomicNumber: 76
   symbol: Os
   name: Os
-  atomicMass: 190.23
+  atomicMass: '190.23'
   electronegativity: 2.2
   group: 8
   period: 6
 - atomicNumber: 77
   symbol: Ir
   name: Ir
-  atomicMass: 192.217
+  atomicMass: '192.22'
   electronegativity: 2.2
   group: 9
   period: 6
 - atomicNumber: 78
   symbol: Pt
   name: Pt
-  atomicMass: 195.084
+  atomicMass: '195.08'
   electronegativity: 2.28
   group: 10
   period: 6
 - atomicNumber: 79
   symbol: Au
   name: Au
-  atomicMass: 196.966569
+  atomicMass: '196.97'
   electronegativity: 2.54
   group: 11
   period: 6
 - atomicNumber: 80
   symbol: Hg
   name: Hg
-  atomicMass: 200.59
+  atomicMass: '200.59'
   electronegativity: 2
   group: 12
   period: 6
 - atomicNumber: 81
   symbol: Tl
   name: Tl
-  atomicMass: 204.3833
+  atomicMass: '204.38'
   electronegativity: 2.04
   group: 13
   period: 6
 - atomicNumber: 82
   symbol: Pb
   name: Pb
-  atomicMass: 207.2
+  atomicMass: '207.2'
   electronegativity: 2.33
   group: 14
   period: 6
 - atomicNumber: 83
   symbol: Bi
   name: Bi
-  atomicMass: 208.9804
+  atomicMass: '208.98'
   electronegativity: 2.02
   group: 15
   period: 6
@@ -624,21 +624,21 @@
 - atomicNumber: 90
   symbol: Th
   name: Th
-  atomicMass: 232.03806
+  atomicMass: '232.04'
   electronegativity: 1.3
   group: ''
   period: 7
 - atomicNumber: 91
   symbol: Pa
   name: Pa
-  atomicMass: 231.03588
+  atomicMass: '231.04'
   electronegativity: 1.5
   group: ''
   period: 7
 - atomicNumber: 92
   symbol: U
   name: U
-  atomicMass: 238.02891
+  atomicMass: '238.03'
   electronegativity: 1.38
   group: ''
   period: 7
@@ -813,7 +813,7 @@
 - atomicNumber: 117
   symbol: Ts
   name: Ts
-  atomicMass: 0
+  atomicMass: '0'
   electronegativity: 0
   group: 17
   period: 7

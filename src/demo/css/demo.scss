@@ -1,0 +1,10 @@
+@import "src/css/variables";
+@import "src/css/mixins";
+
+body {
+  padding: 1em;
+}
+
+@media (min-width: 62em) {
+  @include periodic-table-size;
+}

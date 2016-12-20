@@ -1,0 +1,101 @@
+@import "src/css/variables";
+@import "src/css/mixins";
+
+.nb-periodic-table-table {
+  display: block;
+  width: 100%;
+  max-width: none;
+
+  tbody {
+    display: block;
+  }
+}
+
+.nb-periodic-table-row {
+  display: block;
+}
+
+.nb-periodic-table-cell {
+  box-sizing: border-box;
+  display: block;
+  padding: 0;
+  margin: 0 auto;
+  background: $nb-periodic-table-cell-bg;
+  border: 1px solid $nb-periodic-table-cell-border;
+  // max-width: 20em;
+
+  &--empty {
+    display: none;
+    background: transparent;
+    border: none;
+  }
+}
+
+.nb-periodic-table-element {
+  box-sizing: border-box;
+  display: table;
+  position: relative;
+  padding: .5em;
+  width: 100%;
+
+  &__basic-data {
+    display: table-cell;
+    width: 25%;
+    vertical-align: top;
+  }
+
+  &__extra-data {
+    display: table-cell;
+    width: 75%;
+    vertical-align: top;
+  }
+
+  &__atomic-number {
+    display: block;
+    position: absolute;
+    top: .25em;
+    left: .5em;
+    padding-right: .5em;
+    font-size: $nb-periodic-table-atomic-number-font-size;
+    line-height: $nb-periodic-table-atomic-number-line-height;
+  }
+
+  &__symbol {
+    display: block;
+    margin: 0 auto;
+    padding: .5em 0 .25em;
+    text-align: center;
+    font-size: $nb-periodic-table-symbol-font-size;
+    line-height: $nb-periodic-table-symbol-line-height;
+  }
+
+  &__name {
+    display: block;
+    margin: 0 auto;
+    font-size: $nb-periodic-table-name-font-size;
+    line-height: $nb-periodic-table-name-line-height;
+  }
+
+  &__properties {
+    display: table;
+    width: 100%;
+  }
+
+  &__atomic-mass {
+    display: table-cell;
+    margin: 0 auto;
+    width: 50%;
+    text-align: left;
+    font-size: $nb-periodic-table-atomic-mass-font-size;
+    line-height: $nb-periodic-table-atomic-mass-line-height;
+  }
+
+  &__electronegativity {
+    display: table-cell;
+    margin: 0 auto;
+    width: 50%;
+    text-align: left;
+    font-size: $nb-periodic-table-electronegativity-font-size;
+    line-height: $nb-periodic-table-electronegativity-line-height;
+  }
+}

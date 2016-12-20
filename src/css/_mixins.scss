@@ -1,0 +1,71 @@
+@mixin periodic-table-size() {
+  .nb-periodic-table-table {
+    display: table;
+    border-collapse: collapse;
+
+    tbody {
+      display: table-row-group;
+    }
+  }
+
+  .nb-periodic-table-row {
+    display: table-row;
+  }
+
+  .nb-periodic-table-cell {
+    display: table-cell;
+    vertical-align: top;
+    margin: 0;
+    max-width: none;
+
+    &--empty {
+      display: table-cell;
+    }
+  }
+
+  .nb-periodic-table-element {
+    display: block;
+
+    &__basic-data {
+      display: block;
+      width: 100%;
+    }
+
+    &__extra-data {
+      display: block;
+      width: 100%;
+    }
+
+    &__symbol {
+      padding: .75em 0 .25em;
+      text-align: center;
+    }
+
+    &__name {
+      display: none;
+      text-align: center;
+    }
+
+    &__properties {
+      display: block;
+    }
+
+    &__atomic-mass {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+
+    &__electronegativity {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .nb-periodic-table-table--18 {
+    .nb-periodic-table-cell {
+      width: (100% / 18);
+    }
+  }
+}

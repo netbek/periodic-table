@@ -1,17 +1,26 @@
 var _ = require('lodash');
+var autoprefixer = require('gulp-autoprefixer');
 var cheerio = require('cheerio');
 var cheerioTableparser = require('cheerio-tableparser');
+var cssmin = require('gulp-cssmin');
 var csvtojson = require('csvtojson');
+var Decimal = require('decimal.js');
+var del = require('del');
 var fs = require('fs');
+var gulp = require('gulp');
 var mkdirp = require('mkdirp');
+var nunjucks = require('nunjucks');
 var Promise = require('bluebird');
+var rename = require('gulp-rename');
+var runSequence = require('run-sequence');
+var sass = require('gulp-sass');
 var yaml = require('js-yaml');
 
 Promise.promisifyAll(fs);
 
 var mkdirpAsync = Promise.promisify(mkdirp);
 
-function parse() {
+gulp.task('build-data', function (cb) {
   var wikidata;
 
   var Converter = csvtojson.Converter;
@@ -60,6 +69,7 @@ function parse() {
 
       if (!isNaN(row.atomicMass)) {
         row.atomicMass = Number(row.atomicMass);
+        row.atomicMass = (new Decimal(row.atomicMass)).toDecimalPlaces(2).valueOf();
       }
 
       if (!isNaN(row.electronegativity)) {
@@ -85,7 +95,7 @@ function parse() {
 
     fs.writeFileAsync('data/elements.yml', str, 'utf8')
       .then(function () {
-        console.log('Done!');
+        cb();
       });
   });
 
@@ -105,4 +115,85 @@ function parse() {
       fs.createReadStream('data/src/pt-data1.csv')
         .pipe(converter);
     })
+});
+
+function buildCss(src, dist) {
+  return gulp
+    .src(src)
+    .pipe(sass({
+      'includePaths': [
+        'src/css/'
+      ],
+      'errLogToConsole': true
+    }).on('error', sass.logError))
+    .pipe(autoprefixer({
+      'browsers': [
+        'last 2 versions',
+        'ie >= 8',
+        'ff >= 5',
+        'chrome >= 20',
+        'opera >= 12',
+        'safari >= 4',
+        'ios >= 6',
+        'android >= 2',
+        'bb >= 6'
+      ]
+    }))
+    .pipe(gulp.dest(dist))
+    .pipe(cssmin({
+      advanced: false
+    }))
+    .pipe(rename({
+      suffix: '.min'
+    }))
+    .pipe(gulp.dest(dist));
 }
+
+gulp.task('build-css', function (cb) {
+  buildCss('src/css/**/*.scss', 'css/')
+    .on('end', cb);
+});
+
+gulp.task('build-demo-page', function (cb) {
+  var elements;
+
+  fs.readFileAsync('data/elements.yml', 'utf8')
+    .then(function (str) {
+      elements = yaml.safeLoad(str);
+
+      return mkdirpAsync('demo/');
+    })
+    .then(function () {
+      var res = nunjucks.render('src/demo/index.njk', {
+        elements: elements
+      }, function (err, res) {
+        if (err) {
+          console.log(err);
+          cb();
+        }
+        else {
+          fs.writeFileAsync('demo/index.html', res, 'utf8')
+            .then(function () {
+              cb();
+            });
+        }
+      });
+    });
+});
+
+gulp.task('build-demo-css', function (cb) {
+  buildCss('src/demo/css/**/*.scss', 'demo/css/')
+    .on('end', cb);
+});
+
+gulp.task('build', function (cb) {
+  runSequence(
+    'build-data',
+    'build-css',
+    'build-demo-page',
+    'build-demo-css',
+    cb
+  );
+});
+
+gulp.task('default', ['build']);
