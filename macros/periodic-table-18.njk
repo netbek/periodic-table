@@ -20,9 +20,9 @@
       {%- endif %}
 
       {%- if element.atomicNumber == 57 %}
-        {{ offsetElementCell(57, 71) }}
+        {{ offsetElementCell(57, 71, "lanthanide") }}
       {%- elif element.atomicNumber == 89 %}
-        {{ offsetElementCell(89, 103) }}
+        {{ offsetElementCell(89, 103, "actinide") }}
       {%- elif element.atomicNumber < 57 or (element.atomicNumber > 71 and element.atomicNumber < 89) or element.atomicNumber > 103 %}
         {{ elementCell(element) }}
       {%- endif %}

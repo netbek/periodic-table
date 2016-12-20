@@ -1,5 +1,5 @@
-{%- macro offsetElementCell(start, end) %}
-<td class="nb-periodic-table-cell nb-periodic-table-cell--offset">
+{%- macro offsetElementCell(start, end, category) %}
+<td class="nb-periodic-table-cell nb-periodic-table-cell--offset" data-category="{{ category }}">
   <span class="nb-periodic-table-element">
     <span class="nb-periodic-table-element__atomic-number">{{ start }} - {{ end }}</span>
   </span>
