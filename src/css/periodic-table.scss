@@ -19,9 +19,13 @@
   box-sizing: border-box;
   display: block;
   padding: 0;
-  margin: 0 auto;
+  margin: 0 auto -1px;
   background: $nb-periodic-table-cell-bg;
   border: 1px solid $nb-periodic-table-cell-border;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   &--empty {
     display: none;
@@ -107,20 +111,20 @@
 
   &__basic-data {
     display: table-cell;
-    width: 25%;
-    vertical-align: top;
+    width: 33%;
+    vertical-align: middle;
   }
 
   &__extra-data {
     display: table-cell;
-    width: 75%;
-    vertical-align: top;
+    width: 67%;
+    vertical-align: middle;
   }
 
   &__atomic-number {
     display: block;
     position: absolute;
-    top: .25em;
+    top: .35em;
     left: .5em;
     padding-right: .5em;
     font-size: $nb-periodic-table-atomic-number-font-size;
@@ -130,7 +134,7 @@
   &__symbol {
     display: block;
     margin: 0 auto;
-    padding: .5em 0 .25em;
+    padding: .4em 0;
     text-align: center;
     font-size: $nb-periodic-table-symbol-font-size;
     line-height: $nb-periodic-table-symbol-line-height;
