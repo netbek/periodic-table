@@ -16,6 +16,12 @@ body {
     max-width: none; }
     .nb-periodic-table-cell--empty {
       display: table-cell; }
+    .nb-periodic-table-cell--blockholder {
+      display: table-cell; }
+    .nb-periodic-table-cell--at-default {
+      display: none; }
+    .nb-periodic-table-cell--at-wide {
+      display: table-cell; }
   .nb-periodic-table-element {
     display: block; }
     .nb-periodic-table-element__basic-data {

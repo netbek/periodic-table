@@ -23,6 +23,36 @@
   background: $nb-periodic-table-cell-bg;
   border: 1px solid $nb-periodic-table-cell-border;
 
+  &--empty {
+    display: none;
+    background: transparent;
+    border: none;
+  }
+
+  &--blockholder {
+    display: none;
+  }
+
+  &--at-wide {
+    display: none;
+  }
+
+  // &[data-block="s"] {
+  //   background: #ff9999;
+  // }
+  //
+  // &[data-block="p"] {
+  //   background: #fdff8c;
+  // }
+  //
+  // &[data-block="d"] {
+  //   background: #99ccff;
+  // }
+  //
+  // &[data-block="f"] {
+  //   background: #9bff99;
+  // }
+
   &[data-category="metalloid"] {
     background: $nb-periodic-table-metalloid-bg;
   }
@@ -65,12 +95,6 @@
 
   &[data-category="noble-gas"] {
     background: $nb-periodic-table-noble-gas-bg;
-  }
-
-  &--empty {
-    display: none;
-    background: transparent;
-    border: none;
   }
 }
 

@@ -21,6 +21,18 @@
     &--empty {
       display: table-cell;
     }
+
+    &--blockholder {
+      display: table-cell;
+    }
+
+    &--at-default {
+      display: none;
+    }
+
+    &--at-wide {
+      display: table-cell;
+    }
   }
 
   .nb-periodic-table-element {

@@ -3,6 +3,7 @@
   name: Hydrogen
   atomicMass: '1.01'
   electronegativity: 2.2
+  block: s
   group: 1
   period: 1
   category: diatomic-nonmetal
@@ -11,6 +12,7 @@
   name: Helium
   atomicMass: '4'
   electronegativity: 0
+  block: s
   group: 18
   period: 1
   category: noble-gas
@@ -19,6 +21,7 @@
   name: Lithium
   atomicMass: '6.94'
   electronegativity: 0.98
+  block: s
   group: 1
   period: 2
   category: alkali-metal
@@ -27,6 +30,7 @@
   name: Beryllium
   atomicMass: '9.01'
   electronegativity: 1.57
+  block: s
   group: 2
   period: 2
   category: alkaline-earth-metal
@@ -35,6 +39,7 @@
   name: Boron
   atomicMass: '10.81'
   electronegativity: 2.04
+  block: p
   group: 13
   period: 2
   category: metalloid
@@ -43,6 +48,7 @@
   name: Carbon
   atomicMass: '12.01'
   electronegativity: 2.55
+  block: p
   group: 14
   period: 2
   category: polyatomic-nonmetal
@@ -51,6 +57,7 @@
   name: Nitrogen
   atomicMass: '14.01'
   electronegativity: 3.04
+  block: p
   group: 15
   period: 2
   category: diatomic-nonmetal
@@ -59,6 +66,7 @@
   name: Oxygen
   atomicMass: '16'
   electronegativity: 3.44
+  block: p
   group: 16
   period: 2
   category: diatomic-nonmetal
@@ -67,6 +75,7 @@
   name: Fluorine
   atomicMass: '19'
   electronegativity: 3.98
+  block: p
   group: 17
   period: 2
   category: diatomic-nonmetal
@@ -75,6 +84,7 @@
   name: Neon
   atomicMass: '20.18'
   electronegativity: 0
+  block: p
   group: 18
   period: 2
   category: noble-gas
@@ -83,6 +93,7 @@
   name: Sodium
   atomicMass: '22.99'
   electronegativity: 0.93
+  block: s
   group: 1
   period: 3
   category: alkali-metal
@@ -91,6 +102,7 @@
   name: Magnesium
   atomicMass: '24.31'
   electronegativity: 1.31
+  block: s
   group: 2
   period: 3
   category: alkaline-earth-metal
@@ -99,6 +111,7 @@
   name: Aluminium
   atomicMass: '26.98'
   electronegativity: 1.61
+  block: p
   group: 13
   period: 3
   category: post-​transition-metal
@@ -107,6 +120,7 @@
   name: Silicon
   atomicMass: '28.09'
   electronegativity: 1.9
+  block: p
   group: 14
   period: 3
   category: metalloid
@@ -115,6 +129,7 @@
   name: Phosphorus
   atomicMass: '30.97'
   electronegativity: 2.19
+  block: p
   group: 15
   period: 3
   category: polyatomic-nonmetal
@@ -123,6 +138,7 @@
   name: Sulfur
   atomicMass: '32.07'
   electronegativity: 2.58
+  block: p
   group: 16
   period: 3
   category: polyatomic-nonmetal
@@ -131,6 +147,7 @@
   name: Chlorine
   atomicMass: '35.45'
   electronegativity: 3.16
+  block: p
   group: 17
   period: 3
   category: diatomic-nonmetal
@@ -139,6 +156,7 @@
   name: Argon
   atomicMass: '39.95'
   electronegativity: 0
+  block: p
   group: 18
   period: 3
   category: noble-gas
@@ -147,6 +165,7 @@
   name: Potassium
   atomicMass: '39.1'
   electronegativity: 0.82
+  block: s
   group: 1
   period: 4
   category: alkali-metal
@@ -155,6 +174,7 @@
   name: Calcium
   atomicMass: '40.08'
   electronegativity: 1
+  block: s
   group: 2
   period: 4
   category: alkaline-earth-metal
@@ -163,6 +183,7 @@
   name: Scandium
   atomicMass: '44.96'
   electronegativity: 1.36
+  block: d
   group: 3
   period: 4
   category: transition-metal
@@ -171,6 +192,7 @@
   name: Titanium
   atomicMass: '47.87'
   electronegativity: 1.54
+  block: d
   group: 4
   period: 4
   category: transition-metal
@@ -179,6 +201,7 @@
   name: Vanadium
   atomicMass: '50.94'
   electronegativity: 1.63
+  block: d
   group: 5
   period: 4
   category: transition-metal
@@ -187,6 +210,7 @@
   name: Chromium
   atomicMass: '52'
   electronegativity: 1.66
+  block: d
   group: 6
   period: 4
   category: transition-metal
@@ -195,6 +219,7 @@
   name: Manganese
   atomicMass: '54.94'
   electronegativity: 1.55
+  block: d
   group: 7
   period: 4
   category: transition-metal
@@ -203,6 +228,7 @@
   name: Iron
   atomicMass: '55.85'
   electronegativity: 1.83
+  block: d
   group: 8
   period: 4
   category: transition-metal
@@ -211,6 +237,7 @@
   name: Cobalt
   atomicMass: '58.93'
   electronegativity: 1.88
+  block: d
   group: 9
   period: 4
   category: transition-metal
@@ -219,6 +246,7 @@
   name: Nickel
   atomicMass: '58.69'
   electronegativity: 1.91
+  block: d
   group: 10
   period: 4
   category: transition-metal
@@ -227,6 +255,7 @@
   name: Copper
   atomicMass: '63.55'
   electronegativity: 1.9
+  block: d
   group: 11
   period: 4
   category: transition-metal
@@ -235,6 +264,7 @@
   name: Zinc
   atomicMass: '65.38'
   electronegativity: 1.65
+  block: d
   group: 12
   period: 4
   category: transition-metal
@@ -243,6 +273,7 @@
   name: Gallium
   atomicMass: '69.72'
   electronegativity: 1.81
+  block: p
   group: 13
   period: 4
   category: post-​transition-metal
@@ -251,6 +282,7 @@
   name: Germanium
   atomicMass: '72.64'
   electronegativity: 2.01
+  block: p
   group: 14
   period: 4
   category: metalloid
@@ -259,6 +291,7 @@
   name: Arsenic
   atomicMass: '74.92'
   electronegativity: 2.18
+  block: p
   group: 15
   period: 4
   category: metalloid
@@ -267,6 +300,7 @@
   name: Selenium
   atomicMass: '78.96'
   electronegativity: 2.55
+  block: p
   group: 16
   period: 4
   category: polyatomic-nonmetal
@@ -275,6 +309,7 @@
   name: Bromine
   atomicMass: '79.9'
   electronegativity: 2.96
+  block: p
   group: 17
   period: 4
   category: diatomic-nonmetal
@@ -283,6 +318,7 @@
   name: Krypton
   atomicMass: '83.8'
   electronegativity: 0
+  block: p
   group: 18
   period: 4
   category: noble-gas
@@ -291,6 +327,7 @@
   name: Rubidium
   atomicMass: '85.47'
   electronegativity: 0.82
+  block: s
   group: 1
   period: 5
   category: alkali-metal
@@ -299,6 +336,7 @@
   name: Strontium
   atomicMass: '87.62'
   electronegativity: 0.95
+  block: s
   group: 2
   period: 5
   category: alkaline-earth-metal
@@ -307,6 +345,7 @@
   name: Yttrium
   atomicMass: '88.91'
   electronegativity: 1.22
+  block: d
   group: 3
   period: 5
   category: transition-metal
@@ -315,6 +354,7 @@
   name: Zirconium
   atomicMass: '91.22'
   electronegativity: 1.33
+  block: d
   group: 4
   period: 5
   category: transition-metal
@@ -323,6 +363,7 @@
   name: Niobium
   atomicMass: '92.91'
   electronegativity: 1.6
+  block: d
   group: 5
   period: 5
   category: transition-metal
@@ -331,6 +372,7 @@
   name: Molybdenum
   atomicMass: '95.96'
   electronegativity: 2.16
+  block: d
   group: 6
   period: 5
   category: transition-metal
@@ -339,6 +381,7 @@
   name: Technetium
   atomicMass: (98)
   electronegativity: 1.9
+  block: d
   group: 7
   period: 5
   category: transition-metal
@@ -347,6 +390,7 @@
   name: Ruthenium
   atomicMass: '101.07'
   electronegativity: 2.2
+  block: d
   group: 8
   period: 5
   category: transition-metal
@@ -355,6 +399,7 @@
   name: Rhodium
   atomicMass: '102.91'
   electronegativity: 2.28
+  block: d
   group: 9
   period: 5
   category: transition-metal
@@ -363,6 +408,7 @@
   name: Palladium
   atomicMass: '106.42'
   electronegativity: 2.2
+  block: d
   group: 10
   period: 5
   category: transition-metal
@@ -371,6 +417,7 @@
   name: Silver
   atomicMass: '107.87'
   electronegativity: 1.93
+  block: d
   group: 11
   period: 5
   category: transition-metal
@@ -379,6 +426,7 @@
   name: Cadmium
   atomicMass: '112.41'
   electronegativity: 1.69
+  block: d
   group: 12
   period: 5
   category: transition-metal
@@ -387,6 +435,7 @@
   name: Indium
   atomicMass: '114.82'
   electronegativity: 1.78
+  block: p
   group: 13
   period: 5
   category: post-​transition-metal
@@ -395,6 +444,7 @@
   name: Tin
   atomicMass: '118.71'
   electronegativity: 1.96
+  block: p
   group: 14
   period: 5
   category: post-​transition-metal
@@ -403,6 +453,7 @@
   name: Antimony
   atomicMass: '121.76'
   electronegativity: 2.05
+  block: p
   group: 15
   period: 5
   category: metalloid
@@ -411,6 +462,7 @@
   name: Tellurium
   atomicMass: '127.6'
   electronegativity: 2.1
+  block: p
   group: 16
   period: 5
   category: metalloid
@@ -419,6 +471,7 @@
   name: Iodine
   atomicMass: '126.9'
   electronegativity: 2.66
+  block: p
   group: 17
   period: 5
   category: diatomic-nonmetal
@@ -427,6 +480,7 @@
   name: Xenon
   atomicMass: '131.29'
   electronegativity: 0
+  block: p
   group: 18
   period: 5
   category: noble-gas
@@ -435,6 +489,7 @@
   name: Caesium
   atomicMass: '132.91'
   electronegativity: 0.79
+  block: s
   group: 1
   period: 6
   category: alkali-metal
@@ -443,6 +498,7 @@
   name: Barium
   atomicMass: '137.33'
   electronegativity: 0.89
+  block: s
   group: 2
   period: 6
   category: alkaline-earth-metal
@@ -451,6 +507,7 @@
   name: Lanthanum
   atomicMass: '138.91'
   electronegativity: 1.1
+  block: f
   group: ''
   period: 6
   category: lanthanide
@@ -459,6 +516,7 @@
   name: Cerium
   atomicMass: '140.12'
   electronegativity: 1.12
+  block: f
   group: ''
   period: 6
   category: lanthanide
@@ -467,6 +525,7 @@
   name: Praseodymium
   atomicMass: '140.91'
   electronegativity: 1.13
+  block: f
   group: ''
   period: 6
   category: lanthanide
@@ -475,6 +534,7 @@
   name: Neodymium
   atomicMass: '144.24'
   electronegativity: 1.14
+  block: f
   group: ''
   period: 6
   category: lanthanide
@@ -483,6 +543,7 @@
   name: Promethium
   atomicMass: (145)
   electronegativity: 1.13
+  block: f
   group: ''
   period: 6
   category: lanthanide
@@ -491,6 +552,7 @@
   name: Samarium
   atomicMass: '150.36'
   electronegativity: 1.17
+  block: f
   group: ''
   period: 6
   category: lanthanide
@@ -499,6 +561,7 @@
   name: Europium
   atomicMass: '151.96'
   electronegativity: 1.2
+  block: f
   group: ''
   period: 6
   category: lanthanide
@@ -507,6 +570,7 @@
   name: Gadolinium
   atomicMass: '157.25'
   electronegativity: 1.2
+  block: f
   group: ''
   period: 6
   category: lanthanide
@@ -515,6 +579,7 @@
   name: Terbium
   atomicMass: '158.93'
   electronegativity: 1.2
+  block: f
   group: ''
   period: 6
   category: lanthanide
@@ -523,6 +588,7 @@
   name: Dysprosium
   atomicMass: '162.5'
   electronegativity: 1.22
+  block: f
   group: ''
   period: 6
   category: lanthanide
@@ -531,6 +597,7 @@
   name: Holmium
   atomicMass: '164.93'
   electronegativity: 1.23
+  block: f
   group: ''
   period: 6
   category: lanthanide
@@ -539,6 +606,7 @@
   name: Erbium
   atomicMass: '167.26'
   electronegativity: 1.24
+  block: f
   group: ''
   period: 6
   category: lanthanide
@@ -547,6 +615,7 @@
   name: Thulium
   atomicMass: '168.93'
   electronegativity: 1.25
+  block: f
   group: ''
   period: 6
   category: lanthanide
@@ -555,6 +624,7 @@
   name: Ytterbium
   atomicMass: '173.05'
   electronegativity: 1.1
+  block: f
   group: ''
   period: 6
   category: lanthanide
@@ -563,6 +633,7 @@
   name: Lutetium
   atomicMass: '174.97'
   electronegativity: 1.27
+  block: d
   group: 3
   period: 6
   category: lanthanide
@@ -571,6 +642,7 @@
   name: Hafnium
   atomicMass: '178.49'
   electronegativity: 1.3
+  block: d
   group: 4
   period: 6
   category: transition-metal
@@ -579,6 +651,7 @@
   name: Tantalum
   atomicMass: '180.95'
   electronegativity: 1.5
+  block: d
   group: 5
   period: 6
   category: transition-metal
@@ -587,6 +660,7 @@
   name: Tungsten
   atomicMass: '183.84'
   electronegativity: 2.36
+  block: d
   group: 6
   period: 6
   category: transition-metal
@@ -595,6 +669,7 @@
   name: Rhenium
   atomicMass: '186.21'
   electronegativity: 1.9
+  block: d
   group: 7
   period: 6
   category: transition-metal
@@ -603,6 +678,7 @@
   name: Osmium
   atomicMass: '190.23'
   electronegativity: 2.2
+  block: d
   group: 8
   period: 6
   category: transition-metal
@@ -611,6 +687,7 @@
   name: Iridium
   atomicMass: '192.22'
   electronegativity: 2.2
+  block: d
   group: 9
   period: 6
   category: transition-metal
@@ -619,6 +696,7 @@
   name: Platinum
   atomicMass: '195.08'
   electronegativity: 2.28
+  block: d
   group: 10
   period: 6
   category: transition-metal
@@ -627,6 +705,7 @@
   name: Gold
   atomicMass: '196.97'
   electronegativity: 2.54
+  block: d
   group: 11
   period: 6
   category: transition-metal
@@ -635,6 +714,7 @@
   name: Mercury
   atomicMass: '200.59'
   electronegativity: 2
+  block: d
   group: 12
   period: 6
   category: transition-metal
@@ -643,6 +723,7 @@
   name: Thallium
   atomicMass: '204.38'
   electronegativity: 2.04
+  block: p
   group: 13
   period: 6
   category: post-​transition-metal
@@ -651,6 +732,7 @@
   name: Lead
   atomicMass: '207.2'
   electronegativity: 2.33
+  block: p
   group: 14
   period: 6
   category: post-​transition-metal
@@ -659,6 +741,7 @@
   name: Bismuth
   atomicMass: '208.98'
   electronegativity: 2.02
+  block: p
   group: 15
   period: 6
   category: post-​transition-metal
@@ -667,6 +750,7 @@
   name: Polonium
   atomicMass: (209)
   electronegativity: 2
+  block: p
   group: 16
   period: 6
   category: post-​transition-metal
@@ -675,6 +759,7 @@
   name: Astatine
   atomicMass: (210)
   electronegativity: 2.2
+  block: p
   group: 17
   period: 6
   category: metalloid
@@ -683,6 +768,7 @@
   name: Radon
   atomicMass: (222)
   electronegativity: 0
+  block: p
   group: 18
   period: 6
   category: noble-gas
@@ -691,6 +777,7 @@
   name: Francium
   atomicMass: (223)
   electronegativity: 0.7
+  block: s
   group: 1
   period: 7
   category: alkali-metal
@@ -699,6 +786,7 @@
   name: Radium
   atomicMass: (226)
   electronegativity: 0.9
+  block: s
   group: 2
   period: 7
   category: alkaline-earth-metal
@@ -707,6 +795,7 @@
   name: Actinium
   atomicMass: (227)
   electronegativity: 1.1
+  block: f
   group: ''
   period: 7
   category: actinide
@@ -715,6 +804,7 @@
   name: Thorium
   atomicMass: '232.04'
   electronegativity: 1.3
+  block: f
   group: ''
   period: 7
   category: actinide
@@ -723,6 +813,7 @@
   name: Protactinium
   atomicMass: '231.04'
   electronegativity: 1.5
+  block: f
   group: ''
   period: 7
   category: actinide
@@ -731,6 +822,7 @@
   name: Uranium
   atomicMass: '238.03'
   electronegativity: 1.38
+  block: f
   group: ''
   period: 7
   category: actinide
@@ -739,6 +831,7 @@
   name: Neptunium
   atomicMass: (237)
   electronegativity: 1.36
+  block: f
   group: ''
   period: 7
   category: actinide
@@ -747,6 +840,7 @@
   name: Plutonium
   atomicMass: (244)
   electronegativity: 1.28
+  block: f
   group: ''
   period: 7
   category: actinide
@@ -755,6 +849,7 @@
   name: Americium
   atomicMass: (243)
   electronegativity: 1.3
+  block: f
   group: ''
   period: 7
   category: actinide
@@ -763,6 +858,7 @@
   name: Curium
   atomicMass: (247)
   electronegativity: 1.3
+  block: f
   group: ''
   period: 7
   category: actinide
@@ -771,6 +867,7 @@
   name: Berkelium
   atomicMass: (247)
   electronegativity: 1.3
+  block: f
   group: ''
   period: 7
   category: actinide
@@ -779,6 +876,7 @@
   name: Californium
   atomicMass: (251)
   electronegativity: 1.3
+  block: f
   group: ''
   period: 7
   category: actinide
@@ -787,6 +885,7 @@
   name: Einsteinium
   atomicMass: (252)
   electronegativity: 1.3
+  block: f
   group: ''
   period: 7
   category: actinide
@@ -795,6 +894,7 @@
   name: Fermium
   atomicMass: (257)
   electronegativity: 1.3
+  block: f
   group: ''
   period: 7
   category: actinide
@@ -803,6 +903,7 @@
   name: Mendelevium
   atomicMass: (258)
   electronegativity: 1.3
+  block: f
   group: ''
   period: 7
   category: actinide
@@ -811,6 +912,7 @@
   name: Nobelium
   atomicMass: (259)
   electronegativity: 1.3
+  block: f
   group: ''
   period: 7
   category: actinide
@@ -819,6 +921,7 @@
   name: Lawrencium
   atomicMass: (262)
   electronegativity: 1.3
+  block: d
   group: 3
   period: 7
   category: actinide
@@ -827,6 +930,7 @@
   name: Rutherfordium
   atomicMass: (267)
   electronegativity: 0
+  block: d
   group: 4
   period: 7
   category: transition-metal
@@ -835,6 +939,7 @@
   name: Dubnium
   atomicMass: (268)
   electronegativity: 0
+  block: d
   group: 5
   period: 7
   category: transition-metal
@@ -843,6 +948,7 @@
   name: Seaborgium
   atomicMass: (271)
   electronegativity: 0
+  block: d
   group: 6
   period: 7
   category: transition-metal
@@ -851,6 +957,7 @@
   name: Bohrium
   atomicMass: (272)
   electronegativity: 0
+  block: d
   group: 7
   period: 7
   category: transition-metal
@@ -859,6 +966,7 @@
   name: Hassium
   atomicMass: (270)
   electronegativity: 0
+  block: d
   group: 8
   period: 7
   category: transition-metal
@@ -867,6 +975,7 @@
   name: Meitnerium
   atomicMass: (276)
   electronegativity: 0
+  block: d
   group: 9
   period: 7
   category: unknown-properties
@@ -875,6 +984,7 @@
   name: Darmstadtium
   atomicMass: (281)
   electronegativity: 0
+  block: d
   group: 10
   period: 7
   category: unknown-properties
@@ -883,6 +993,7 @@
   name: Roentgenium
   atomicMass: (280)
   electronegativity: 0
+  block: d
   group: 11
   period: 7
   category: unknown-properties
@@ -891,6 +1002,7 @@
   name: Copernicium
   atomicMass: (285)
   electronegativity: 0
+  block: d
   group: 12
   period: 7
   category: transition-metal
@@ -899,6 +1011,7 @@
   name: Nihonium
   atomicMass: (284)
   electronegativity: 0
+  block: p
   group: 13
   period: 7
   category: unknown-properties
@@ -907,6 +1020,7 @@
   name: Flerovium
   atomicMass: (289)
   electronegativity: 0
+  block: p
   group: 14
   period: 7
   category: post-​transition-metal
@@ -915,6 +1029,7 @@
   name: Moscovium
   atomicMass: (288)
   electronegativity: 0
+  block: p
   group: 15
   period: 7
   category: unknown-properties
@@ -923,6 +1038,7 @@
   name: Livermorium
   atomicMass: (293)
   electronegativity: 0
+  block: p
   group: 16
   period: 7
   category: unknown-properties
@@ -931,6 +1047,7 @@
   name: Tennessine
   atomicMass: '0'
   electronegativity: 0
+  block: p
   group: 17
   period: 7
   category: unknown-properties
@@ -939,6 +1056,7 @@
   name: Oganesson
   atomicMass: (294)
   electronegativity: 0
+  block: p
   group: 18
   period: 7
   category: unknown-properties

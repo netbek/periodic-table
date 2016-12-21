@@ -1,6 +1,6 @@
 {%- from "./element-cell.njk" import elementCell %}
 {%- from "./empty-cell.njk" import emptyCell %}
-{%- from "./offset-element-cell.njk" import offsetElementCell %}
+{%- from "./blockholder-element-cell.njk" import blockholderElementCell %}
 
 {%- macro periodicTable(elements) %}
 <table class="nb-periodic-table-table nb-periodic-table-table--18">
@@ -20,10 +20,16 @@
       {%- endif %}
 
       {%- if element.atomicNumber == 57 %}
-        {{ offsetElementCell(57, 71, "lanthanide") }}
+        {{ blockholderElementCell(57, 71, "lanthanide") }}
       {%- elif element.atomicNumber == 89 %}
-        {{ offsetElementCell(89, 103, "actinide") }}
-      {%- elif element.atomicNumber < 57 or (element.atomicNumber > 71 and element.atomicNumber < 89) or element.atomicNumber > 103 %}
+        {{ blockholderElementCell(89, 103, "actinide") }}
+      {%- endif %}
+
+      {%- if element.atomicNumber >= 57 and element.atomicNumber <= 71 %}
+        {{ elementCell(element, true) }}
+      {%- elif element.atomicNumber >= 89 and element.atomicNumber <= 103 %}
+        {{ elementCell(element, true) }}
+      {%- else %}
         {{ elementCell(element) }}
       {%- endif %}
     {%- endfor %}
@@ -38,7 +44,7 @@
     {{ emptyCell() }}
     {%- for element in elements %}
       {%- if element.atomicNumber >= 57 and element.atomicNumber <= 71 %}
-        {{ elementCell(element) }}
+        {{ elementCell(element, false, true) }}
       {%- endif %}
     {%- endfor %}
     {{ emptyCell() }}
@@ -49,7 +55,7 @@
     {{ emptyCell() }}
     {%- for element in elements %}
       {%- if element.atomicNumber >= 89 and element.atomicNumber <= 103 %}
-        {{ elementCell(element) }}
+        {{ elementCell(element, false, true) }}
       {%- endif %}
     {%- endfor %}
     {{ emptyCell() }}

@@ -126,6 +126,7 @@ gulp.task('livereload-reload', function (cb) {
  ******************************************************************************/
 
 gulp.task('build-data', function (cb) {
+  var blocksData;
   var wikidata;
 
   var Converter = csvtojson.Converter;
@@ -136,7 +137,7 @@ gulp.task('build-data', function (cb) {
       'string#!name',
       'string#!atomicMass',
       'string#!cpkHexColor',
-      'string#!electronicConfiguration',
+      'string#!electronConfiguration',
       'string#!electronegativity',
       'string#!atomicRadius',
       'string#!ionRadius',
@@ -181,6 +182,9 @@ gulp.task('build-data', function (cb) {
         row.electronegativity = Number(row.electronegativity);
       }
 
+      row.block = _.find(blocksData, {
+        atomicNumber: row.atomicNumber
+      }).block;
       row.group = '';
       row.period = '';
       row.category = '';
@@ -206,7 +210,12 @@ gulp.task('build-data', function (cb) {
       });
   });
 
-  fs.readFileAsync('data/src/list-of-chemical-elements.html', 'utf8')
+  fs.readFileAsync('data/src/blocks.yml', 'utf8')
+    .then(function (str) {
+      blocksData = yaml.safeLoad(str);
+
+      return fs.readFileAsync('data/src/list-of-chemical-elements.html', 'utf8');
+    })
     .then(function (str) {
       var $ = cheerio.load(str);
 
