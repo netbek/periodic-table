@@ -23,10 +23,6 @@
   background: $nb-periodic-table-cell-bg;
   border: 1px solid $nb-periodic-table-cell-border;
 
-  &:last-child {
-    margin-bottom: 0;
-  }
-
   &--empty {
     display: none;
     background: transparent;
@@ -57,49 +53,49 @@
   //   background: #9bff99;
   // }
 
-  &[data-category="metalloid"] {
-    background: $nb-periodic-table-metalloid-bg;
-  }
-
-  &[data-category="unknown-properties"] {
-    background: $nb-periodic-table-unknown-properties-bg;
-  }
-
-  &[data-category="alkali-metal"] {
-    background: $nb-periodic-table-alkali-metal-bg;
-  }
-
-  &[data-category="alkaline-earth-metal"] {
-    background: $nb-periodic-table-alkaline-earth-metal-bg;
-  }
-
-  &[data-category="lanthanide"] {
-    background: $nb-periodic-table-lanthanide-bg;
-  }
-
-  &[data-category="actinide"] {
-    background: $nb-periodic-table-actinide-bg;
-  }
-
-  &[data-category="transition-metal"] {
-    background: $nb-periodic-table-transition-metal-bg;
-  }
-
-  &[data-category="post-​transition-metal"] {
-    background: $nb-periodic-table-post-​transition-metal-bg;
-  }
-
-  &[data-category="polyatomic-nonmetal"] {
-    background: $nb-periodic-table-polyatomic-nonmetal-bg;
-  }
-
-  &[data-category="diatomic-nonmetal"] {
-    background: $nb-periodic-table-diatomic-nonmetal-bg;
-  }
-
-  &[data-category="noble-gas"] {
-    background: $nb-periodic-table-noble-gas-bg;
-  }
+  // &[data-category="metalloid"] {
+  //   background: $nb-periodic-table-metalloid-bg;
+  // }
+  //
+  // &[data-category="unknown-properties"] {
+  //   background: $nb-periodic-table-unknown-properties-bg;
+  // }
+  //
+  // &[data-category="alkali-metal"] {
+  //   background: $nb-periodic-table-alkali-metal-bg;
+  // }
+  //
+  // &[data-category="alkaline-earth-metal"] {
+  //   background: $nb-periodic-table-alkaline-earth-metal-bg;
+  // }
+  //
+  // &[data-category="lanthanide"] {
+  //   background: $nb-periodic-table-lanthanide-bg;
+  // }
+  //
+  // &[data-category="actinide"] {
+  //   background: $nb-periodic-table-actinide-bg;
+  // }
+  //
+  // &[data-category="transition-metal"] {
+  //   background: $nb-periodic-table-transition-metal-bg;
+  // }
+  //
+  // &[data-category="post-​transition-metal"] {
+  //   background: $nb-periodic-table-post-​transition-metal-bg;
+  // }
+  //
+  // &[data-category="polyatomic-nonmetal"] {
+  //   background: $nb-periodic-table-polyatomic-nonmetal-bg;
+  // }
+  //
+  // &[data-category="diatomic-nonmetal"] {
+  //   background: $nb-periodic-table-diatomic-nonmetal-bg;
+  // }
+  //
+  // &[data-category="noble-gas"] {
+  //   background: $nb-periodic-table-noble-gas-bg;
+  // }
 }
 
 .nb-periodic-table-element {
