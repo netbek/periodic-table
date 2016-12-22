@@ -1,6 +1,6 @@
 {
   "name": "periodic-table",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "",
   "main": "lib/periodic-table.js",
   "repository": {
@@ -29,7 +29,6 @@
     "csvtojson": "^1.0.3",
     "decimal.js": "^7.1.0",
     "del": "^2.2.2",
-    "fs": "0.0.1-security",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-cssmin": "^0.1.7",
