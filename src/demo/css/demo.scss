@@ -5,6 +5,11 @@ body {
   padding: 1em;
 }
 
+.container {
+  margin: 0 auto;
+  max-width: 62em;
+}
+
 @media (min-width: 62em) {
   @include periodic-table-size;
 }
