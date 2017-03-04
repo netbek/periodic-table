@@ -15,11 +15,7 @@ module.exports = {
   'css': {
     'params': {
       'includePaths': [
-        'bower_components/bourbon/app/assets/stylesheets/',
-        'bower_components/breakpoint-sass/stylesheets/',
-        'bower_components/mathsass/dist/',
-        'bower_components/modernizr-mixin/stylesheets/',
-        'bower_components/singularity/stylesheets/'
+        'node_modules/bourbon/app/assets/stylesheets/'
       ],
       'errLogToConsole': true
     }

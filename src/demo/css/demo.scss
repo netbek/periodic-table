@@ -1,15 +1,28 @@
-@import "src/css/variables";
-@import "src/css/mixins";
+@import 'src/css/variables';
+@import 'src/css/mixins';
 
-body {
-  padding: 1em;
+main {
+  padding: 1em 0;
 }
 
-.container {
+.constraint {
   margin: 0 auto;
-  max-width: 62em;
+  padding: 0 1em;
+
+  &--content {
+    max-width: 62em;
+  }
+}
+
+.category-legend {
+  display: none;
 }
 
 @media (min-width: 62em) {
+  .category-legend {
+    display: block;
+  }
+
+  @include periodic-table-color('category');
   @include periodic-table-size;
 }

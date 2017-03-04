@@ -1,20 +1,25 @@
 $nb-periodic-table-cell-bg:                       #eee !default;
 $nb-periodic-table-cell-border:                   #ccc !default;
 
-$nb-periodic-table-symbol-font-size:              (20/16) * 1em !default;
+$nb-periodic-table-symbol-font-size:              (18/16) * 1em !default;
 $nb-periodic-table-symbol-line-height:            1.5 !default;
 
-$nb-periodic-table-atomic-number-font-size:       (12/16) * 1em !default;
+$nb-periodic-table-atomic-number-font-size:       (11/16) * 1em !default;
 $nb-periodic-table-atomic-number-line-height:     1.5 !default;
 
-$nb-periodic-table-name-font-size:                (12/16) * 1em !default;
+$nb-periodic-table-name-font-size:                (11/16) * 1em !default;
 $nb-periodic-table-name-line-height:              1.5 !default;
 
-$nb-periodic-table-atomic-mass-font-size:         (14/16) * 1em !default;
+$nb-periodic-table-atomic-mass-font-size:         (11/16) * 1em !default;
 $nb-periodic-table-atomic-mass-line-height:       1.5 !default;
 
-$nb-periodic-table-electronegativity-font-size:   (14/16) * 1em !default;
+$nb-periodic-table-electronegativity-font-size:   (11/16) * 1em !default;
 $nb-periodic-table-electronegativity-line-height: 1.5 !default;
+
+$nb-periodic-table-s-block-bg:                    #ff9999 !default;
+$nb-periodic-table-p-block-bg:                    #fdff8c !default;
+$nb-periodic-table-d-block-bg:                    #99ccff !default;
+$nb-periodic-table-f-block-bg:                    #9bff99 !default;
 
 $nb-periodic-table-metalloid-bg:                  #cccc99 !default;
 $nb-periodic-table-unknown-properties-bg:         #e8e8e8 !default;

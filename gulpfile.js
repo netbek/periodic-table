@@ -128,6 +128,7 @@ gulp.task('livereload-reload', function (cb) {
 gulp.task('build-data', function (cb) {
   var blocksData;
   var wikidata;
+  var categoryColorMap = {};
 
   var Converter = csvtojson.Converter;
   var converter = new Converter({
@@ -214,24 +215,19 @@ gulp.task('build-data', function (cb) {
     .then(function (str) {
       blocksData = yaml.safeLoad(str);
 
+      return fs.readFileAsync('data/categories.yml', 'utf8');
+    })
+    .then(function (str) {
+      var values = yaml.safeLoad(str);
+
+      _.forEach(values, function (value) {
+        categoryColorMap[value.id] = value.color;
+      });
+
       return fs.readFileAsync('data/src/list-of-chemical-elements.html', 'utf8');
     })
     .then(function (str) {
       var $ = cheerio.load(str);
-
-      var categoryColorMap = {
-        'metalloid': '#cccc99',
-        'unknown-properties': '#e8e8e8',
-        'alkali-metal': '#ff6666',
-        'alkaline-earth-metal': '#ffdead',
-        'lanthanide': '#ffbfff',
-        'actinide': '#ff99cc',
-        'transition-metal': '#ffc0c0',
-        'post-​transition-metal': '#cccccc',
-        'polyatomic-nonmetal': '#a1ffc3',
-        'diatomic-nonmetal': '#e7ff8f',
-        'noble-gas': '#c0ffff'
-      };
 
       var categories = [];
 
@@ -269,9 +265,15 @@ gulp.task('build-css', function (cb) {
 });
 
 gulp.task('build-demo-page', function (cb) {
+  var categories;
   var elements;
 
-  fs.readFileAsync('data/elements.yml', 'utf8')
+  fs.readFileAsync('data/categories.yml', 'utf8')
+    .then(function (str) {
+      categories = yaml.safeLoad(str);
+
+      return fs.readFileAsync('data/elements.yml', 'utf8');
+    })
     .then(function (str) {
       elements = yaml.safeLoad(str);
 
@@ -279,6 +281,7 @@ gulp.task('build-demo-page', function (cb) {
     })
     .then(function () {
       var res = nunjucks.render('src/demo/index.njk', {
+        categories: categories,
         elements: elements
       }, function (err, res) {
         if (err) {

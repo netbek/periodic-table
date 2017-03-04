@@ -1,21 +1,31 @@
-{%- from "./../../macros/periodic-table-18.njk" import periodicTable %}
+{%- from "./../../macros/legend.njk" import categoryLegend %}
+{%- from "./../../macros/table-18.njk" import table %}
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <title>Periodic table demo</title>
-    <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css"/>
+    <title>Demo</title>
+    <link rel="stylesheet" href="../node_modules/normalize-css/normalize.css"/>
     <link rel="stylesheet" href="../css/periodic-table.min.css"/>
     <link rel="stylesheet" href="../demo/css/demo.min.css"/>
   </head>
   <body>
-    <div class="container">
-      <header>
-        <h1>Periodic table of the elements</h1>
-      </header>
-      {{ periodicTable(elements) }}
-    </div>
+    <main>
+      <div class="constraint constraint--content">
+        <header>
+          <h1>Periodic Table of Elements</h1>
+        </header>
+
+        <div class="category-legend">
+          {{ categoryLegend(elements, categories) }}
+        </div>
+      </div>
+
+      <div class="constraint constraint--periodic-table">
+        {{ table(elements) }}
+      </div>
+    </main>
   </body>
 </html>
