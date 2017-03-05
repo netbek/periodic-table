@@ -6,8 +6,19 @@
   $block: '.nb-periodic-table-element-legend';
 
   display: inline-block;
+  vertical-align: top;
 
-  #{$block}__subject {
+  &--at-wide {
+    margin-right: $nb-periodic-table-legend-padding-horz * 6;
+  }
+
+  &__caption {
+    margin: ($nb-periodic-table-legend-line-height * 1em) auto;
+    font-size: $nb-periodic-table-legend-font-size;
+    line-height: $nb-periodic-table-legend-line-height;
+  }
+
+  &__subject {
     display: inline-block;
 
     .nb-periodic-table-element {
@@ -19,7 +30,7 @@
     }
   }
 
-  #{$block}__notes {
+  &__notes {
     display: inline-block;
     margin-left: .5em;
 
@@ -54,9 +65,9 @@
         #{$block}__note {
           display: inline-block;
           position: relative;
+          margin: (-.5em * ($nb-periodic-table-legend-line-height - $nb-periodic-table-property-line-height)) 0;
           font-size: $nb-periodic-table-legend-font-size;
           line-height: $nb-periodic-table-legend-line-height;
-          white-space: nowrap;
         }
       }
     }

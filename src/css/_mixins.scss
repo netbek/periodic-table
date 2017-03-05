@@ -74,6 +74,31 @@
 
 @mixin periodic-table-size($size: 'default') {
   @if $size == 'wide' {
+    .nb-periodic-table-legend {
+      padding: $nb-periodic-table-legend-padding-vert $nb-periodic-table-legend-padding-horz;
+      border: 1px dotted $nb-periodic-table-cell-border;
+    }
+
+    .nb-periodic-table-element-legend {
+      &--at-default {
+        display: none;
+      }
+
+      &--at-wide {
+        display: inline-block;
+      }
+    }
+
+    .nb-periodic-table-category-legend {
+      &--at-default {
+        display: none;
+      }
+
+      &--at-wide {
+        display: inline-block;
+      }
+    }
+
     .nb-periodic-table-table {
       display: table;
       max-width: none;
@@ -163,6 +188,31 @@
     }
   }
   @else {
+    .nb-periodic-table-legend {
+      padding: 0;
+      border: 0;
+    }
+
+    .nb-periodic-table-element-legend {
+      &--at-default {
+        display: inline-block;
+      }
+
+      &--at-wide {
+        display: none;
+      }
+    }
+
+    .nb-periodic-table-category-legend {
+      &--at-default {
+        display: none;
+      }
+
+      &--at-wide {
+        display: none;
+      }
+    }
+
     .nb-periodic-table-table {
       display: block;
       max-width: 24em;

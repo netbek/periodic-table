@@ -1,4 +1,4 @@
-{%- from "./../../macros/legend.njk" import categoryLegend, elementLegend %}
+{%- from "./../../macros/legend.njk" import legend %}
 {%- from "./../../macros/table-18.njk" import table %}
 <!DOCTYPE html>
 <html>
@@ -18,14 +18,7 @@
           <h1>Periodic Table of Elements</h1>
         </header>
 
-        <div class="legends">
-          <div class="element-legend">
-            {{ elementLegend() }}
-          </div>
-          <div class="category-legend">
-            {{ categoryLegend(elements, categories) }}
-          </div>
-        </div>
+        {{ legend(elements, categories) }}
       </div>
 
       <div class="constraint constraint--periodic-table">

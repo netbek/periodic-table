@@ -1,9 +1,12 @@
 $nb-periodic-table-cell-bg:                       #eee !default;
 $nb-periodic-table-cell-border:                   #ccc !default;
 
+$nb-periodic-table-legend-padding-vert:           1em !default;
+$nb-periodic-table-legend-padding-horz:           1em !default;
+
 $nb-periodic-table-legend-font-size:              (12/16) * 1rem !default;
 $nb-periodic-table-legend-font-size--wide:        (12/16) * 1rem !default;
-$nb-periodic-table-legend-line-height:            1 !default;
+$nb-periodic-table-legend-line-height:            1.5 !default;
 
 $nb-periodic-table-number-font-size:              (12/16) * 1rem !default;
 $nb-periodic-table-number-font-size--wide:        (11/16) * 1rem !default;

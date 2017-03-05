@@ -12,21 +12,7 @@ header {
   .constraint--content {
     max-width: 62em; }
 
-.legends {
-  display: none; }
-
 @media (min-width: 82em) {
-  .legends {
-    display: inline-block;
-    padding: 1em;
-    border: 1px dotted #ccc; }
-    .legends .element-legend {
-      display: inline-block;
-      vertical-align: top; }
-    .legends .category-legend {
-      display: inline-block;
-      vertical-align: top;
-      margin-left: 6em; }
   .nb-periodic-table-cell[data-category='metalloid'] {
     background: #cccc99; }
   .nb-periodic-table-cell[data-category='unknown-properties'] {
@@ -51,6 +37,17 @@ header {
     background: #c0ffff; }
   .nb-periodic-table-cell--empty {
     background: transparent; }
+  .nb-periodic-table-legend {
+    padding: 1em 1em;
+    border: 1px dotted #ccc; }
+  .nb-periodic-table-element-legend--at-default {
+    display: none; }
+  .nb-periodic-table-element-legend--at-wide {
+    display: inline-block; }
+  .nb-periodic-table-category-legend--at-default {
+    display: none; }
+  .nb-periodic-table-category-legend--at-wide {
+    display: inline-block; }
   .nb-periodic-table-table {
     display: table;
     max-width: none; }

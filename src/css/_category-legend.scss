@@ -3,6 +3,11 @@
 @import 'mixins';
 
 .nb-periodic-table-category-legend {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.nb-periodic-table-category-legend-table {
   display: table;
   border-collapse: collapse;
   width: auto;
@@ -25,20 +30,22 @@
 .nb-periodic-table-category-legend-cell {
   box-sizing: border-box;
   display: table-cell;
-  padding: 0 2em .25em 0;
-  width: 50%;
+  padding: 0 ($nb-periodic-table-legend-padding-horz * 2) ($nb-periodic-table-legend-padding-horz * .25) 0;
   vertical-align: top;
+
+  &:nth-child(2n+2) {
+    padding-right: 0;
+  }
 }
 
 .nb-periodic-table-category-legend-item {
   $block: '.nb-periodic-table-category-legend-item';
-  $swatch-size: ($nb-periodic-table-legend-line-height * 1em) + (.25em * 2);
+  $swatch-size: ($nb-periodic-table-legend-line-height * 1em);
 
   display: block;
   font-size: $nb-periodic-table-legend-font-size;
   line-height: $nb-periodic-table-legend-line-height;
   text-align: left;
-  white-space: nowrap;
 
   &__swatch {
     box-sizing: border-box;
@@ -54,7 +61,6 @@
     box-sizing: border-box;
     display: block;
     margin-left: $swatch-size + .75em;
-    padding: .25em 0;
   }
 
   &[data-category='metalloid'] {
