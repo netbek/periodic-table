@@ -3,113 +3,90 @@
 @import 'mixins';
 
 .nb-periodic-table-table {
-  display: block;
+  border-collapse: collapse;
   width: 100%;
-  max-width: none;
-
-  tbody {
-    display: block;
-  }
-}
-
-.nb-periodic-table-row {
-  display: block;
+  margin: 0 auto;
 }
 
 .nb-periodic-table-cell {
   box-sizing: border-box;
   display: block;
+  vertical-align: top;
   padding: 0;
-  margin: 0 auto -1px;
   border: 1px solid $nb-periodic-table-cell-border;
 
   &--empty {
-    display: none;
     border: none;
-  }
 
-  &--blockholder {
-    display: none;
-  }
-
-  &--at-wide {
-    display: none;
+    .nb-periodic-table-element {
+      height: 1.5em;
+    }
   }
 }
 
 .nb-periodic-table-element {
   box-sizing: border-box;
-  display: table;
+  border-collapse: collapse;
   position: relative;
-  padding: .5em;
   width: 100%;
 
-  &__basic-data {
-    display: table-cell;
-    width: 33%;
+  &__basic {
     vertical-align: middle;
   }
 
-  &__extended-data {
-    display: table-cell;
-    width: 67%;
+  &__extended {
     vertical-align: middle;
   }
 
   &__atomic-number {
+    box-sizing: border-box;
     display: block;
     position: absolute;
-    top: .35em;
+    top: .75em;
     left: .5em;
     padding-right: .5em;
     text-align: left;
-    font-size: $nb-periodic-table-atomic-number-font-size;
-    line-height: $nb-periodic-table-atomic-number-line-height;
+    line-height: $nb-periodic-table-number-line-height;
   }
 
   &__symbol {
+    box-sizing: border-box;
     display: block;
     position: relative;
     margin: 0 auto;
-    padding: .4em 0;
     text-align: center;
-    font-size: $nb-periodic-table-symbol-font-size;
     line-height: $nb-periodic-table-symbol-line-height;
   }
 
   &__name {
+    box-sizing: border-box;
     display: block;
     position: relative;
     margin: 0 auto;
-    text-align: left;
-    font-size: $nb-periodic-table-name-font-size;
     line-height: $nb-periodic-table-name-line-height;
   }
 
   &__properties {
-    display: table;
+    border-collapse: collapse;
     width: 100%;
   }
 
   &__atomic-mass {
-    display: table-cell;
+    box-sizing: border-box;
     position: relative;
     margin: 0 auto;
-    width: 50%;
-    text-align: left;
-    font-size: $nb-periodic-table-atomic-mass-font-size;
-    line-height: $nb-periodic-table-atomic-mass-line-height;
+    padding: .25em 0;
+    line-height: $nb-periodic-table-property-line-height;
   }
 
   &__electronegativity {
-    display: table-cell;
+    box-sizing: border-box;
     position: relative;
     margin: 0 auto;
-    width: 50%;
-    text-align: left;
-    font-size: $nb-periodic-table-electronegativity-font-size;
-    line-height: $nb-periodic-table-electronegativity-line-height;
+    padding: .25em 0;
+    line-height: $nb-periodic-table-property-line-height;
   }
 }
 
 @include periodic-table-color;
+@include periodic-table-size;

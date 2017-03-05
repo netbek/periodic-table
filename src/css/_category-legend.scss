@@ -4,6 +4,7 @@
 
 .nb-periodic-table-category-legend {
   display: table;
+  border-collapse: collapse;
   width: auto;
 
   caption {
@@ -13,38 +14,47 @@
 
 .nb-periodic-table-category-legend-row {
   display: table-row;
+
+  &:last-child {
+    .nb-periodic-table-category-legend-cell {
+      padding-bottom: 0;
+    }
+  }
 }
 
 .nb-periodic-table-category-legend-cell {
   box-sizing: border-box;
   display: table-cell;
-  padding: 0 2em 0 0;
+  padding: 0 2em .25em 0;
   width: 50%;
   vertical-align: top;
 }
 
 .nb-periodic-table-category-legend-item {
   $block: '.nb-periodic-table-category-legend-item';
+  $swatch-size: ($nb-periodic-table-legend-line-height * 1em) + (.25em * 2);
 
-  @include clearfix;
   display: block;
-  font-size: 11px;
-  line-height: 1.5;
+  font-size: $nb-periodic-table-legend-font-size;
+  line-height: $nb-periodic-table-legend-line-height;
   text-align: left;
+  white-space: nowrap;
 
   &__swatch {
     box-sizing: border-box;
     display: inline-block;
-    width: 1.5em;
-    height: 1.5em;
+    width: $swatch-size;
+    height: $swatch-size;
     vertical-align: middle;
     float: left;
     border: 1px solid $nb-periodic-table-cell-border;
   }
 
   &__label {
+    box-sizing: border-box;
     display: block;
-    margin-left: 2.25em;
+    margin-left: $swatch-size + .75em;
+    padding: .25em 0;
   }
 
   &[data-category='metalloid'] {

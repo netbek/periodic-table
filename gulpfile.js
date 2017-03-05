@@ -12,6 +12,7 @@ var livereload = require('livereload');
 var nunjucks = require('nunjucks');
 var open = require('open');
 var os = require('os');
+var pixrem = require('pixrem');
 var postcss = require('gulp-postcss');
 var postcssColorRgbaFallback = require('postcss-color-rgba-fallback');
 var postcssOpacity = require('postcss-opacity');
@@ -64,6 +65,7 @@ function buildCss(src, dist) {
     .pipe(sass(config.css.params).on('error', sass.logError))
     .pipe(postcss([
       autoprefixer(config.autoprefixer),
+      pixrem,
       postcssColorRgbaFallback,
       postcssOpacity
     ]))

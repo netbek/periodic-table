@@ -15,7 +15,7 @@ header {
 .legends {
   display: none; }
 
-@media (min-width: 62em) {
+@media (min-width: 82em) {
   .legends {
     display: inline-block;
     padding: 1em;
@@ -53,16 +53,14 @@ header {
     background: transparent; }
   .nb-periodic-table-table {
     display: table;
-    border-collapse: collapse; }
+    max-width: none; }
     .nb-periodic-table-table tbody {
       display: table-row-group; }
   .nb-periodic-table-row {
     display: table-row; }
   .nb-periodic-table-cell {
     display: table-cell;
-    vertical-align: top;
-    margin: 0;
-    max-width: none; }
+    margin: 0; }
     .nb-periodic-table-cell--empty {
       display: table-cell; }
     .nb-periodic-table-cell--blockholder {
@@ -74,26 +72,32 @@ header {
   .nb-periodic-table-element {
     display: block;
     padding: .5em .25em; }
-    .nb-periodic-table-element__basic-data {
+    .nb-periodic-table-element__basic {
       display: block;
       width: 100%; }
-    .nb-periodic-table-element__extended-data {
+    .nb-periodic-table-element__extended {
       display: block;
       width: 100%; }
+    .nb-periodic-table-element__atomic-number {
+      font-size: 0.6875rem; }
     .nb-periodic-table-element__symbol {
-      padding: .6em 0 .1em;
-      text-align: center; }
+      padding: 0.8em 0 0.26667em;
+      font-size: 1.125rem; }
     .nb-periodic-table-element__name {
-      text-align: center; }
+      padding: .25em 0;
+      text-align: center;
+      font-size: 0.6875rem; }
     .nb-periodic-table-element__properties {
       display: block; }
     .nb-periodic-table-element__atomic-mass {
       display: block;
       width: 100%;
-      text-align: center; }
+      text-align: center;
+      font-size: 0.6875rem; }
     .nb-periodic-table-element__electronegativity {
       display: block;
       width: 100%;
-      text-align: center; }
+      text-align: center;
+      font-size: 0.6875rem; }
   .nb-periodic-table-table--18 .nb-periodic-table-cell {
     width: 5.55556%; } }

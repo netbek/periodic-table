@@ -72,86 +72,183 @@
   }
 }
 
-@mixin periodic-table-size {
-  .nb-periodic-table-table {
-    display: table;
-    border-collapse: collapse;
+@mixin periodic-table-size($size: 'default') {
+  @if $size == 'wide' {
+    .nb-periodic-table-table {
+      display: table;
+      max-width: none;
 
-    tbody {
-      display: table-row-group;
-    }
-  }
-
-  .nb-periodic-table-row {
-    display: table-row;
-  }
-
-  .nb-periodic-table-cell {
-    display: table-cell;
-    vertical-align: top;
-    margin: 0;
-    max-width: none;
-
-    &--empty {
-      display: table-cell;
+      tbody {
+        display: table-row-group;
+      }
     }
 
-    &--blockholder {
-      display: table-cell;
+    .nb-periodic-table-row {
+      display: table-row;
     }
 
-    &--at-default {
-      display: none;
-    }
-
-    &--at-wide {
-      display: table-cell;
-    }
-  }
-
-  .nb-periodic-table-element {
-    display: block;
-    padding: .5em .25em;
-
-    &__basic-data {
-      display: block;
-      width: 100%;
-    }
-
-    &__extended-data {
-      display: block;
-      width: 100%;
-    }
-
-    &__symbol {
-      padding: .6em 0 .1em;
-      text-align: center;
-    }
-
-    &__name {
-      text-align: center;
-    }
-
-    &__properties {
-      display: block;
-    }
-
-    &__atomic-mass {
-      display: block;
-      width: 100%;
-      text-align: center;
-    }
-
-    &__electronegativity {
-      display: block;
-      width: 100%;
-      text-align: center;
-    }
-  }
-
-  .nb-periodic-table-table--18 {
     .nb-periodic-table-cell {
-      width: (100% / 18);
+      display: table-cell;
+      margin: 0;
+
+      &--empty {
+        display: table-cell;
+      }
+
+      &--blockholder {
+        display: table-cell;
+      }
+
+      &--at-default {
+        display: none;
+      }
+
+      &--at-wide {
+        display: table-cell;
+      }
+    }
+
+    .nb-periodic-table-element {
+      display: block;
+      padding: .5em .25em;
+
+      &__basic {
+        display: block;
+        width: 100%;
+      }
+
+      &__extended {
+        display: block;
+        width: 100%;
+      }
+
+      &__atomic-number {
+        font-size: $nb-periodic-table-number-font-size--wide;
+      }
+
+      &__symbol {
+        padding: .8em 0 ($nb-periodic-table-name-font-size / $nb-periodic-table-symbol-font-size * .4em);
+        font-size: $nb-periodic-table-symbol-font-size--wide;
+      }
+
+      &__name {
+        padding: .25em 0;
+        text-align: center;
+        font-size: $nb-periodic-table-name-font-size--wide;
+      }
+
+      &__properties {
+        display: block;
+      }
+
+      &__atomic-mass {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: $nb-periodic-table-property-font-size--wide;
+      }
+
+      &__electronegativity {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: $nb-periodic-table-property-font-size--wide;
+      }
+    }
+
+    .nb-periodic-table-table--18 {
+      .nb-periodic-table-cell {
+        width: (100% / 18);
+      }
+    }
+  }
+  @else {
+    .nb-periodic-table-table {
+      display: block;
+      max-width: 24em;
+
+      tbody {
+        display: block;
+      }
+    }
+
+    .nb-periodic-table-row {
+      display: block;
+    }
+
+    .nb-periodic-table-cell {
+      display: block;
+      margin: 0 auto -1px;
+
+      &--empty {
+        display: none;
+      }
+
+      &--blockholder {
+        display: none;
+      }
+
+      &--at-default {
+        display: block;
+      }
+
+      &--at-wide {
+        display: none;
+      }
+    }
+
+    .nb-periodic-table-element {
+      display: table;
+      padding: .5em;
+
+      &__basic {
+        display: table-cell;
+        width: 33%;
+      }
+
+      &__extended {
+        display: table-cell;
+        width: 67%;
+      }
+
+      &__atomic-number {
+        font-size: $nb-periodic-table-number-font-size;
+      }
+
+      &__symbol {
+        padding: 1.25em 0;
+        font-size: $nb-periodic-table-symbol-font-size;
+      }
+
+      &__name {
+        padding: .25em 0 .5em;
+        text-align: left;
+        font-size: $nb-periodic-table-name-font-size;
+      }
+
+      &__properties {
+        display: table;
+      }
+
+      &__atomic-mass {
+        display: table-cell;
+        width: 50%;
+        text-align: left;
+        font-size: $nb-periodic-table-property-font-size;
+      }
+
+      &__electronegativity {
+        display: table-cell;
+        width: 50%;
+        text-align: left;
+        font-size: $nb-periodic-table-property-font-size;
+      }
+    }
+
+    .nb-periodic-table-table--18 {
+      .nb-periodic-table-cell {
+        width: 100%;
+      }
     }
   }
 }

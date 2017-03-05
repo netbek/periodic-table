@@ -53,6 +53,7 @@
     "nunjucks": "^3.0.0",
     "open": "0.0.5",
     "os": "^0.1.1",
+    "pixrem": "^3.0.2",
     "postcss": "^5.2.15",
     "postcss-color-rgba-fallback": "^2.2.0",
     "postcss-opacity": "^4.0.0",

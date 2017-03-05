@@ -35,7 +35,7 @@
         display: block;
         position: absolute;
         left: -2.25em;
-        top: .75em;
+        top: $nb-periodic-table-legend-line-height * .5em;
         width: 1.75em;
         height: 1px;
       }
@@ -54,8 +54,9 @@
         #{$block}__note {
           display: inline-block;
           position: relative;
-          font-size: 11px;
-          line-height: 1.5;
+          font-size: $nb-periodic-table-legend-font-size;
+          line-height: $nb-periodic-table-legend-line-height;
+          white-space: nowrap;
         }
       }
     }

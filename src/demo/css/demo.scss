@@ -23,7 +23,7 @@ header {
   display: none;
 }
 
-@media (min-width: 62em) {
+@media (min-width: 82em) {
   .legends {
     display: inline-block;
     padding: 1em;
@@ -42,5 +42,5 @@ header {
   }
 
   @include periodic-table-color('category');
-  @include periodic-table-size;
+  @include periodic-table-size('wide');
 }
