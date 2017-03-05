@@ -1,18 +1,20 @@
 var _ = require('lodash');
-var autoprefixer = require('gulp-autoprefixer');
+var autoprefixer = require('autoprefixer');
 var cheerio = require('cheerio');
 var cheerioTableparser = require('cheerio-tableparser');
 var cssmin = require('gulp-cssmin');
 var csvtojson = require('csvtojson');
 var Decimal = require('decimal.js');
 var del = require('del');
-var fs = require('fs');
+var fs = require('fs-extra');
 var gulp = require('gulp');
 var livereload = require('livereload');
-var mkdirp = require('mkdirp');
 var nunjucks = require('nunjucks');
 var open = require('open');
 var os = require('os');
+var postcss = require('gulp-postcss');
+var postcssColorRgbaFallback = require('postcss-color-rgba-fallback');
+var postcssOpacity = require('postcss-opacity');
 var Promise = require('bluebird');
 var rename = require('gulp-rename');
 var runSequence = require('run-sequence');
@@ -21,8 +23,6 @@ var webserver = require('gulp-webserver');
 var yaml = require('js-yaml');
 
 Promise.promisifyAll(fs);
-
-var mkdirpAsync = Promise.promisify(mkdirp);
 
 /*******************************************************************************
  * Config
@@ -62,7 +62,11 @@ function buildCss(src, dist) {
   return gulp
     .src(src)
     .pipe(sass(config.css.params).on('error', sass.logError))
-    .pipe(autoprefixer(config.autoprefixer))
+    .pipe(postcss([
+      autoprefixer(config.autoprefixer),
+      postcssColorRgbaFallback,
+      postcssOpacity
+    ]))
     .pipe(gulp.dest(dist))
     .pipe(cssmin({
       advanced: false
@@ -277,7 +281,7 @@ gulp.task('build-demo-page', function (cb) {
     .then(function (str) {
       elements = yaml.safeLoad(str);
 
-      return mkdirpAsync('demo/');
+      return fs.mkdirpAsync('demo/');
     })
     .then(function () {
       var res = nunjucks.render('src/demo/index.njk', {

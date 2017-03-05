@@ -1,6 +1,10 @@
 @charset "UTF-8";
 main {
-  padding: 1em 0; }
+  padding: 1em 0;
+  text-align: center; }
+
+header {
+  text-align: left; }
 
 .constraint {
   margin: 0 auto;
@@ -8,12 +12,21 @@ main {
   .constraint--content {
     max-width: 62em; }
 
-.category-legend {
+.legends {
   display: none; }
 
 @media (min-width: 62em) {
-  .category-legend {
-    display: block; }
+  .legends {
+    display: inline-block;
+    padding: 1em;
+    border: 1px dotted #ccc; }
+    .legends .element-legend {
+      display: inline-block;
+      vertical-align: top; }
+    .legends .category-legend {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 6em; }
   .nb-periodic-table-cell[data-category='metalloid'] {
     background: #cccc99; }
   .nb-periodic-table-cell[data-category='unknown-properties'] {
@@ -64,7 +77,7 @@ main {
     .nb-periodic-table-element__basic-data {
       display: block;
       width: 100%; }
-    .nb-periodic-table-element__extra-data {
+    .nb-periodic-table-element__extended-data {
       display: block;
       width: 100%; }
     .nb-periodic-table-element__symbol {

@@ -31,3 +31,73 @@
   </tbody>
 </table>
 {%- endmacro %}
+
+{%- macro elementLegend() %}
+<div class="nb-periodic-table-element-legend">
+  <span class="nb-periodic-table-element-legend__subject">
+    <span class="nb-periodic-table-element">
+      <span class="nb-periodic-table-element__basic-data">
+        <span class="nb-periodic-table-element__atomic-number">
+          1
+        </span>
+        <span class="nb-periodic-table-element__symbol">
+          H
+        </span>
+      </span>
+      <span class="nb-periodic-table-element__extended-data">
+        <span class="nb-periodic-table-element__name">
+          Hydrogen
+        </span>
+        <span class="nb-periodic-table-element__properties">
+          <span class="nb-periodic-table-element__atomic-mass">
+            1.01
+          </span>
+          <span class="nb-periodic-table-element__electronegativity">
+            2.2
+          </span>
+        </span>
+      </span>
+    </span>
+  </span>
+  <span class="nb-periodic-table-element-legend__notes">
+    <span class="nb-periodic-table-element">
+      <span class="nb-periodic-table-element__basic-data">
+        <span class="nb-periodic-table-element__atomic-number">
+          <span class="nb-periodic-table-element-legend__note">
+            <span class="nb-periodic-table-element-legend__connector"></span>
+            Atomic number
+          </span>
+        </span>
+        <span class="nb-periodic-table-element__symbol">
+          <span class="nb-periodic-table-element-legend__note">
+            <span class="nb-periodic-table-element-legend__connector"></span>
+            Symbol
+          </span>
+        </span>
+      </span>
+      <span class="nb-periodic-table-element__extended-data">
+        <span class="nb-periodic-table-element__name">
+          <span class="nb-periodic-table-element-legend__note">
+            <span class="nb-periodic-table-element-legend__connector"></span>
+            Name
+          </span>
+        </span>
+        <span class="nb-periodic-table-element__properties">
+          <span class="nb-periodic-table-element__atomic-mass">
+            <span class="nb-periodic-table-element-legend__note">
+              <span class="nb-periodic-table-element-legend__connector"></span>
+              Atomic mass
+            </span>
+          </span>
+          <span class="nb-periodic-table-element__electronegativity">
+            <span class="nb-periodic-table-element-legend__note">
+              <span class="nb-periodic-table-element-legend__connector"></span>
+              Electronegativity
+            </span>
+          </span>
+        </span>
+      </span>
+    </span>
+  </span>
+</div>
+{%- endmacro %}

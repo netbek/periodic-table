@@ -3,6 +3,11 @@
 
 main {
   padding: 1em 0;
+  text-align: center;
+}
+
+header {
+  text-align: left;
 }
 
 .constraint {
@@ -14,13 +19,26 @@ main {
   }
 }
 
-.category-legend {
+.legends {
   display: none;
 }
 
 @media (min-width: 62em) {
-  .category-legend {
-    display: block;
+  .legends {
+    display: inline-block;
+    padding: 1em;
+    border: 1px dotted $nb-periodic-table-cell-border;
+
+    .element-legend {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .category-legend {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 6em;
+    }
   }
 
   @include periodic-table-color('category');

@@ -5,6 +5,10 @@
 .nb-periodic-table-category-legend {
   display: table;
   width: auto;
+
+  caption {
+    display: none;
+  }
 }
 
 .nb-periodic-table-category-legend-row {
@@ -24,19 +28,23 @@
 
   @include clearfix;
   display: block;
+  font-size: 11px;
+  line-height: 1.5;
+  text-align: left;
 
   &__swatch {
     box-sizing: border-box;
     display: inline-block;
-    width: 1em;
-    height: 1em;
+    width: 1.5em;
+    height: 1.5em;
     vertical-align: middle;
     float: left;
+    border: 1px solid $nb-periodic-table-cell-border;
   }
 
   &__label {
     display: block;
-    margin-left: 1.5em;
+    margin-left: 2.25em;
   }
 
   &[data-category='metalloid'] {

@@ -1,0 +1,63 @@
+@import 'bourbon';
+@import 'variables';
+@import 'mixins';
+
+.nb-periodic-table-element-legend {
+  $block: '.nb-periodic-table-element-legend';
+
+  display: inline-block;
+
+  #{$block}__subject {
+    display: inline-block;
+
+    .nb-periodic-table-element {
+      display: inline-block;
+      width: 5em;
+      padding: .5em;
+      background: $nb-periodic-table-cell-bg;
+      border: 1px solid $nb-periodic-table-cell-border;
+    }
+  }
+
+  #{$block}__notes {
+    display: inline-block;
+    margin-left: .5em;
+
+    .nb-periodic-table-element {
+      display: inline-block;
+      width: auto;
+      max-width: none;
+      background: none;
+      border-color: transparent;
+
+      #{$block}__connector {
+        border-top: 1px solid #999;
+        display: block;
+        position: absolute;
+        left: -2.25em;
+        top: .75em;
+        width: 1.75em;
+        height: 1px;
+      }
+
+      &__atomic-number {
+        left: auto;
+      }
+
+      &__atomic-number,
+      &__symbol,
+      &__name,
+      &__atomic-mass,
+      &__electronegativity {
+        text-align: left;
+
+        #{$block}__note {
+          display: inline-block;
+          position: relative;
+          font-size: 11px;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}

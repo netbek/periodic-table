@@ -50,7 +50,7 @@
     vertical-align: middle;
   }
 
-  &__extra-data {
+  &__extended-data {
     display: table-cell;
     width: 67%;
     vertical-align: middle;
@@ -62,12 +62,14 @@
     top: .35em;
     left: .5em;
     padding-right: .5em;
+    text-align: left;
     font-size: $nb-periodic-table-atomic-number-font-size;
     line-height: $nb-periodic-table-atomic-number-line-height;
   }
 
   &__symbol {
     display: block;
+    position: relative;
     margin: 0 auto;
     padding: .4em 0;
     text-align: center;
@@ -77,7 +79,9 @@
 
   &__name {
     display: block;
+    position: relative;
     margin: 0 auto;
+    text-align: left;
     font-size: $nb-periodic-table-name-font-size;
     line-height: $nb-periodic-table-name-line-height;
   }
@@ -89,6 +93,7 @@
 
   &__atomic-mass {
     display: table-cell;
+    position: relative;
     margin: 0 auto;
     width: 50%;
     text-align: left;
@@ -98,6 +103,7 @@
 
   &__electronegativity {
     display: table-cell;
+    position: relative;
     margin: 0 auto;
     width: 50%;
     text-align: left;
