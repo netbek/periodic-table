@@ -1,6 +1,23 @@
 # Periodic table [![Build Status](https://secure.travis-ci.org/netbek/periodic-table.png?branch=master)](http://travis-ci.org/netbek/periodic-table)
 
-Periodic table with responsive design.
+Periodic table with responsive layout.
+
+## Installation
+
+Install or update local Node dependencies:
+
+```
+cd /path/to/periodic-table
+yarn install
+```
+
+## Usage
+
+To view the demo, run:
+
+```
+gulp livereload
+```
 
 ## Credit
 
