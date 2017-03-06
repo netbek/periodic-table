@@ -50,6 +50,7 @@ header {
     display: inline-block; }
   .nb-periodic-table-table {
     display: table;
+    width: auto;
     max-width: none; }
     .nb-periodic-table-table tbody {
       display: table-row-group; }

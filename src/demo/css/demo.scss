@@ -19,28 +19,7 @@ header {
   }
 }
 
-// .legends {
-//   display: none;
-// }
-
 @media (min-width: 82em) {
-  // .legends {
-  //   display: inline-block;
-  //   padding: 1em;
-  //   border: 1px dotted $nb-periodic-table-cell-border;
-  //
-  //   .element-legend {
-  //     display: inline-block;
-  //     vertical-align: top;
-  //   }
-  //
-  //   .category-legend {
-  //     display: inline-block;
-  //     vertical-align: top;
-  //     margin-left: 6em;
-  //   }
-  // }
-
   @include periodic-table-color('category');
   @include periodic-table-size('wide');
 }

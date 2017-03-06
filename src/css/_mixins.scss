@@ -101,6 +101,7 @@
 
     .nb-periodic-table-table {
       display: table;
+      width: auto;
       max-width: none;
 
       tbody {
@@ -215,6 +216,7 @@
 
     .nb-periodic-table-table {
       display: block;
+      width: 100%;
       max-width: 24em;
 
       tbody {

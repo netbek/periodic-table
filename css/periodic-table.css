@@ -122,7 +122,6 @@
 
 .nb-periodic-table-table {
   border-collapse: collapse;
-  width: 100%;
   margin: 0 auto; }
 
 .nb-periodic-table-cell {
@@ -220,6 +219,7 @@
 
 .nb-periodic-table-table {
   display: block;
+  width: 100%;
   max-width: 24em; }
   .nb-periodic-table-table tbody {
     display: block; }
