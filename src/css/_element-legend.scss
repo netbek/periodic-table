@@ -14,7 +14,6 @@
 
   &__caption {
     margin: ($nb-periodic-table-legend-line-height * 1em) auto;
-    font-size: $nb-periodic-table-legend-font-size;
     line-height: $nb-periodic-table-legend-line-height;
   }
 
@@ -65,9 +64,32 @@
         #{$block}__note {
           display: inline-block;
           position: relative;
-          margin: (-.5em * ($nb-periodic-table-legend-line-height - $nb-periodic-table-property-line-height)) 0;
-          font-size: $nb-periodic-table-legend-font-size;
           line-height: $nb-periodic-table-legend-line-height;
+        }
+      }
+
+      &__atomic-number {
+        #{$block}__note {
+          margin: (-.5em * $nb-periodic-table-legend-font-size--wide / $nb-periodic-table-number-font-size--wide) 0;
+        }
+      }
+
+      &__symbol {
+        #{$block}__note {
+          margin: (-.5em * $nb-periodic-table-legend-font-size--wide / $nb-periodic-table-symbol-font-size--wide) 0;
+        }
+      }
+
+      &__name {
+        #{$block}__note {
+          margin: (-.5em * $nb-periodic-table-legend-font-size--wide / $nb-periodic-table-name-font-size--wide) 0;
+        }
+      }
+
+      &__atomic-mass,
+      &__electronegativity {
+        #{$block}__note {
+          margin: (-.5em * $nb-periodic-table-legend-font-size--wide / $nb-periodic-table-property-font-size--wide) 0;
         }
       }
     }

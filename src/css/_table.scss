@@ -41,9 +41,6 @@
     box-sizing: border-box;
     display: block;
     position: absolute;
-    top: .75em;
-    left: .5em;
-    padding-right: .5em;
     text-align: left;
     line-height: $nb-periodic-table-number-line-height;
   }
@@ -86,6 +83,3 @@
     line-height: $nb-periodic-table-property-line-height;
   }
 }
-
-@include periodic-table-color;
-@include periodic-table-size;

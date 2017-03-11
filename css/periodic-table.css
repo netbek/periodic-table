@@ -27,8 +27,6 @@
 
 .nb-periodic-table-category-legend-item {
   display: block;
-  font-size: 12px;
-  font-size: 0.75rem;
   line-height: 1.5;
   text-align: left; }
   .nb-periodic-table-category-legend-item__swatch {
@@ -77,8 +75,6 @@
     margin-right: 6em; }
   .nb-periodic-table-element-legend__caption {
     margin: 1.5em auto;
-    font-size: 12px;
-    font-size: 0.75rem;
     line-height: 1.5; }
   .nb-periodic-table-element-legend__subject {
     display: inline-block; }
@@ -112,10 +108,15 @@
         .nb-periodic-table-element-legend__notes .nb-periodic-table-element__atomic-number .nb-periodic-table-element-legend__note, .nb-periodic-table-element-legend__notes .nb-periodic-table-element__symbol .nb-periodic-table-element-legend__note, .nb-periodic-table-element-legend__notes .nb-periodic-table-element__name .nb-periodic-table-element-legend__note, .nb-periodic-table-element-legend__notes .nb-periodic-table-element__atomic-mass .nb-periodic-table-element-legend__note, .nb-periodic-table-element-legend__notes .nb-periodic-table-element__electronegativity .nb-periodic-table-element-legend__note {
           display: inline-block;
           position: relative;
-          margin: -0.25em 0;
-          font-size: 12px;
-          font-size: 0.75rem;
           line-height: 1.5; }
+      .nb-periodic-table-element-legend__notes .nb-periodic-table-element__atomic-number .nb-periodic-table-element-legend__note {
+        margin: -0.54545em 0; }
+      .nb-periodic-table-element-legend__notes .nb-periodic-table-element__symbol .nb-periodic-table-element-legend__note {
+        margin: -0.33333em 0; }
+      .nb-periodic-table-element-legend__notes .nb-periodic-table-element__name .nb-periodic-table-element-legend__note {
+        margin: -0.54545em 0; }
+      .nb-periodic-table-element-legend__notes .nb-periodic-table-element__atomic-mass .nb-periodic-table-element-legend__note, .nb-periodic-table-element-legend__notes .nb-periodic-table-element__electronegativity .nb-periodic-table-element-legend__note {
+        margin: -0.54545em 0; }
 
 .nb-periodic-table-legend {
   display: inline-block; }
@@ -154,9 +155,6 @@
             box-sizing: border-box;
     display: block;
     position: absolute;
-    top: .75em;
-    left: .5em;
-    padding-right: .5em;
     text-align: left;
     line-height: 1; }
   .nb-periodic-table-element__symbol {
@@ -211,11 +209,23 @@
 .nb-periodic-table-element-legend--at-wide {
   display: none; }
 
+.nb-periodic-table-element-legend__caption {
+  font-size: 14px;
+  font-size: 0.875rem; }
+
+.nb-periodic-table-element-legend__notes .nb-periodic-table-element__atomic-number .nb-periodic-table-element-legend__note, .nb-periodic-table-element-legend__notes .nb-periodic-table-element__symbol .nb-periodic-table-element-legend__note, .nb-periodic-table-element-legend__notes .nb-periodic-table-element__name .nb-periodic-table-element-legend__note, .nb-periodic-table-element-legend__notes .nb-periodic-table-element__atomic-mass .nb-periodic-table-element-legend__note, .nb-periodic-table-element-legend__notes .nb-periodic-table-element__electronegativity .nb-periodic-table-element-legend__note {
+  font-size: 14px;
+  font-size: 0.875rem; }
+
 .nb-periodic-table-category-legend--at-default {
   display: none; }
 
 .nb-periodic-table-category-legend--at-wide {
   display: none; }
+
+.nb-periodic-table-category-legend-item {
+  font-size: 14px;
+  font-size: 0.875rem; }
 
 .nb-periodic-table-table {
   display: block;
@@ -249,31 +259,33 @@
     display: table-cell;
     width: 67%; }
   .nb-periodic-table-element__atomic-number {
-    font-size: 12px;
-    font-size: 0.75rem; }
+    font-size: 14px;
+    font-size: 0.875rem;
+    top: 0.75em;
+    left: 0.5em; }
   .nb-periodic-table-element__symbol {
-    padding: 1.25em 0;
+    padding: 1.5em 0;
     font-size: 18px;
     font-size: 1.125rem; }
   .nb-periodic-table-element__name {
-    padding: .25em 0 .5em;
+    padding: .25em 0;
     text-align: left;
-    font-size: 12px;
-    font-size: 0.75rem; }
+    font-size: 14px;
+    font-size: 0.875rem; }
   .nb-periodic-table-element__properties {
     display: table; }
   .nb-periodic-table-element__atomic-mass {
     display: table-cell;
     width: 50%;
     text-align: left;
-    font-size: 12px;
-    font-size: 0.75rem; }
+    font-size: 14px;
+    font-size: 0.875rem; }
   .nb-periodic-table-element__electronegativity {
     display: table-cell;
     width: 50%;
     text-align: left;
-    font-size: 12px;
-    font-size: 0.75rem; }
+    font-size: 14px;
+    font-size: 0.875rem; }
 
 .nb-periodic-table-table--18 .nb-periodic-table-cell {
   width: 100%; }

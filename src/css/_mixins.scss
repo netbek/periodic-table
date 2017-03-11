@@ -87,6 +87,24 @@
       &--at-wide {
         display: inline-block;
       }
+
+      &__caption {
+        font-size: $nb-periodic-table-legend-font-size--wide;
+      }
+
+      &__notes {
+        .nb-periodic-table-element {
+          &__atomic-number,
+          &__symbol,
+          &__name,
+          &__atomic-mass,
+          &__electronegativity {
+            .nb-periodic-table-element-legend__note {
+              font-size: $nb-periodic-table-legend-font-size--wide;
+            }
+          }
+        }
+      }
     }
 
     .nb-periodic-table-category-legend {
@@ -97,6 +115,10 @@
       &--at-wide {
         display: inline-block;
       }
+    }
+
+    .nb-periodic-table-category-legend-item {
+      font-size: $nb-periodic-table-legend-font-size--wide;
     }
 
     .nb-periodic-table-table {
@@ -150,6 +172,8 @@
 
       &__atomic-number {
         font-size: $nb-periodic-table-number-font-size--wide;
+        top: $nb-periodic-table-number-y--wide;
+        left: $nb-periodic-table-number-x--wide;
       }
 
       &__symbol {
@@ -202,6 +226,24 @@
       &--at-wide {
         display: none;
       }
+
+      &__caption {
+        font-size: $nb-periodic-table-legend-font-size;
+      }
+
+      &__notes {
+        .nb-periodic-table-element {
+          &__atomic-number,
+          &__symbol,
+          &__name,
+          &__atomic-mass,
+          &__electronegativity {
+            .nb-periodic-table-element-legend__note {
+              font-size: $nb-periodic-table-legend-font-size;
+            }
+          }
+        }
+      }
     }
 
     .nb-periodic-table-category-legend {
@@ -212,6 +254,10 @@
       &--at-wide {
         display: none;
       }
+    }
+
+    .nb-periodic-table-category-legend-item {
+      font-size: $nb-periodic-table-legend-font-size;
     }
 
     .nb-periodic-table-table {
@@ -265,15 +311,17 @@
 
       &__atomic-number {
         font-size: $nb-periodic-table-number-font-size;
+        top: $nb-periodic-table-number-y;
+        left: $nb-periodic-table-number-x;
       }
 
       &__symbol {
-        padding: 1.25em 0;
+        padding: 1.5em 0;
         font-size: $nb-periodic-table-symbol-font-size;
       }
 
       &__name {
-        padding: .25em 0 .5em;
+        padding: .25em 0;
         text-align: left;
         font-size: $nb-periodic-table-name-font-size;
       }

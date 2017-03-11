@@ -1,4 +1,11 @@
+@import 'bourbon';
+@import 'variables';
+@import 'mixins';
+
 @import 'category-legend';
 @import 'element-legend';
 @import 'legend';
 @import 'table';
+
+@include periodic-table-color;
+@include periodic-table-size;
