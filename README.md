@@ -15,7 +15,7 @@ cd /path/to/periodic-table
 yarn install
 ```
 
-### Development
+## Development
 
 Automatically build and refresh browser during development:
 
