@@ -2,6 +2,10 @@
 
 Periodic table with responsive layout.
 
+## Demo
+
+[netbek.github.io/periodic-table](https://netbek.github.io/periodic-table)
+
 ## Installation
 
 Install or update local Node dependencies:
@@ -11,9 +15,9 @@ cd /path/to/periodic-table
 yarn install
 ```
 
-## Usage
+### Development
 
-To view the demo, run:
+Automatically build and refresh browser during development:
 
 ```
 gulp livereload
