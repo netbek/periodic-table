@@ -3,6 +3,7 @@
   "version": "0.1.12",
   "description": "",
   "main": "lib/periodic-table.js",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git://github.com/netbek/periodic-table"
