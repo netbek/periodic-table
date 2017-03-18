@@ -340,6 +340,10 @@ chokidar@^1.6.0:
   optionalDependencies:
     fsevents "^1.0.0"
 
+chrys@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/chrys/-/chrys-0.0.1.tgz#247490bf2fb46e8a3479de3efa84ded65949506c"
+
 clean-css@^3.1.9:
   version "3.4.23"
   resolved "https://registry.yarnpkg.com/clean-css/-/clean-css-3.4.23.tgz#604fbbca24c12feb59b02f00b84f1fb7ded6d001"

@@ -15,7 +15,8 @@ module.exports = {
   'css': {
     'params': {
       'includePaths': [
-        'node_modules/bourbon/app/assets/stylesheets/'
+        'node_modules/bourbon/app/assets/stylesheets/',
+        'node_modules/chrys/src/css/'
       ],
       'errLogToConsole': true
     }
