@@ -7,6 +7,7 @@ var csvtojson = require('csvtojson');
 var Decimal = require('decimal.js');
 var del = require('del');
 var fs = require('fs-extra');
+var ghPages = require('gulp-gh-pages');
 var gulp = require('gulp');
 var livereload = require('livereload');
 var nunjucks = require('nunjucks');
@@ -265,8 +266,11 @@ gulp.task('build-data', function (cb) {
     })
 });
 
-gulp.task('build-css', function (cb) {
-  buildCss('src/css/**/*.scss', 'css/')
+gulp.task('build-demo-css', function (cb) {
+  buildCss([
+      'src/css/**/*.scss',
+      'src/demo/css/**/*.scss'
+    ], 'demo/css/')
     .on('end', cb);
 });
 
@@ -304,19 +308,26 @@ gulp.task('build-demo-page', function (cb) {
     });
 });
 
-gulp.task('build-demo-css', function (cb) {
-  buildCss('src/demo/css/**/*.scss', 'demo/css/')
-    .on('end', cb);
+gulp.task('build-demo-vendor', function () {
+  return gulp.src([
+      'node_modules/normalize-css/**/*.css'
+    ])
+    .pipe(gulp.dest('demo/css/'));
 });
 
 gulp.task('build', function (cb) {
   runSequence(
     'build-data',
-    'build-css',
-    'build-demo-page',
     'build-demo-css',
+    'build-demo-page',
+    'build-demo-vendor',
     cb
   );
+});
+
+gulp.task('deploy', function () {
+  return gulp.src('demo/**/*')
+    .pipe(ghPages());
 });
 
 gulp.task('livereload', function () {

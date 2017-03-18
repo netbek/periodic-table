@@ -6,3 +6,6 @@ npm-debug.log
 nbproject
 .idea
 .netbeans.xml
+
+# GH pages
+.publish
