@@ -1,15 +1,15 @@
 {
   "name": "periodic-table",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "description": "",
-  "main": "lib/periodic-table.js",
+  "main": "index.js",
   "private": true,
   "repository": {
     "type": "git",
     "url": "git://github.com/netbek/periodic-table"
   },
   "scripts": {
-    "test": "make test"
+    "test": "echo test"
   },
   "author": {
     "name": "Hein Bekker",
