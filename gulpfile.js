@@ -13,6 +13,7 @@ var livereload = require('livereload');
 var nunjucks = require('nunjucks');
 var open = require('open');
 var os = require('os');
+var periodicTable = require('.');
 var pixrem = require('pixrem');
 var postcss = require('gulp-postcss');
 var postcssColorRgbaFallback = require('postcss-color-rgba-fallback');
@@ -275,25 +276,15 @@ gulp.task('build-demo-css', function (cb) {
 });
 
 gulp.task('build-demo-page', function (cb) {
-  var categories;
-  var elements;
-
-  fs.readFileAsync('data/categories.yml', 'utf8')
-    .then(function (str) {
-      categories = yaml.safeLoad(str);
-
-      return fs.readFileAsync('data/elements.yml', 'utf8');
-    })
-    .then(function (str) {
-      elements = yaml.safeLoad(str);
-
-      return fs.mkdirpAsync('demo/');
-    })
+  fs.mkdirpAsync('demo/')
     .then(function () {
-      var res = nunjucks.render('src/demo/index.njk', {
-        categories: categories,
-        elements: elements
-      }, function (err, res) {
+      return Promise.props({
+        categories: periodicTable.loadCategories(),
+        elements: periodicTable.loadElements()
+      });
+    })
+    .then(function (data) {
+      var res = nunjucks.render('src/demo/index.njk', data, function (err, res) {
         if (err) {
           console.log(err);
           cb();
