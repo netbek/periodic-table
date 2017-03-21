@@ -15,6 +15,10 @@ cd /path/to/periodic-table
 yarn install
 ```
 
+## Integration
+
+See [github.com/netbek/periodic-table-demo](https://github.com/netbek/periodic-table-demo) for a demo integration into the frontend environment/workflow.
+
 ## Development
 
 Automatically build and refresh browser during development:
