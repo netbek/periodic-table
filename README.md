@@ -6,7 +6,11 @@ Periodic table with responsive layout.
 
 [netbek.github.io/periodic-table](https://netbek.github.io/periodic-table)
 
-## Installation
+## Integration
+
+See [github.com/netbek/periodic-table-demo](https://github.com/netbek/periodic-table-demo) for a demo integration into the frontend environment/workflow.
+
+## Development
 
 Install or update local Node dependencies:
 
@@ -14,12 +18,6 @@ Install or update local Node dependencies:
 cd /path/to/periodic-table
 yarn install
 ```
-
-## Integration
-
-See [github.com/netbek/periodic-table-demo](https://github.com/netbek/periodic-table-demo) for a demo integration into the frontend environment/workflow.
-
-## Development
 
 Automatically build and refresh browser during development:
 
