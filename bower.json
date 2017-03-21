@@ -1,5 +1,5 @@
 {
-  "name": "periodic-table",
+  "name": "@netbek/periodic-table",
   "version": "0.1.15",
   "ignore": [
     "**/.*",

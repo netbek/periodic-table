@@ -1,9 +1,8 @@
 {
-  "name": "periodic-table",
+  "name": "@netbek/periodic-table",
   "version": "0.1.15",
   "description": "",
   "main": "index.js",
-  "private": true,
   "repository": {
     "type": "git",
     "url": "git://github.com/netbek/periodic-table"
