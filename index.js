@@ -1,4 +1,5 @@
 var fs = require('fs-extra');
+var path = require('path');
 var Promise = require('bluebird');
 var yaml = require('js-yaml');
 
@@ -10,7 +11,7 @@ module.exports = {
    * @returns {Promise}
    */
   loadCategories: function () {
-    return fs.readFileAsync('data/categories.yml', 'utf8')
+    return fs.readFileAsync(path.resolve(__dirname, 'data/categories.yml'), 'utf8')
       .then(function (data) {
         return Promise.resolve(yaml.safeLoad(data));
       });
@@ -20,7 +21,7 @@ module.exports = {
    * @returns {Promise}
    */
   loadElements: function () {
-    return fs.readFileAsync('data/elements.yml', 'utf8')
+    return fs.readFileAsync(path.resolve(__dirname, 'data/elements.yml'), 'utf8')
       .then(function (data) {
         return Promise.resolve(yaml.safeLoad(data));
       });
