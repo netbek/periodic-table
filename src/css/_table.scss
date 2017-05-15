@@ -42,6 +42,7 @@
     display: block;
     position: absolute;
     text-align: left;
+    font-family: $nb-periodic-table-number-font-family;
     line-height: $nb-periodic-table-number-line-height;
   }
 
@@ -51,6 +52,7 @@
     position: relative;
     margin: 0 auto;
     text-align: center;
+    font-family: $nb-periodic-table-symbol-font-family;
     line-height: $nb-periodic-table-symbol-line-height;
   }
 
@@ -59,6 +61,7 @@
     display: block;
     position: relative;
     margin: 0 auto;
+    font-family: $nb-periodic-table-name-font-family;
     line-height: $nb-periodic-table-name-line-height;
   }
 
@@ -72,6 +75,7 @@
     position: relative;
     margin: 0 auto;
     padding: .25em 0;
+    font-family: $nb-periodic-table-property-font-family;
     line-height: $nb-periodic-table-property-line-height;
   }
 
@@ -80,6 +84,7 @@
     position: relative;
     margin: 0 auto;
     padding: .25em 0;
+    font-family: $nb-periodic-table-property-font-family;
     line-height: $nb-periodic-table-property-line-height;
   }
 }
