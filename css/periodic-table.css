@@ -156,6 +156,7 @@
     display: block;
     position: absolute;
     text-align: left;
+    font-family: inherit;
     line-height: 1; }
   .nb-periodic-table-element__symbol {
     -webkit-box-sizing: border-box;
@@ -165,6 +166,7 @@
     position: relative;
     margin: 0 auto;
     text-align: center;
+    font-family: inherit;
     line-height: 1; }
   .nb-periodic-table-element__name {
     -webkit-box-sizing: border-box;
@@ -173,6 +175,7 @@
     display: block;
     position: relative;
     margin: 0 auto;
+    font-family: inherit;
     line-height: 1; }
   .nb-periodic-table-element__properties {
     border-collapse: collapse;
@@ -184,6 +187,7 @@
     position: relative;
     margin: 0 auto;
     padding: .25em 0;
+    font-family: inherit;
     line-height: 1; }
   .nb-periodic-table-element__electronegativity {
     -webkit-box-sizing: border-box;
@@ -192,6 +196,7 @@
     position: relative;
     margin: 0 auto;
     padding: .25em 0;
+    font-family: inherit;
     line-height: 1; }
 
 .nb-periodic-table-cell {
