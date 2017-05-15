@@ -24,11 +24,13 @@ $nb-periodic-table-symbol-font-family:            inherit !default;
 $nb-periodic-table-symbol-font-size:              (18/16) * 1rem !default;
 $nb-periodic-table-symbol-font-size--wide:        (18/16) * 1rem !default;
 $nb-periodic-table-symbol-line-height:            1 !default;
+$nb-periodic-table-symbol-padding--wide:          .8em 0 .4em !default;
 
 $nb-periodic-table-name-font-family:              inherit !default;
 $nb-periodic-table-name-font-size:                (14/16) * 1rem !default;
 $nb-periodic-table-name-font-size--wide:          (11/16) * 1rem !default;
 $nb-periodic-table-name-line-height:              1 !default;
+$nb-periodic-table-name-padding--wide:            .25em 0 !default;
 
 $nb-periodic-table-property-font-family:          inherit !default;
 $nb-periodic-table-property-font-size:            (14/16) * 1rem !default;

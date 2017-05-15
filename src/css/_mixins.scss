@@ -177,14 +177,14 @@
       }
 
       &__symbol {
-        padding: .8em 0 ($nb-periodic-table-name-font-size / $nb-periodic-table-symbol-font-size * .4em);
         font-size: $nb-periodic-table-symbol-font-size--wide;
+        padding: $nb-periodic-table-symbol-padding--wide;
       }
 
       &__name {
-        padding: .25em 0;
-        text-align: center;
         font-size: $nb-periodic-table-name-font-size--wide;
+        padding: $nb-periodic-table-name-padding--wide;
+        text-align: center;
       }
 
       &__properties {
