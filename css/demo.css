@@ -87,12 +87,12 @@ header {
       top: 0.75em;
       left: 0.75em; }
     .nb-periodic-table-element__symbol {
-      padding: 0.8em 0 0.31111em;
-      font-size: 1.125rem; }
+      font-size: 1.125rem;
+      padding: 0.8em 0 0.4em; }
     .nb-periodic-table-element__name {
-      padding: .25em 0;
-      text-align: center;
-      font-size: 0.6875rem; }
+      font-size: 0.6875rem;
+      padding: 0.25em 0;
+      text-align: center; }
     .nb-periodic-table-element__properties {
       display: block; }
     .nb-periodic-table-element__atomic-mass {
