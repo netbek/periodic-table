@@ -77,6 +77,8 @@
     padding: .25em 0;
     font-family: $nb-periodic-table-property-font-family;
     line-height: $nb-periodic-table-property-line-height;
+    font-style: $nb-periodic-table-atomic-mass-font-style;
+    font-weight: $nb-periodic-table-atomic-mass-font-weight;
   }
 
   &__electronegativity {
@@ -86,5 +88,7 @@
     padding: .25em 0;
     font-family: $nb-periodic-table-property-font-family;
     line-height: $nb-periodic-table-property-line-height;
+    font-style: $nb-periodic-table-electronegativity-font-style;
+    font-weight: $nb-periodic-table-electronegativity-font-weight;
   }
 }
