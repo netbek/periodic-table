@@ -109,7 +109,9 @@
           display: inline-block;
           position: relative;
           font-family: inherit;
-          line-height: 1.5; }
+          line-height: 1.5;
+          font-style: normal;
+          font-weight: normal; }
       .nb-periodic-table-element-legend__notes .nb-periodic-table-element__atomic-number .nb-periodic-table-element-legend__note {
         margin: -0.54545em 0; }
       .nb-periodic-table-element-legend__notes .nb-periodic-table-element__symbol .nb-periodic-table-element-legend__note {
@@ -189,7 +191,9 @@
     margin: 0 auto;
     padding: .25em 0;
     font-family: inherit;
-    line-height: 1; }
+    line-height: 1;
+    font-style: inherit;
+    font-weight: inherit; }
   .nb-periodic-table-element__electronegativity {
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
@@ -198,7 +202,9 @@
     margin: 0 auto;
     padding: .25em 0;
     font-family: inherit;
-    line-height: 1; }
+    line-height: 1;
+    font-style: inherit;
+    font-weight: inherit; }
 
 .nb-periodic-table-cell {
   background: #eee; }
