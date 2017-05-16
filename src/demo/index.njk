@@ -18,7 +18,13 @@
           <h1>Periodic Table of Elements</h1>
         </header>
 
-        {{ legend(elements, categories) }}
+        {{ legend(elements, categories, {
+          atomicNumber: 'Atomic number',
+          symbol: 'Symbol',
+          name: 'Name',
+          atomicMass: 'Atomic mass',
+          electronegativity: 'Electronegativity'
+        }) }}
       </div>
 
       <div class="constraint constraint--periodic-table">

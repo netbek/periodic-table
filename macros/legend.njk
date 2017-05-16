@@ -1,7 +1,7 @@
-{%- macro legend(elements, categories) %}
+{%- macro legend(elements, categories, keys) %}
 <div class="nb-periodic-table-legend">
   <div class="nb-periodic-table-element-legend nb-periodic-table-element-legend--at-default">
-    <p class="nb-periodic-table-element-legend__caption">Left to right: Atomic number, Symbol, Name, Atomic mass, Electronegativity</p>
+    <p class="nb-periodic-table-element-legend__caption">Left to right: {{ keys.atomicNumber }}, {{ keys.symbol }}, {{ keys.name }}, {{ keys.atomicMass }}, {{ keys.electronegativity }}</p>
   </div>
 
   <div class="nb-periodic-table-element-legend nb-periodic-table-element-legend--at-wide">
@@ -36,13 +36,13 @@
           <span class="nb-periodic-table-element__atomic-number">
             <span class="nb-periodic-table-element-legend__note">
               <span class="nb-periodic-table-element-legend__connector"></span>
-              Atomic number
+              {{ keys.atomicNumber }}
             </span>
           </span>
           <span class="nb-periodic-table-element__symbol">
             <span class="nb-periodic-table-element-legend__note">
               <span class="nb-periodic-table-element-legend__connector"></span>
-              Symbol
+              {{ keys.symbol }}
             </span>
           </span>
         </span>
@@ -50,20 +50,20 @@
           <span class="nb-periodic-table-element__name">
             <span class="nb-periodic-table-element-legend__note">
               <span class="nb-periodic-table-element-legend__connector"></span>
-              Name
+              {{ keys.name }}
             </span>
           </span>
           <span class="nb-periodic-table-element__properties">
             <span class="nb-periodic-table-element__atomic-mass">
               <span class="nb-periodic-table-element-legend__note">
                 <span class="nb-periodic-table-element-legend__connector"></span>
-                Atomic mass
+                {{ keys.atomicMass }}
               </span>
             </span>
             <span class="nb-periodic-table-element__electronegativity">
               <span class="nb-periodic-table-element-legend__note">
                 <span class="nb-periodic-table-element-legend__connector"></span>
-                Electronegativity
+                {{ keys.electronegativity }}
               </span>
             </span>
           </span>
