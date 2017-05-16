@@ -42,19 +42,6 @@ $nb-periodic-table-p-block-bg:                    #fdff8c !default;
 $nb-periodic-table-d-block-bg:                    #99ccff !default;
 $nb-periodic-table-f-block-bg:                    #9bff99 !default;
 
-// Wikipedia palette
-// $nb-periodic-table-metalloid-bg:                  #cccc99 !default;
-// $nb-periodic-table-unknown-properties-bg:         #e8e8e8 !default;
-// $nb-periodic-table-alkali-metal-bg:               #ff6666 !default;
-// $nb-periodic-table-alkaline-earth-metal-bg:       #ffdead !default;
-// $nb-periodic-table-lanthanide-bg:                 #ffbfff !default;
-// $nb-periodic-table-actinide-bg:                   #ff99cc !default;
-// $nb-periodic-table-transition-metal-bg:           #ffc0c0 !default;
-// $nb-periodic-table-post-​transition-metal-bg:      #cccccc !default;
-// $nb-periodic-table-polyatomic-nonmetal-bg:        #a1ffc3 !default;
-// $nb-periodic-table-diatomic-nonmetal-bg:          #e7ff8f !default;
-// $nb-periodic-table-noble-gas-bg:                  #c0ffff !default;
-
 $category-color-map:                              map-get(map-get($chrys-color-map, 'brewer-set3'), 11);
 $nb-periodic-table-metalloid-bg:                  nth($category-color-map, 1) !default;
 $nb-periodic-table-unknown-properties-bg:         nth($category-color-map, 2) !default;
@@ -63,7 +50,7 @@ $nb-periodic-table-alkaline-earth-metal-bg:       nth($category-color-map, 4) !d
 $nb-periodic-table-lanthanide-bg:                 nth($category-color-map, 5) !default;
 $nb-periodic-table-actinide-bg:                   nth($category-color-map, 6) !default;
 $nb-periodic-table-transition-metal-bg:           nth($category-color-map, 7) !default;
-$nb-periodic-table-post-​transition-metal-bg:      nth($category-color-map, 8) !default;
+$nb-periodic-table-post-transition-metal-bg:      nth($category-color-map, 8) !default;
 $nb-periodic-table-polyatomic-nonmetal-bg:        nth($category-color-map, 9) !default;
 $nb-periodic-table-diatomic-nonmetal-bg:          nth($category-color-map, 10) !default;
 $nb-periodic-table-noble-gas-bg:                  nth($category-color-map, 11) !default;
