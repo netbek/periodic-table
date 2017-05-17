@@ -178,7 +178,7 @@
 
       &__symbol {
         font-size: $nb-periodic-table-symbol-font-size--wide;
-        padding: $nb-periodic-table-symbol-padding--wide;
+        padding: $nb-periodic-table-symbol-padding-top--wide $nb-periodic-table-symbol-padding-right--wide $nb-periodic-table-symbol-padding-bottom--wide $nb-periodic-table-symbol-padding-left--wide;
       }
 
       &__name {
@@ -199,9 +199,13 @@
       }
 
       &__electronegativity {
+        position: absolute;
         display: block;
+        top: $nb-periodic-table-electronegativity-y--wide;
+        right: $nb-periodic-table-electronegativity-x--wide;
+        padding: 0;
         width: 100%;
-        text-align: center;
+        text-align: right;
         font-size: $nb-periodic-table-property-font-size--wide;
       }
     }
@@ -338,7 +342,11 @@
       }
 
       &__electronegativity {
+        position: relative;
         display: table-cell;
+        top: $nb-periodic-table-electronegativity-y;
+        right: $nb-periodic-table-electronegativity-x;
+        padding: .25em 0;
         width: 50%;
         text-align: left;
         font-size: $nb-periodic-table-property-font-size;

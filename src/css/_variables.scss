@@ -24,7 +24,10 @@ $nb-periodic-table-symbol-font-family:            inherit !default;
 $nb-periodic-table-symbol-font-size:              (18/16) * 1rem !default;
 $nb-periodic-table-symbol-font-size--wide:        (18/16) * 1rem !default;
 $nb-periodic-table-symbol-line-height:            1 !default;
-$nb-periodic-table-symbol-padding--wide:          .8em 0 .4em !default;
+$nb-periodic-table-symbol-padding-top--wide:      1em !default;
+$nb-periodic-table-symbol-padding-right--wide:    0 !default;
+$nb-periodic-table-symbol-padding-bottom--wide:   .25em !default;
+$nb-periodic-table-symbol-padding-left--wide:     0 !default;
 
 $nb-periodic-table-name-font-family:              inherit !default;
 $nb-periodic-table-name-font-size:                (14/16) * 1rem !default;
@@ -42,6 +45,10 @@ $nb-periodic-table-atomic-mass-font-weight:       inherit !default;
 
 $nb-periodic-table-electronegativity-font-style:  inherit !default;
 $nb-periodic-table-electronegativity-font-weight: inherit !default;
+$nb-periodic-table-electronegativity-x:           auto !default;
+$nb-periodic-table-electronegativity-y:           auto !default;
+$nb-periodic-table-electronegativity-x--wide:     .75em !default;
+$nb-periodic-table-electronegativity-y--wide:     .75em !default;
 
 $nb-periodic-table-s-block-bg:                    #ff9999 !default;
 $nb-periodic-table-p-block-bg:                    #fdff8c !default;
