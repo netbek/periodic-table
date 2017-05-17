@@ -233,18 +233,22 @@
 
       &__caption {
         font-size: $nb-periodic-table-legend-font-size;
-      }
 
-      &__notes {
         .nb-periodic-table-element {
           &__atomic-number,
           &__symbol,
           &__name,
           &__atomic-mass,
           &__electronegativity {
-            .nb-periodic-table-element-legend__note {
-              font-size: $nb-periodic-table-legend-font-size;
-            }
+            display: inline;
+            position: inherit;
+            top: auto;
+            left: auto;
+            right: auto;
+            padding: 0;
+            font-size: inherit;
+            line-height: inherit;
+            text-align: inherit;
           }
         }
       }

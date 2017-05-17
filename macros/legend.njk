@@ -1,7 +1,14 @@
 {%- macro legend(elements, categories, keys) %}
 <div class="nb-periodic-table-legend">
   <div class="nb-periodic-table-element-legend nb-periodic-table-element-legend--at-default">
-    <p class="nb-periodic-table-element-legend__caption">Left to right: {{ keys.atomicNumber }}, {{ keys.symbol }}, {{ keys.name }}, {{ keys.atomicMass }}, {{ keys.electronegativity }}</p>
+    <p class="nb-periodic-table-element-legend__caption">
+      Left to right:
+      <span class="nb-periodic-table-element__atomic-number">{{ keys.atomicNumber }}</span>,
+      <span class="nb-periodic-table-element__symbol">{{ keys.symbol }}</span>,
+      <span class="nb-periodic-table-element__name">{{ keys.name }}</span>,
+      <span class="nb-periodic-table-element__atomic-mass">{{ keys.atomicMass }}</span>,
+      <span class="nb-periodic-table-element__electronegativity">{{ keys.electronegativity }}</span>
+    </p>
   </div>
 
   <div class="nb-periodic-table-element-legend nb-periodic-table-element-legend--at-wide">
