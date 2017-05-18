@@ -114,7 +114,7 @@
   block: p
   group: 13
   period: 3
-  category: post-​transition-metal
+  category: post-transition-metal
 - atomicNumber: 14
   symbol: Si
   name: Silicon
@@ -276,7 +276,7 @@
   block: p
   group: 13
   period: 4
-  category: post-​transition-metal
+  category: post-transition-metal
 - atomicNumber: 32
   symbol: Ge
   name: Germanium
@@ -438,7 +438,7 @@
   block: p
   group: 13
   period: 5
-  category: post-​transition-metal
+  category: post-transition-metal
 - atomicNumber: 50
   symbol: Sn
   name: Tin
@@ -447,7 +447,7 @@
   block: p
   group: 14
   period: 5
-  category: post-​transition-metal
+  category: post-transition-metal
 - atomicNumber: 51
   symbol: Sb
   name: Antimony
@@ -726,7 +726,7 @@
   block: p
   group: 13
   period: 6
-  category: post-​transition-metal
+  category: post-transition-metal
 - atomicNumber: 82
   symbol: Pb
   name: Lead
@@ -735,7 +735,7 @@
   block: p
   group: 14
   period: 6
-  category: post-​transition-metal
+  category: post-transition-metal
 - atomicNumber: 83
   symbol: Bi
   name: Bismuth
@@ -744,7 +744,7 @@
   block: p
   group: 15
   period: 6
-  category: post-​transition-metal
+  category: post-transition-metal
 - atomicNumber: 84
   symbol: Po
   name: Polonium
@@ -753,7 +753,7 @@
   block: p
   group: 16
   period: 6
-  category: post-​transition-metal
+  category: post-transition-metal
 - atomicNumber: 85
   symbol: At
   name: Astatine
@@ -1023,7 +1023,7 @@
   block: p
   group: 14
   period: 7
-  category: post-​transition-metal
+  category: post-transition-metal
 - atomicNumber: 115
   symbol: Mc
   name: Moscovium

@@ -19,8 +19,8 @@
 - id: transition-metal
   name: Transition metal
   color: '#ffc0c0'
-- id: post-​transition-metal
-  name: Post-​transition metal
+- id: post-transition-metal
+  name: Post-transition metal
   color: '#cccccc'
 - id: polyatomic-nonmetal
   name: Polyatomic nonmetal

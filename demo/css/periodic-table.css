@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .nb-periodic-table-category-legend {
   display: inline-block;
   vertical-align: top; }
@@ -59,7 +58,7 @@
     background: #fdb462; }
   .nb-periodic-table-category-legend-item[data-category='transition-metal'] .nb-periodic-table-category-legend-item__swatch {
     background: #b3de69; }
-  .nb-periodic-table-category-legend-item[data-category='post-​transition-metal'] .nb-periodic-table-category-legend-item__swatch {
+  .nb-periodic-table-category-legend-item[data-category='post-transition-metal'] .nb-periodic-table-category-legend-item__swatch {
     background: #fccde5; }
   .nb-periodic-table-category-legend-item[data-category='polyatomic-nonmetal'] .nb-periodic-table-category-legend-item__swatch {
     background: #d9d9d9; }
