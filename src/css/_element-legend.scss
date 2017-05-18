@@ -151,10 +151,15 @@
         }
       }
 
-      &__atomic-mass,
+      &__atomic-mass {
+        #{$block}__note {
+          margin: (-.5em * $nb-periodic-table-legend-label-font-size--wide / $nb-periodic-table-atomic-mass-font-size--wide) 0;
+        }
+      }
+
       &__electronegativity {
         #{$block}__note {
-          margin: (-.5em * $nb-periodic-table-legend-label-font-size--wide / $nb-periodic-table-property-font-size--wide) 0;
+          margin: (-.5em * $nb-periodic-table-legend-label-font-size--wide / $nb-periodic-table-electronegativity-font-size--wide) 0;
         }
       }
     }

@@ -203,7 +203,7 @@
         display: block;
         width: 100%;
         text-align: center;
-        font-size: $nb-periodic-table-property-font-size--wide;
+        font-size: $nb-periodic-table-atomic-mass-font-size--wide;
       }
 
       &__electronegativity {
@@ -214,7 +214,7 @@
         padding: 0;
         width: 100%;
         text-align: right;
-        font-size: $nb-periodic-table-property-font-size--wide;
+        font-size: $nb-periodic-table-electronegativity-font-size--wide;
       }
     }
 
@@ -354,7 +354,7 @@
         display: table-cell;
         width: 50%;
         text-align: left;
-        font-size: $nb-periodic-table-property-font-size;
+        font-size: $nb-periodic-table-atomic-mass-font-size;
       }
 
       &__electronegativity {
@@ -365,7 +365,7 @@
         padding: .25em 0;
         width: 50%;
         text-align: left;
-        font-size: $nb-periodic-table-property-font-size;
+        font-size: $nb-periodic-table-atomic-mass-font-size;
       }
     }
 

@@ -39,14 +39,17 @@ $nb-periodic-table-name-padding-horz:             0 !default;
 $nb-periodic-table-name-padding-vert--wide:       .25em !default;
 $nb-periodic-table-name-padding-horz--wide:       0 !default;
 
-$nb-periodic-table-property-font-family:          inherit !default;
-$nb-periodic-table-property-font-size:            (14/16) * 1rem !default;
-$nb-periodic-table-property-font-size--wide:      (11/16) * 1rem !default;
-$nb-periodic-table-property-line-height:          1 !default;
-
+$nb-periodic-table-atomic-mass-font-family:       inherit !default;
+$nb-periodic-table-atomic-mass-font-size:         (14/16) * 1rem !default;
+$nb-periodic-table-atomic-mass-font-size--wide:   (11/16) * 1rem !default;
+$nb-periodic-table-atomic-mass-line-height:       1 !default;
 $nb-periodic-table-atomic-mass-font-style:        inherit !default;
 $nb-periodic-table-atomic-mass-font-weight:       inherit !default;
 
+$nb-periodic-table-electronegativity-font-family: inherit !default;
+$nb-periodic-table-electronegativity-font-size:   (14/16) * 1rem !default;
+$nb-periodic-table-electronegativity-font-size--wide: (11/16) * 1rem !default;
+$nb-periodic-table-electronegativity-line-height: 1 !default;
 $nb-periodic-table-electronegativity-font-style:  inherit !default;
 $nb-periodic-table-electronegativity-font-weight: inherit !default;
 $nb-periodic-table-electronegativity-x:           auto !default;
@@ -54,9 +57,9 @@ $nb-periodic-table-electronegativity-y:           auto !default;
 $nb-periodic-table-electronegativity-x--wide:     .75em !default;
 $nb-periodic-table-electronegativity-y--wide:     .75em !default;
 
-$nb-periodic-table-axis-label-font-family:        $nb-periodic-table-property-font-family !default;
-$nb-periodic-table-axis-label-font-size:          $nb-periodic-table-property-font-size--wide !default;
-$nb-periodic-table-axis-label-line-height:        $nb-periodic-table-property-line-height !default;
+$nb-periodic-table-axis-label-font-family:        inherit !default;
+$nb-periodic-table-axis-label-font-size:          (11/16) * 1rem !default;
+$nb-periodic-table-axis-label-line-height:        1 !default;
 $nb-periodic-table-axis-label-padding-vert:       1em !default;
 $nb-periodic-table-axis-label-padding-horz:       0 !default;
 
