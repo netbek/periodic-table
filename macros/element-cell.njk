@@ -13,20 +13,18 @@
       <span class="nb-periodic-table-element__name">
         {{ element.name }}
       </span>
-      {%- if element.atomicMass or element.electronegativity %}
-        <span class="nb-periodic-table-element__properties">
+      <span class="nb-periodic-table-element__properties">
+        <span class="nb-periodic-table-element__atomic-mass">
           {%- if element.atomicMass %}
-            <span class="nb-periodic-table-element__atomic-mass">
-              {{ element.atomicMass }}
-            </span>
-          {%- endif %}
-          {%- if element.electronegativity %}
-            <span class="nb-periodic-table-element__electronegativity">
-              {{ element.electronegativity }}
-            </span>
+            {{ element.atomicMass }}
           {%- endif %}
         </span>
-      {%- endif %}
+        <span class="nb-periodic-table-element__electronegativity">
+          {%- if element.electronegativity %}
+            {{ element.electronegativity }}
+          {%- endif %}
+        </span>
+      </span>
     </span>
   </span>
 </td>
