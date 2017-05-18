@@ -14,6 +14,20 @@
   padding: 0;
   border: 1px solid $nb-periodic-table-cell-border;
 
+  &--axis {
+    border: none;
+    text-align: center;
+    vertical-align: bottom;
+
+    .nb-periodic-table-label {
+      display: inline-block;
+      font-family: $nb-periodic-table-legend-font-family;
+      font-size: $nb-periodic-table-legend-font-size--wide;
+      line-height: $nb-periodic-table-legend-line-height;
+      margin-bottom: $nb-periodic-table-legend-padding-vert;
+    }
+  }
+
   &--empty {
     border: none;
 

@@ -162,6 +162,17 @@
   vertical-align: top;
   padding: 0;
   border: 1px solid #ccc; }
+  .nb-periodic-table-cell--axis {
+    border: none;
+    text-align: center;
+    vertical-align: bottom; }
+    .nb-periodic-table-cell--axis .nb-periodic-table-label {
+      display: inline-block;
+      font-family: inherit;
+      font-size: 12px;
+      font-size: 0.75rem;
+      line-height: 1.5;
+      margin-bottom: 1em; }
   .nb-periodic-table-cell--empty {
     border: none; }
     .nb-periodic-table-cell--empty .nb-periodic-table-element {
@@ -233,6 +244,8 @@
 
 .nb-periodic-table-cell {
   background: #eee; }
+  .nb-periodic-table-cell--axis {
+    background: transparent; }
   .nb-periodic-table-cell--empty {
     background: transparent; }
 
@@ -283,6 +296,8 @@
 .nb-periodic-table-cell {
   display: block;
   margin: 0 auto -1px; }
+  .nb-periodic-table-cell--axis {
+    display: none; }
   .nb-periodic-table-cell--empty {
     display: none; }
   .nb-periodic-table-cell--blockholder {

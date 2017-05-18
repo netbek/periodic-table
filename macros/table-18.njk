@@ -1,9 +1,19 @@
+{%- from "./axis-cell.njk" import axisCell %}
 {%- from "./element-cell.njk" import elementCell %}
 {%- from "./empty-cell.njk" import emptyCell %}
 {%- from "./blockholder-element-cell.njk" import blockholderElementCell %}
 
 {%- macro table(elements) %}
 <table class="nb-periodic-table-table nb-periodic-table-table--18">
+  <tr class="nb-periodic-table-row">
+    {%- for i in range(0, 18) %}
+      {%- if i == 0 or i == 17 %}
+        {{ axisCell(i + 1) }}
+      {%- else %}
+        {{ emptyCell() }}
+      {%- endif %}
+    {%- endfor %}
+  </tr>
   <tr class="nb-periodic-table-row">
     {%- for element in elements %}
       {%- if element.atomicNumber == 3 or element.atomicNumber == 11 or element.atomicNumber == 19 or element.atomicNumber == 37 or element.atomicNumber == 55 or element.atomicNumber == 87 %}
@@ -12,11 +22,17 @@
       {%- endif %}
 
       {%- if element.atomicNumber == 2 %}
-        {%- for i in range(0, 16) %}{{ emptyCell() }}{%- endfor %}
+        {%- for i in range(0, 16) %}
+          {%- if i == 0 or i >= 11 %}
+            {{ axisCell(1 + i + 1) }}
+          {%- else %}
+            {{ emptyCell() }}
+          {%- endif %}
+        {%- endfor %}
       {%- elif element.atomicNumber == 5 %}
         {%- for i in range(0, 10) %}{{ emptyCell() }}{%- endfor %}
       {%- elif element.atomicNumber == 13 %}
-        {%- for i in range(0, 10) %}{{ emptyCell() }}{%- endfor %}
+        {%- for i in range(0, 10) %}{{ axisCell(2 + i + 1) }}{%- endfor %}
       {%- endif %}
 
       {%- if element.atomicNumber == 57 %}

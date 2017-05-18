@@ -34,6 +34,8 @@ header {
     background: #bc80bd; }
   .nb-periodic-table-cell[data-category='noble-gas'] {
     background: #ccebc5; }
+  .nb-periodic-table-cell--axis {
+    background: transparent; }
   .nb-periodic-table-cell--empty {
     background: transparent; }
   .nb-periodic-table-legend {
@@ -64,6 +66,8 @@ header {
   .nb-periodic-table-cell {
     display: table-cell;
     margin: 0; }
+    .nb-periodic-table-cell--axis {
+      display: table-cell; }
     .nb-periodic-table-cell--empty {
       display: table-cell; }
     .nb-periodic-table-cell--blockholder {

@@ -66,6 +66,10 @@
       background: $nb-periodic-table-cell-bg;
     }
 
+    &--axis {
+      background: transparent;
+    }
+
     &--empty {
       background: transparent;
     }
@@ -138,6 +142,10 @@
     .nb-periodic-table-cell {
       display: table-cell;
       margin: 0;
+
+      &--axis {
+        display: table-cell;
+      }
 
       &--empty {
         display: table-cell;
@@ -285,6 +293,10 @@
     .nb-periodic-table-cell {
       display: block;
       margin: 0 auto -1px;
+
+      &--axis {
+        display: none;
+      }
 
       &--empty {
         display: none;
