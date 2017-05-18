@@ -1,5 +1,15 @@
-{%- macro elementCell(element, showAtDefault=false, showAtWide=false) %}
-<td class="nb-periodic-table-cell{% if showAtDefault %} nb-periodic-table-cell--at-default{% endif %}{% if showAtWide %} nb-periodic-table-cell--at-wide{% endif %}" data-block="{{ element.block }}" data-category="{{ element.category }}">
+{%- macro elementCell(element, showAtDefault=false, showAtWide=false, addClassName="") %}
+  {%- set className = "nb-periodic-table-cell" %}
+  {%- if showAtDefault %}
+    {%- set className = className + " nb-periodic-table-cell--at-default" %}
+  {%- endif %}
+  {%- if showAtWide %}
+    {%- set className = className + " nb-periodic-table-cell--at-wide" %}
+  {%- endif %}
+  {%- if addClassName %}
+    {%- set className = className + " " + addClassName %}
+  {%- endif %}
+<td class="{{ className }}" data-block="{{ element.block }}" data-category="{{ element.category }}">
   <span class="nb-periodic-table-element">
     <span class="nb-periodic-table-element__basic">
       <span class="nb-periodic-table-element__atomic-number">
