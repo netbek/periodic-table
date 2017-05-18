@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .nb-periodic-table-category-legend {
   display: inline-block;
   vertical-align: top; }
@@ -59,7 +58,7 @@
     background: #fdb462; }
   .nb-periodic-table-category-legend-item[data-category='transition-metal'] .nb-periodic-table-category-legend-item__swatch {
     background: #b3de69; }
-  .nb-periodic-table-category-legend-item[data-category='post-​transition-metal'] .nb-periodic-table-category-legend-item__swatch {
+  .nb-periodic-table-category-legend-item[data-category='post-transition-metal'] .nb-periodic-table-category-legend-item__swatch {
     background: #fccde5; }
   .nb-periodic-table-category-legend-item[data-category='polyatomic-nonmetal'] .nb-periodic-table-category-legend-item__swatch {
     background: #d9d9d9; }
@@ -77,7 +76,10 @@
     margin: 1.5em auto;
     line-height: 1.5; }
   .nb-periodic-table-element-legend__subject {
-    display: inline-block; }
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    z-index: 0; }
     .nb-periodic-table-element-legend__subject .nb-periodic-table-element {
       display: inline-block;
       width: 5em;
@@ -85,8 +87,34 @@
       background: #eee;
       border: 1px solid #ccc; }
   .nb-periodic-table-element-legend__notes {
+    position: relative;
     display: inline-block;
-    margin-left: .5em; }
+    vertical-align: top;
+    z-index: 1; }
+    .nb-periodic-table-element-legend__notes--left {
+      margin-right: .75em; }
+      .nb-periodic-table-element-legend__notes--left .nb-periodic-table-element .nb-periodic-table-element-legend__connector {
+        right: -1.75em; }
+      .nb-periodic-table-element-legend__notes--left .nb-periodic-table-element__atomic-number {
+        top: 0;
+        margin-bottom: -1em; }
+      .nb-periodic-table-element-legend__notes--left .nb-periodic-table-element__atomic-number, .nb-periodic-table-element-legend__notes--left .nb-periodic-table-element__symbol, .nb-periodic-table-element-legend__notes--left .nb-periodic-table-element__name, .nb-periodic-table-element-legend__notes--left .nb-periodic-table-element__atomic-mass, .nb-periodic-table-element-legend__notes--left .nb-periodic-table-element__electronegativity {
+        position: relative;
+        text-align: right; }
+      .nb-periodic-table-element-legend__notes--left .nb-periodic-table-element__symbol, .nb-periodic-table-element-legend__notes--left .nb-periodic-table-element__name, .nb-periodic-table-element-legend__notes--left .nb-periodic-table-element__atomic-mass, .nb-periodic-table-element-legend__notes--left .nb-periodic-table-element__electronegativity {
+        display: none; }
+    .nb-periodic-table-element-legend__notes--right {
+      margin-left: .75em; }
+      .nb-periodic-table-element-legend__notes--right .nb-periodic-table-element .nb-periodic-table-element-legend__connector {
+        left: -1.75em; }
+      .nb-periodic-table-element-legend__notes--right .nb-periodic-table-element__atomic-number {
+        top: 0;
+        margin-bottom: -1em; }
+      .nb-periodic-table-element-legend__notes--right .nb-periodic-table-element__atomic-number, .nb-periodic-table-element-legend__notes--right .nb-periodic-table-element__symbol, .nb-periodic-table-element-legend__notes--right .nb-periodic-table-element__name, .nb-periodic-table-element-legend__notes--right .nb-periodic-table-element__atomic-mass, .nb-periodic-table-element-legend__notes--right .nb-periodic-table-element__electronegativity {
+        position: relative;
+        text-align: left; }
+      .nb-periodic-table-element-legend__notes--right .nb-periodic-table-element__electronegativity {
+        display: none; }
     .nb-periodic-table-element-legend__notes .nb-periodic-table-element {
       display: inline-block;
       width: auto;
@@ -97,28 +125,28 @@
         border-top: 1px solid #999;
         display: block;
         position: absolute;
-        left: -2.25em;
         top: 0.75em;
-        width: 1.75em;
+        width: 1.25em;
         height: 1px; }
       .nb-periodic-table-element-legend__notes .nb-periodic-table-element__atomic-number {
         left: auto; }
-      .nb-periodic-table-element-legend__notes .nb-periodic-table-element__atomic-number, .nb-periodic-table-element-legend__notes .nb-periodic-table-element__symbol, .nb-periodic-table-element-legend__notes .nb-periodic-table-element__name, .nb-periodic-table-element-legend__notes .nb-periodic-table-element__atomic-mass, .nb-periodic-table-element-legend__notes .nb-periodic-table-element__electronegativity {
-        text-align: left; }
-        .nb-periodic-table-element-legend__notes .nb-periodic-table-element__atomic-number .nb-periodic-table-element-legend__note, .nb-periodic-table-element-legend__notes .nb-periodic-table-element__symbol .nb-periodic-table-element-legend__note, .nb-periodic-table-element-legend__notes .nb-periodic-table-element__name .nb-periodic-table-element-legend__note, .nb-periodic-table-element-legend__notes .nb-periodic-table-element__atomic-mass .nb-periodic-table-element-legend__note, .nb-periodic-table-element-legend__notes .nb-periodic-table-element__electronegativity .nb-periodic-table-element-legend__note {
-          display: inline-block;
-          position: relative;
-          font-family: inherit;
-          line-height: 1.5;
-          font-style: normal;
-          font-weight: normal; }
+      .nb-periodic-table-element-legend__notes .nb-periodic-table-element__atomic-number .nb-periodic-table-element-legend__note, .nb-periodic-table-element-legend__notes .nb-periodic-table-element__symbol .nb-periodic-table-element-legend__note, .nb-periodic-table-element-legend__notes .nb-periodic-table-element__name .nb-periodic-table-element-legend__note, .nb-periodic-table-element-legend__notes .nb-periodic-table-element__atomic-mass .nb-periodic-table-element-legend__note, .nb-periodic-table-element-legend__notes .nb-periodic-table-element__electronegativity .nb-periodic-table-element-legend__note {
+        display: inline-block;
+        position: relative;
+        font-family: inherit;
+        line-height: 1.5;
+        font-style: normal;
+        font-weight: normal;
+        white-space: nowrap; }
       .nb-periodic-table-element-legend__notes .nb-periodic-table-element__atomic-number .nb-periodic-table-element-legend__note {
         margin: -0.54545em 0; }
       .nb-periodic-table-element-legend__notes .nb-periodic-table-element__symbol .nb-periodic-table-element-legend__note {
         margin: -0.33333em 0; }
       .nb-periodic-table-element-legend__notes .nb-periodic-table-element__name .nb-periodic-table-element-legend__note {
         margin: -0.54545em 0; }
-      .nb-periodic-table-element-legend__notes .nb-periodic-table-element__atomic-mass .nb-periodic-table-element-legend__note, .nb-periodic-table-element-legend__notes .nb-periodic-table-element__electronegativity .nb-periodic-table-element-legend__note {
+      .nb-periodic-table-element-legend__notes .nb-periodic-table-element__atomic-mass .nb-periodic-table-element-legend__note {
+        margin: -0.54545em 0; }
+      .nb-periodic-table-element-legend__notes .nb-periodic-table-element__electronegativity .nb-periodic-table-element-legend__note {
         margin: -0.54545em 0; }
 
 .nb-periodic-table-legend {
@@ -136,10 +164,21 @@
   vertical-align: top;
   padding: 0;
   border: 1px solid #ccc; }
+  .nb-periodic-table-cell--axis {
+    border: none;
+    text-align: center;
+    vertical-align: bottom; }
+    .nb-periodic-table-cell--axis .nb-periodic-table-label {
+      display: inline-block;
+      font-family: inherit;
+      font-size: 11px;
+      font-size: 0.6875rem;
+      line-height: 1;
+      padding: 1em 0; }
   .nb-periodic-table-cell--empty {
     border: none; }
     .nb-periodic-table-cell--empty .nb-periodic-table-element {
-      height: 1.5em; }
+      height: 1em; }
 
 .nb-periodic-table-element {
   -webkit-box-sizing: border-box;
@@ -200,7 +239,6 @@
             box-sizing: border-box;
     position: relative;
     margin: 0 auto;
-    padding: .25em 0;
     font-family: inherit;
     line-height: 1;
     font-style: inherit;
@@ -208,6 +246,8 @@
 
 .nb-periodic-table-cell {
   background: #eee; }
+  .nb-periodic-table-cell--axis {
+    background: transparent; }
   .nb-periodic-table-cell--empty {
     background: transparent; }
 
@@ -224,10 +264,16 @@
 .nb-periodic-table-element-legend__caption {
   font-size: 14px;
   font-size: 0.875rem; }
-
-.nb-periodic-table-element-legend__notes .nb-periodic-table-element__atomic-number .nb-periodic-table-element-legend__note, .nb-periodic-table-element-legend__notes .nb-periodic-table-element__symbol .nb-periodic-table-element-legend__note, .nb-periodic-table-element-legend__notes .nb-periodic-table-element__name .nb-periodic-table-element-legend__note, .nb-periodic-table-element-legend__notes .nb-periodic-table-element__atomic-mass .nb-periodic-table-element-legend__note, .nb-periodic-table-element-legend__notes .nb-periodic-table-element__electronegativity .nb-periodic-table-element-legend__note {
-  font-size: 14px;
-  font-size: 0.875rem; }
+  .nb-periodic-table-element-legend__caption .nb-periodic-table-element__atomic-number, .nb-periodic-table-element-legend__caption .nb-periodic-table-element__symbol, .nb-periodic-table-element-legend__caption .nb-periodic-table-element__name, .nb-periodic-table-element-legend__caption .nb-periodic-table-element__atomic-mass, .nb-periodic-table-element-legend__caption .nb-periodic-table-element__electronegativity {
+    display: inline;
+    position: inherit;
+    top: auto;
+    left: auto;
+    right: auto;
+    padding: 0;
+    font-size: inherit;
+    line-height: inherit;
+    text-align: inherit; }
 
 .nb-periodic-table-category-legend--at-default {
   display: none; }
@@ -252,6 +298,8 @@
 .nb-periodic-table-cell {
   display: block;
   margin: 0 auto -1px; }
+  .nb-periodic-table-cell--axis {
+    display: none; }
   .nb-periodic-table-cell--empty {
     display: none; }
   .nb-periodic-table-cell--blockholder {
@@ -280,7 +328,7 @@
     font-size: 18px;
     font-size: 1.125rem; }
   .nb-periodic-table-element__name {
-    padding: .25em 0;
+    padding: 0.25em 0;
     text-align: left;
     font-size: 14px;
     font-size: 0.875rem; }
@@ -293,7 +341,11 @@
     font-size: 14px;
     font-size: 0.875rem; }
   .nb-periodic-table-element__electronegativity {
+    position: relative;
     display: table-cell;
+    top: auto;
+    right: auto;
+    padding: .25em 0;
     width: 50%;
     text-align: left;
     font-size: 14px;
