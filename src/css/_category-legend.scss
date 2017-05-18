@@ -40,10 +40,10 @@
 
 .nb-periodic-table-category-legend-item {
   $block: '.nb-periodic-table-category-legend-item';
-  $swatch-size: ($nb-periodic-table-legend-line-height * 1em);
+  $swatch-size: ($nb-periodic-table-legend-label-line-height * 1em);
 
   display: block;
-  line-height: $nb-periodic-table-legend-line-height;
+  line-height: $nb-periodic-table-legend-label-line-height;
   text-align: left;
 
   &__swatch {

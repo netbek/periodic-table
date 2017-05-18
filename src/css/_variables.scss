@@ -3,22 +3,23 @@
 $nb-periodic-table-cell-bg:                       #eee !default;
 $nb-periodic-table-cell-border:                   #ccc !default;
 
+$nb-periodic-table-empty-cell-height:             1em !default;
+
 $nb-periodic-table-legend-padding-vert:           1em !default;
 $nb-periodic-table-legend-padding-horz:           1em !default;
+$nb-periodic-table-legend-label-font-family:      inherit !default;
+$nb-periodic-table-legend-label-font-size:        (14/16) * 1rem !default;
+$nb-periodic-table-legend-label-font-size--wide:  (12/16) * 1rem !default;
+$nb-periodic-table-legend-label-line-height:      1.5 !default;
 
-$nb-periodic-table-legend-font-family:            inherit !default;
-$nb-periodic-table-legend-font-size:              (14/16) * 1rem !default;
-$nb-periodic-table-legend-font-size--wide:        (12/16) * 1rem !default;
-$nb-periodic-table-legend-line-height:            1.5 !default;
-
-$nb-periodic-table-number-font-family:            inherit !default;
-$nb-periodic-table-number-font-size:              (14/16) * 1rem !default;
-$nb-periodic-table-number-font-size--wide:        (11/16) * 1rem !default;
-$nb-periodic-table-number-line-height:            1 !default;
-$nb-periodic-table-number-x:                      .5em !default;
-$nb-periodic-table-number-y:                      .75em !default;
-$nb-periodic-table-number-x--wide:                .75em !default;
-$nb-periodic-table-number-y--wide:                .75em !default;
+$nb-periodic-table-atomic-number-font-family:     inherit !default;
+$nb-periodic-table-atomic-number-font-size:       (14/16) * 1rem !default;
+$nb-periodic-table-atomic-number-font-size--wide: (11/16) * 1rem !default;
+$nb-periodic-table-atomic-number-line-height:     1 !default;
+$nb-periodic-table-atomic-number-x:               .5em !default;
+$nb-periodic-table-atomic-number-y:               .75em !default;
+$nb-periodic-table-atomic-number-x--wide:         .75em !default;
+$nb-periodic-table-atomic-number-y--wide:         .75em !default;
 
 $nb-periodic-table-symbol-font-family:            inherit !default;
 $nb-periodic-table-symbol-font-size:              (18/16) * 1rem !default;
@@ -33,7 +34,10 @@ $nb-periodic-table-name-font-family:              inherit !default;
 $nb-periodic-table-name-font-size:                (14/16) * 1rem !default;
 $nb-periodic-table-name-font-size--wide:          (11/16) * 1rem !default;
 $nb-periodic-table-name-line-height:              1 !default;
-$nb-periodic-table-name-padding--wide:            .25em 0 !default;
+$nb-periodic-table-name-padding-vert:             .25em !default;
+$nb-periodic-table-name-padding-horz:             0 !default;
+$nb-periodic-table-name-padding-vert--wide:       .25em !default;
+$nb-periodic-table-name-padding-horz--wide:       0 !default;
 
 $nb-periodic-table-property-font-family:          inherit !default;
 $nb-periodic-table-property-font-size:            (14/16) * 1rem !default;
@@ -49,6 +53,12 @@ $nb-periodic-table-electronegativity-x:           auto !default;
 $nb-periodic-table-electronegativity-y:           auto !default;
 $nb-periodic-table-electronegativity-x--wide:     .75em !default;
 $nb-periodic-table-electronegativity-y--wide:     .75em !default;
+
+$nb-periodic-table-axis-label-font-family:        $nb-periodic-table-property-font-family !default;
+$nb-periodic-table-axis-label-font-size:          $nb-periodic-table-property-font-size--wide !default;
+$nb-periodic-table-axis-label-line-height:        $nb-periodic-table-property-line-height !default;
+$nb-periodic-table-axis-label-padding-vert:       1em !default;
+$nb-periodic-table-axis-label-padding-horz:       0 !default;
 
 $nb-periodic-table-s-block-bg:                    #ff9999 !default;
 $nb-periodic-table-p-block-bg:                    #fdff8c !default;

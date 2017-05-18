@@ -21,10 +21,10 @@
 
     .nb-periodic-table-label {
       display: inline-block;
-      font-family: $nb-periodic-table-legend-font-family;
-      font-size: $nb-periodic-table-legend-font-size--wide;
-      line-height: $nb-periodic-table-legend-line-height;
-      margin-bottom: $nb-periodic-table-legend-padding-vert;
+      font-family: $nb-periodic-table-axis-label-font-family;
+      font-size: $nb-periodic-table-axis-label-font-size;
+      line-height: $nb-periodic-table-axis-label-line-height;
+      padding: $nb-periodic-table-axis-label-padding-vert $nb-periodic-table-axis-label-padding-horz;
     }
   }
 
@@ -32,7 +32,7 @@
     border: none;
 
     .nb-periodic-table-element {
-      height: 1.5em;
+      height: $nb-periodic-table-empty-cell-height;
     }
   }
 }
@@ -56,8 +56,8 @@
     display: block;
     position: absolute;
     text-align: left;
-    font-family: $nb-periodic-table-number-font-family;
-    line-height: $nb-periodic-table-number-line-height;
+    font-family: $nb-periodic-table-atomic-number-font-family;
+    line-height: $nb-periodic-table-atomic-number-line-height;
   }
 
   &__symbol {

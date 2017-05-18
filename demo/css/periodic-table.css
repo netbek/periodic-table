@@ -169,14 +169,14 @@
     .nb-periodic-table-cell--axis .nb-periodic-table-label {
       display: inline-block;
       font-family: inherit;
-      font-size: 12px;
-      font-size: 0.75rem;
-      line-height: 1.5;
-      margin-bottom: 1em; }
+      font-size: 11px;
+      font-size: 0.6875rem;
+      line-height: 1;
+      padding: 1em 0; }
   .nb-periodic-table-cell--empty {
     border: none; }
     .nb-periodic-table-cell--empty .nb-periodic-table-element {
-      height: 1.5em; }
+      height: 1em; }
 
 .nb-periodic-table-element {
   -webkit-box-sizing: border-box;
@@ -326,7 +326,7 @@
     font-size: 18px;
     font-size: 1.125rem; }
   .nb-periodic-table-element__name {
-    padding: .25em 0;
+    padding: 0.25em 0;
     text-align: left;
     font-size: 14px;
     font-size: 0.875rem; }

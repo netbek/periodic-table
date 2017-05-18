@@ -93,7 +93,7 @@
       }
 
       &__caption {
-        font-size: $nb-periodic-table-legend-font-size--wide;
+        font-size: $nb-periodic-table-legend-label-font-size--wide;
       }
 
       &__notes {
@@ -104,7 +104,7 @@
           &__atomic-mass,
           &__electronegativity {
             .nb-periodic-table-element-legend__note {
-              font-size: $nb-periodic-table-legend-font-size--wide;
+              font-size: $nb-periodic-table-legend-label-font-size--wide;
             }
           }
         }
@@ -122,7 +122,7 @@
     }
 
     .nb-periodic-table-category-legend-item {
-      font-size: $nb-periodic-table-legend-font-size--wide;
+      font-size: $nb-periodic-table-legend-label-font-size--wide;
     }
 
     .nb-periodic-table-table {
@@ -179,9 +179,9 @@
       }
 
       &__atomic-number {
-        font-size: $nb-periodic-table-number-font-size--wide;
-        top: $nb-periodic-table-number-y--wide;
-        left: $nb-periodic-table-number-x--wide;
+        font-size: $nb-periodic-table-atomic-number-font-size--wide;
+        top: $nb-periodic-table-atomic-number-y--wide;
+        left: $nb-periodic-table-atomic-number-x--wide;
       }
 
       &__symbol {
@@ -191,7 +191,7 @@
 
       &__name {
         font-size: $nb-periodic-table-name-font-size--wide;
-        padding: $nb-periodic-table-name-padding--wide;
+        padding: $nb-periodic-table-name-padding-vert--wide $nb-periodic-table-name-padding-horz--wide;
         text-align: center;
       }
 
@@ -240,7 +240,7 @@
       }
 
       &__caption {
-        font-size: $nb-periodic-table-legend-font-size;
+        font-size: $nb-periodic-table-legend-label-font-size;
 
         .nb-periodic-table-element {
           &__atomic-number,
@@ -273,7 +273,7 @@
     }
 
     .nb-periodic-table-category-legend-item {
-      font-size: $nb-periodic-table-legend-font-size;
+      font-size: $nb-periodic-table-legend-label-font-size;
     }
 
     .nb-periodic-table-table {
@@ -330,9 +330,9 @@
       }
 
       &__atomic-number {
-        font-size: $nb-periodic-table-number-font-size;
-        top: $nb-periodic-table-number-y;
-        left: $nb-periodic-table-number-x;
+        font-size: $nb-periodic-table-atomic-number-font-size;
+        top: $nb-periodic-table-atomic-number-y;
+        left: $nb-periodic-table-atomic-number-x;
       }
 
       &__symbol {
@@ -341,7 +341,7 @@
       }
 
       &__name {
-        padding: .25em 0;
+        padding: $nb-periodic-table-name-padding-vert $nb-periodic-table-name-padding-horz;
         text-align: left;
         font-size: $nb-periodic-table-name-font-size;
       }
