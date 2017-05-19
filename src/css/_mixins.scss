@@ -145,6 +145,10 @@
 
       &--axis {
         display: table-cell;
+
+        .nb-periodic-table-label {
+          font-size: $nb-periodic-table-axis-label-font-size--wide;
+        }
       }
 
       &--empty {
@@ -296,6 +300,10 @@
 
       &--axis {
         display: none;
+
+        .nb-periodic-table-label {
+          font-size: $nb-periodic-table-axis-label-font-size;
+        }
       }
 
       &--empty {

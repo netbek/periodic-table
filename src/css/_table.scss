@@ -22,8 +22,9 @@
     .nb-periodic-table-label {
       display: inline-block;
       font-family: $nb-periodic-table-axis-label-font-family;
-      font-size: $nb-periodic-table-axis-label-font-size;
       line-height: $nb-periodic-table-axis-label-line-height;
+      font-style: $nb-periodic-table-axis-label-font-style;
+      font-weight: $nb-periodic-table-axis-label-font-weight;
       padding: $nb-periodic-table-axis-label-padding-vert $nb-periodic-table-axis-label-padding-horz;
     }
   }
