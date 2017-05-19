@@ -68,6 +68,8 @@ header {
     margin: 0; }
     .nb-periodic-table-cell--axis {
       display: table-cell; }
+      .nb-periodic-table-cell--axis .nb-periodic-table-label {
+        font-size: 0.6875rem; }
     .nb-periodic-table-cell--empty {
       display: table-cell; }
     .nb-periodic-table-cell--blockholder {
