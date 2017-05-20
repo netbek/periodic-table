@@ -1,65 +1,21 @@
 @mixin periodic-table-color($style: 'default') {
   .nb-periodic-table-cell {
     @if $style == 'block' {
-      &[data-block='s'] {
-        background: $nb-periodic-table-s-block-bg;
-      }
+      @each $block in map-keys($nb-periodic-table-block-color-map) {
+        $color: map-get($nb-periodic-table-block-color-map, $block);
 
-      &[data-block='p'] {
-        background: $nb-periodic-table-p-block-bg;
-      }
-
-      &[data-block='d'] {
-        background: $nb-periodic-table-d-block-bg;
-      }
-
-      &[data-block='f'] {
-        background: $nb-periodic-table-f-block-bg;
+        &[data-block='#{$block}'] {
+          background: $color;
+        }
       }
     }
     @else if $style == 'category' {
-      &[data-category='metalloid'] {
-        background: $nb-periodic-table-metalloid-bg;
-      }
+      @each $category in map-keys($nb-periodic-table-category-color-map) {
+        $color: map-get($nb-periodic-table-category-color-map, $category);
 
-      &[data-category='unknown-properties'] {
-        background: $nb-periodic-table-unknown-properties-bg;
-      }
-
-      &[data-category='alkali-metal'] {
-        background: $nb-periodic-table-alkali-metal-bg;
-      }
-
-      &[data-category='alkaline-earth-metal'] {
-        background: $nb-periodic-table-alkaline-earth-metal-bg;
-      }
-
-      &[data-category='lanthanide'] {
-        background: $nb-periodic-table-lanthanide-bg;
-      }
-
-      &[data-category='actinide'] {
-        background: $nb-periodic-table-actinide-bg;
-      }
-
-      &[data-category='transition-metal'] {
-        background: $nb-periodic-table-transition-metal-bg;
-      }
-
-      &[data-category='post-transition-metal'] {
-        background: $nb-periodic-table-post-transition-metal-bg;
-      }
-
-      &[data-category='polyatomic-nonmetal'] {
-        background: $nb-periodic-table-polyatomic-nonmetal-bg;
-      }
-
-      &[data-category='diatomic-nonmetal'] {
-        background: $nb-periodic-table-diatomic-nonmetal-bg;
-      }
-
-      &[data-category='noble-gas'] {
-        background: $nb-periodic-table-noble-gas-bg;
+        &[data-category='#{$category}'] {
+          background: $color;
+        }
       }
     }
     @else {

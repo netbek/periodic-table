@@ -66,20 +66,24 @@ $nb-periodic-table-axis-label-font-weight:        inherit !default;
 $nb-periodic-table-axis-label-padding-vert:       1em !default;
 $nb-periodic-table-axis-label-padding-horz:       0 !default;
 
-$nb-periodic-table-s-block-bg:                    #ff9999 !default;
-$nb-periodic-table-p-block-bg:                    #fdff8c !default;
-$nb-periodic-table-d-block-bg:                    #99ccff !default;
-$nb-periodic-table-f-block-bg:                    #9bff99 !default;
+$nb-periodic-table-block-color-map: (
+  s:                                              #ff9999,
+  p:                                              #fdff8c,
+  d:                                              #99ccff,
+  f:                                              #9bff99
+) !default;
 
 $category-color-map:                              map-get(map-get($chrys-color-map, 'brewer-set3'), 11);
-$nb-periodic-table-metalloid-bg:                  nth($category-color-map, 1) !default;
-$nb-periodic-table-unknown-properties-bg:         nth($category-color-map, 2) !default;
-$nb-periodic-table-alkali-metal-bg:               nth($category-color-map, 3) !default;
-$nb-periodic-table-alkaline-earth-metal-bg:       nth($category-color-map, 4) !default;
-$nb-periodic-table-lanthanide-bg:                 nth($category-color-map, 5) !default;
-$nb-periodic-table-actinide-bg:                   nth($category-color-map, 6) !default;
-$nb-periodic-table-transition-metal-bg:           nth($category-color-map, 7) !default;
-$nb-periodic-table-post-transition-metal-bg:      nth($category-color-map, 8) !default;
-$nb-periodic-table-polyatomic-nonmetal-bg:        nth($category-color-map, 9) !default;
-$nb-periodic-table-diatomic-nonmetal-bg:          nth($category-color-map, 10) !default;
-$nb-periodic-table-noble-gas-bg:                  nth($category-color-map, 11) !default;
+$nb-periodic-table-category-color-map: (
+  metalloid:                                      nth($category-color-map, 1),
+  unknown-properties:                             nth($category-color-map, 2),
+  alkali-metal:                                   nth($category-color-map, 3),
+  alkaline-earth-metal:                           nth($category-color-map, 4),
+  lanthanide:                                     nth($category-color-map, 5),
+  actinide:                                       nth($category-color-map, 6),
+  transition-metal:                               nth($category-color-map, 7),
+  post-transition-metal:                          nth($category-color-map, 8),
+  polyatomic-nonmetal:                            nth($category-color-map, 9),
+  diatomic-nonmetal:                              nth($category-color-map, 10),
+  noble-gas:                                      nth($category-color-map, 11)
+) !default;
