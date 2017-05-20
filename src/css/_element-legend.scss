@@ -2,8 +2,8 @@
 @import 'variables';
 @import 'mixins';
 
-.nb-periodic-table-element-legend {
-  $block: '.nb-periodic-table-element-legend';
+.nb-pt-element-legend {
+  $block: '.nb-pt-element-legend';
 
   display: inline-block;
   vertical-align: top;
@@ -23,7 +23,7 @@
     vertical-align: top;
     z-index: 0;
 
-    .nb-periodic-table-element {
+    .nb-pt-element {
       display: inline-block;
       width: 5em;
       padding: .5em;
@@ -41,7 +41,7 @@
     &--left {
       margin-right: .75em;
 
-      .nb-periodic-table-element {
+      .nb-pt-element {
         #{$block}__connector {
           right: -1.75em;
         }
@@ -72,7 +72,7 @@
     &--right {
       margin-left: .75em;
 
-      .nb-periodic-table-element {
+      .nb-pt-element {
         #{$block}__connector {
           left: -1.75em;
         }
@@ -97,7 +97,7 @@
       }
     }
 
-    .nb-periodic-table-element {
+    .nb-pt-element {
       display: inline-block;
       width: auto;
       max-width: none;

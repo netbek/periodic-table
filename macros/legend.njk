@@ -1,113 +1,113 @@
 {%- macro legend(elements, categories, keys) %}
-<div class="nb-periodic-table-legend">
-  <div class="nb-periodic-table-element-legend nb-periodic-table-element-legend--at-default">
-    <p class="nb-periodic-table-element-legend__caption">
+<div class="nb-pt-legend">
+  <div class="nb-pt-element-legend nb-pt-element-legend--at-default">
+    <p class="nb-pt-element-legend__caption">
       Left to right:
-      <span class="nb-periodic-table-element__atomic-number">{{ keys.atomicNumber }}</span>,
-      <span class="nb-periodic-table-element__symbol">{{ keys.symbol }}</span>,
-      <span class="nb-periodic-table-element__name">{{ keys.name }}</span>,
-      <span class="nb-periodic-table-element__atomic-mass">{{ keys.atomicMass }}</span>,
-      <span class="nb-periodic-table-element__electronegativity">{{ keys.electronegativity }}</span>
+      <span class="nb-pt-element__atomic-number">{{ keys.atomicNumber }}</span>,
+      <span class="nb-pt-element__symbol">{{ keys.symbol }}</span>,
+      <span class="nb-pt-element__name">{{ keys.name }}</span>,
+      <span class="nb-pt-element__atomic-mass">{{ keys.atomicMass }}</span>,
+      <span class="nb-pt-element__electronegativity">{{ keys.electronegativity }}</span>
     </p>
   </div>
 
-  <div class="nb-periodic-table-element-legend nb-periodic-table-element-legend--at-wide">
-    <span class="nb-periodic-table-element-legend__notes nb-periodic-table-element-legend__notes--left">
-      <span class="nb-periodic-table-element">
-        <span class="nb-periodic-table-element__basic">
-          <span class="nb-periodic-table-element__atomic-number">
-            <span class="nb-periodic-table-element-legend__note">
-              <span class="nb-periodic-table-element-legend__connector"></span>
+  <div class="nb-pt-element-legend nb-pt-element-legend--at-wide">
+    <span class="nb-pt-element-legend__notes nb-pt-element-legend__notes--left">
+      <span class="nb-pt-element">
+        <span class="nb-pt-element__basic">
+          <span class="nb-pt-element__atomic-number">
+            <span class="nb-pt-element-legend__note">
+              <span class="nb-pt-element-legend__connector"></span>
               {{ keys.atomicNumber }}
             </span>
           </span>
-          <span class="nb-periodic-table-element__symbol">
-            <span class="nb-periodic-table-element-legend__note">
-              <span class="nb-periodic-table-element-legend__connector"></span>
+          <span class="nb-pt-element__symbol">
+            <span class="nb-pt-element-legend__note">
+              <span class="nb-pt-element-legend__connector"></span>
               {{ keys.symbol }}
             </span>
           </span>
         </span>
-        <span class="nb-periodic-table-element__extended">
-          <span class="nb-periodic-table-element__name">
-            <span class="nb-periodic-table-element-legend__note">
-              <span class="nb-periodic-table-element-legend__connector"></span>
+        <span class="nb-pt-element__extended">
+          <span class="nb-pt-element__name">
+            <span class="nb-pt-element-legend__note">
+              <span class="nb-pt-element-legend__connector"></span>
               {{ keys.name }}
             </span>
           </span>
-          <span class="nb-periodic-table-element__properties">
-            <span class="nb-periodic-table-element__atomic-mass">
-              <span class="nb-periodic-table-element-legend__note">
-                <span class="nb-periodic-table-element-legend__connector"></span>
+          <span class="nb-pt-element__properties">
+            <span class="nb-pt-element__atomic-mass">
+              <span class="nb-pt-element-legend__note">
+                <span class="nb-pt-element-legend__connector"></span>
                 {{ keys.atomicMass }}
               </span>
             </span>
-            <span class="nb-periodic-table-element__electronegativity">
-              <span class="nb-periodic-table-element-legend__note">
-                <span class="nb-periodic-table-element-legend__connector"></span>
+            <span class="nb-pt-element__electronegativity">
+              <span class="nb-pt-element-legend__note">
+                <span class="nb-pt-element-legend__connector"></span>
                 {{ keys.electronegativity }}
               </span>
             </span>
           </span>
         </span>
       </span>
-    </span><span class="nb-periodic-table-element-legend__subject">
-      <span class="nb-periodic-table-element">
-        <span class="nb-periodic-table-element__basic">
-          <span class="nb-periodic-table-element__atomic-number">
+    </span><span class="nb-pt-element-legend__subject">
+      <span class="nb-pt-element">
+        <span class="nb-pt-element__basic">
+          <span class="nb-pt-element__atomic-number">
             {{ elements[0].atomicNumber }}
           </span>
-          <span class="nb-periodic-table-element__symbol">
+          <span class="nb-pt-element__symbol">
             {{ elements[0].symbol }}
           </span>
         </span>
-        <span class="nb-periodic-table-element__extended">
-          <span class="nb-periodic-table-element__name">
+        <span class="nb-pt-element__extended">
+          <span class="nb-pt-element__name">
             {{ elements[0].name }}
           </span>
-          <span class="nb-periodic-table-element__properties">
-            <span class="nb-periodic-table-element__atomic-mass">
+          <span class="nb-pt-element__properties">
+            <span class="nb-pt-element__atomic-mass">
               {{ elements[0].atomicMass }}
             </span>
-            <span class="nb-periodic-table-element__electronegativity">
+            <span class="nb-pt-element__electronegativity">
               {{ elements[0].electronegativity }}
             </span>
           </span>
         </span>
       </span>
-    </span><span class="nb-periodic-table-element-legend__notes nb-periodic-table-element-legend__notes--right">
-      <span class="nb-periodic-table-element">
-        <span class="nb-periodic-table-element__basic">
-          <span class="nb-periodic-table-element__atomic-number">
-            <span class="nb-periodic-table-element-legend__note">
-              <span class="nb-periodic-table-element-legend__connector"></span>
+    </span><span class="nb-pt-element-legend__notes nb-pt-element-legend__notes--right">
+      <span class="nb-pt-element">
+        <span class="nb-pt-element__basic">
+          <span class="nb-pt-element__atomic-number">
+            <span class="nb-pt-element-legend__note">
+              <span class="nb-pt-element-legend__connector"></span>
               {{ keys.electronegativity }}
             </span>
           </span>
-          <span class="nb-periodic-table-element__symbol">
-            <span class="nb-periodic-table-element-legend__note">
-              <span class="nb-periodic-table-element-legend__connector"></span>
+          <span class="nb-pt-element__symbol">
+            <span class="nb-pt-element-legend__note">
+              <span class="nb-pt-element-legend__connector"></span>
               {{ keys.symbol }}
             </span>
           </span>
         </span>
-        <span class="nb-periodic-table-element__extended">
-          <span class="nb-periodic-table-element__name">
-            <span class="nb-periodic-table-element-legend__note">
-              <span class="nb-periodic-table-element-legend__connector"></span>
+        <span class="nb-pt-element__extended">
+          <span class="nb-pt-element__name">
+            <span class="nb-pt-element-legend__note">
+              <span class="nb-pt-element-legend__connector"></span>
               {{ keys.name }}
             </span>
           </span>
-          <span class="nb-periodic-table-element__properties">
-            <span class="nb-periodic-table-element__atomic-mass">
-              <span class="nb-periodic-table-element-legend__note">
-                <span class="nb-periodic-table-element-legend__connector"></span>
+          <span class="nb-pt-element__properties">
+            <span class="nb-pt-element__atomic-mass">
+              <span class="nb-pt-element-legend__note">
+                <span class="nb-pt-element-legend__connector"></span>
                 {{ keys.atomicMass }}
               </span>
             </span>
-            <span class="nb-periodic-table-element__electronegativity">
-              <span class="nb-periodic-table-element-legend__note">
-                <span class="nb-periodic-table-element-legend__connector"></span>
+            <span class="nb-pt-element__electronegativity">
+              <span class="nb-pt-element-legend__note">
+                <span class="nb-pt-element-legend__connector"></span>
                 {{ keys.electronegativity }}
               </span>
             </span>
@@ -117,8 +117,8 @@
     </span>
   </div>
 
-  <div class="nb-periodic-table-category-legend nb-periodic-table-category-legend--at-wide">
-    <table class="nb-periodic-table-category-legend-table">
+  <div class="nb-pt-category-legend nb-pt-category-legend--at-wide">
+    <table class="nb-pt-category-legend-table">
       <caption>Categories</caption>
       <tbody>
       {%- for category in categories %}
@@ -126,15 +126,15 @@
           {%- if loop.first === false %}
         </tr>
           {%- endif %}
-        <tr class="nb-periodic-table-category-legend-row">
+        <tr class="nb-pt-category-legend-row">
           {%- endif %}
 
         {%- for elementCategory, items in elements | groupby("category") %}
           {%- if category.id === elementCategory %}
-          <td class="nb-periodic-table-category-legend-cell">
-            <span class="nb-periodic-table-category-legend-item" data-category="{{ category.id }}">
-              <span class="nb-periodic-table-category-legend-item__swatch"></span>
-              <span class="nb-periodic-table-category-legend-item__label">{{ category.name }}</span>
+          <td class="nb-pt-category-legend-cell">
+            <span class="nb-pt-category-legend-item" data-category="{{ category.id }}">
+              <span class="nb-pt-category-legend-item__swatch"></span>
+              <span class="nb-pt-category-legend-item__label">{{ category.name }}</span>
             </span>
           </td>
           {%- endif %}
@@ -142,7 +142,7 @@
 
         {%- if loop.last %}
           {%- if loop.index % 2 === 1 %}
-          <td class="nb-periodic-table-category-legend-cell"></td>
+          <td class="nb-pt-category-legend-cell"></td>
           {%- endif %}
         </tr>
         {%- endif %}

@@ -2,12 +2,12 @@
 @import 'variables';
 @import 'mixins';
 
-.nb-periodic-table-table {
+.nb-pt-table {
   border-collapse: collapse;
   margin: 0 auto;
 }
 
-.nb-periodic-table-cell {
+.nb-pt-cell {
   box-sizing: border-box;
   display: block;
   vertical-align: top;
@@ -19,7 +19,7 @@
     text-align: center;
     vertical-align: bottom;
 
-    .nb-periodic-table-label {
+    .nb-pt-label {
       display: inline-block;
       font-family: $nb-periodic-table-axis-label-font-family;
       line-height: $nb-periodic-table-axis-label-line-height;
@@ -32,13 +32,13 @@
   &--empty {
     border: none;
 
-    .nb-periodic-table-element {
+    .nb-pt-element {
       height: $nb-periodic-table-empty-cell-height;
     }
   }
 }
 
-.nb-periodic-table-element {
+.nb-pt-element {
   box-sizing: border-box;
   border-collapse: collapse;
   position: relative;

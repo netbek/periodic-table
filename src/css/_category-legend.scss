@@ -2,12 +2,12 @@
 @import 'variables';
 @import 'mixins';
 
-.nb-periodic-table-category-legend {
+.nb-pt-category-legend {
   display: inline-block;
   vertical-align: top;
 }
 
-.nb-periodic-table-category-legend-table {
+.nb-pt-category-legend-table {
   display: table;
   border-collapse: collapse;
   width: auto;
@@ -17,17 +17,17 @@
   }
 }
 
-.nb-periodic-table-category-legend-row {
+.nb-pt-category-legend-row {
   display: table-row;
 
   &:last-child {
-    .nb-periodic-table-category-legend-cell {
+    .nb-pt-category-legend-cell {
       padding-bottom: 0;
     }
   }
 }
 
-.nb-periodic-table-category-legend-cell {
+.nb-pt-category-legend-cell {
   box-sizing: border-box;
   display: table-cell;
   padding: 0 ($nb-periodic-table-legend-padding-horz * 2) ($nb-periodic-table-legend-padding-horz * .25) 0;
@@ -38,8 +38,8 @@
   }
 }
 
-.nb-periodic-table-category-legend-item {
-  $block: '.nb-periodic-table-category-legend-item';
+.nb-pt-category-legend-item {
+  $block: '.nb-pt-category-legend-item';
   $swatch-size: ($nb-periodic-table-legend-label-line-height * 1em);
 
   display: block;

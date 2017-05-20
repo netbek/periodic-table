@@ -4,8 +4,8 @@
 {%- from "./blockholder-element-cell.njk" import blockholderElementCell %}
 
 {%- macro table(elements, groups) %}
-<table class="nb-periodic-table-table nb-periodic-table-table--18">
-  <tr class="nb-periodic-table-row">
+<table class="nb-pt-table nb-pt-table--18">
+  <tr class="nb-pt-row">
     {%- for i in range(0, 18) %}
       {%- if i == 0 or i == 17 %}
         {{ axisCell(groups[i + 1] | safe) }}
@@ -14,11 +14,11 @@
       {%- endif %}
     {%- endfor %}
   </tr>
-  <tr class="nb-periodic-table-row">
+  <tr class="nb-pt-row">
     {%- for element in elements %}
       {%- if element.atomicNumber == 3 or element.atomicNumber == 11 or element.atomicNumber == 19 or element.atomicNumber == 37 or element.atomicNumber == 55 or element.atomicNumber == 87 %}
   </tr>
-  <tr class="nb-periodic-table-row">
+  <tr class="nb-pt-row">
       {%- endif %}
 
       {%- if element.atomicNumber == 2 %}
@@ -51,11 +51,11 @@
     {%- endfor %}
   </tr>
 
-  <tr class="nb-periodic-table-row">
+  <tr class="nb-pt-row">
     {%- for i in range(0, 18) %}{{ emptyCell() }}{%- endfor %}
   </tr>
 
-  <tr class="nb-periodic-table-row">
+  <tr class="nb-pt-row">
     {{ emptyCell() }}
     {{ emptyCell() }}
     {%- for element in elements %}
@@ -66,7 +66,7 @@
     {{ emptyCell() }}
   </tr>
 
-  <tr class="nb-periodic-table-row">
+  <tr class="nb-pt-row">
     {{ emptyCell() }}
     {{ emptyCell() }}
     {%- for element in elements %}

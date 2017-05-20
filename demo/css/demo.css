@@ -12,100 +12,100 @@ header {
     max-width: 62em; }
 
 @media (min-width: 82em) {
-  .nb-periodic-table-cell[data-category='metalloid'] {
+  .nb-pt-cell[data-category='metalloid'] {
     background: #8dd3c7; }
-  .nb-periodic-table-cell[data-category='unknown-properties'] {
+  .nb-pt-cell[data-category='unknown-properties'] {
     background: #ffffb3; }
-  .nb-periodic-table-cell[data-category='alkali-metal'] {
+  .nb-pt-cell[data-category='alkali-metal'] {
     background: #bebada; }
-  .nb-periodic-table-cell[data-category='alkaline-earth-metal'] {
+  .nb-pt-cell[data-category='alkaline-earth-metal'] {
     background: #fb8072; }
-  .nb-periodic-table-cell[data-category='lanthanide'] {
+  .nb-pt-cell[data-category='lanthanide'] {
     background: #80b1d3; }
-  .nb-periodic-table-cell[data-category='actinide'] {
+  .nb-pt-cell[data-category='actinide'] {
     background: #fdb462; }
-  .nb-periodic-table-cell[data-category='transition-metal'] {
+  .nb-pt-cell[data-category='transition-metal'] {
     background: #b3de69; }
-  .nb-periodic-table-cell[data-category='post-transition-metal'] {
+  .nb-pt-cell[data-category='post-transition-metal'] {
     background: #fccde5; }
-  .nb-periodic-table-cell[data-category='polyatomic-nonmetal'] {
+  .nb-pt-cell[data-category='polyatomic-nonmetal'] {
     background: #d9d9d9; }
-  .nb-periodic-table-cell[data-category='diatomic-nonmetal'] {
+  .nb-pt-cell[data-category='diatomic-nonmetal'] {
     background: #bc80bd; }
-  .nb-periodic-table-cell[data-category='noble-gas'] {
+  .nb-pt-cell[data-category='noble-gas'] {
     background: #ccebc5; }
-  .nb-periodic-table-cell--axis {
+  .nb-pt-cell--axis {
     background: transparent; }
-  .nb-periodic-table-cell--empty {
+  .nb-pt-cell--empty {
     background: transparent; }
-  .nb-periodic-table-legend {
+  .nb-pt-legend {
     padding: 1em 1em;
     border: 1px dotted #ccc; }
-  .nb-periodic-table-element-legend--at-default {
+  .nb-pt-element-legend--at-default {
     display: none; }
-  .nb-periodic-table-element-legend--at-wide {
+  .nb-pt-element-legend--at-wide {
     display: inline-block; }
-  .nb-periodic-table-element-legend__caption {
+  .nb-pt-element-legend__caption {
     font-size: 0.75rem; }
-  .nb-periodic-table-element-legend__notes .nb-periodic-table-element__atomic-number .nb-periodic-table-element-legend__note, .nb-periodic-table-element-legend__notes .nb-periodic-table-element__symbol .nb-periodic-table-element-legend__note, .nb-periodic-table-element-legend__notes .nb-periodic-table-element__name .nb-periodic-table-element-legend__note, .nb-periodic-table-element-legend__notes .nb-periodic-table-element__atomic-mass .nb-periodic-table-element-legend__note, .nb-periodic-table-element-legend__notes .nb-periodic-table-element__electronegativity .nb-periodic-table-element-legend__note {
+  .nb-pt-element-legend__notes .nb-pt-element__atomic-number .nb-pt-element-legend__note, .nb-pt-element-legend__notes .nb-pt-element__symbol .nb-pt-element-legend__note, .nb-pt-element-legend__notes .nb-pt-element__name .nb-pt-element-legend__note, .nb-pt-element-legend__notes .nb-pt-element__atomic-mass .nb-pt-element-legend__note, .nb-pt-element-legend__notes .nb-pt-element__electronegativity .nb-pt-element-legend__note {
     font-size: 0.75rem; }
-  .nb-periodic-table-category-legend--at-default {
+  .nb-pt-category-legend--at-default {
     display: none; }
-  .nb-periodic-table-category-legend--at-wide {
+  .nb-pt-category-legend--at-wide {
     display: inline-block; }
-  .nb-periodic-table-category-legend-item {
+  .nb-pt-category-legend-item {
     font-size: 0.75rem; }
-  .nb-periodic-table-table {
+  .nb-pt-table {
     display: table;
     width: auto;
     max-width: none; }
-    .nb-periodic-table-table tbody {
+    .nb-pt-table tbody {
       display: table-row-group; }
-  .nb-periodic-table-row {
+  .nb-pt-row {
     display: table-row; }
-  .nb-periodic-table-cell {
+  .nb-pt-cell {
     display: table-cell;
     margin: 0; }
-    .nb-periodic-table-cell--axis {
+    .nb-pt-cell--axis {
       display: table-cell; }
-      .nb-periodic-table-cell--axis .nb-periodic-table-label {
+      .nb-pt-cell--axis .nb-pt-label {
         font-size: 0.6875rem; }
-    .nb-periodic-table-cell--empty {
+    .nb-pt-cell--empty {
       display: table-cell; }
-    .nb-periodic-table-cell--blockholder {
+    .nb-pt-cell--blockholder {
       display: table-cell; }
-    .nb-periodic-table-cell--at-default {
+    .nb-pt-cell--at-default {
       display: none; }
-    .nb-periodic-table-cell--at-wide {
+    .nb-pt-cell--at-wide {
       display: table-cell; }
-  .nb-periodic-table-element {
+  .nb-pt-element {
     display: block;
     padding: .5em .25em; }
-    .nb-periodic-table-element__basic {
+    .nb-pt-element__basic {
       display: block;
       width: 100%; }
-    .nb-periodic-table-element__extended {
+    .nb-pt-element__extended {
       display: block;
       width: 100%; }
-    .nb-periodic-table-element__atomic-number {
+    .nb-pt-element__atomic-number {
       font-size: 0.6875rem;
       top: 0.75em;
       left: 0.75em; }
-    .nb-periodic-table-element__symbol {
+    .nb-pt-element__symbol {
       font-size: 1.125rem;
       padding: 1em 0 0.25em 0; }
-    .nb-periodic-table-element__name {
+    .nb-pt-element__name {
       font-size: 0.6875rem;
       padding: 0.25em 0;
       text-align: center; }
-    .nb-periodic-table-element__properties {
+    .nb-pt-element__properties {
       display: block; }
-    .nb-periodic-table-element__atomic-mass {
+    .nb-pt-element__atomic-mass {
       display: block;
       width: 100%;
       text-align: center;
       font-size: 0.6875rem; }
-    .nb-periodic-table-element__electronegativity {
+    .nb-pt-element__electronegativity {
       position: absolute;
       display: block;
       top: 0.75em;
@@ -114,5 +114,5 @@ header {
       width: 100%;
       text-align: right;
       font-size: 0.6875rem; }
-  .nb-periodic-table-table--18 .nb-periodic-table-cell {
+  .nb-pt-table--18 .nb-pt-cell {
     width: 5.55556%; } }

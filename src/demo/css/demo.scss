@@ -20,6 +20,6 @@ header {
 }
 
 @media (min-width: 82em) {
-  @include periodic-table-color('category');
-  @include periodic-table-size('wide');
+  @include nb-periodic-table-color('category');
+  @include nb-periodic-table-size('wide');
 }

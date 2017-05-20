@@ -1,5 +1,5 @@
-@mixin periodic-table-color($style: 'default') {
-  .nb-periodic-table-cell {
+@mixin nb-periodic-table-color($style: 'default') {
+  .nb-pt-cell {
     @if $style == 'block' {
       @each $block in map-keys($nb-periodic-table-block-color-map) {
         $color: map-get($nb-periodic-table-block-color-map, $block);
@@ -32,14 +32,14 @@
   }
 }
 
-@mixin periodic-table-size($size: 'default') {
+@mixin nb-periodic-table-size($size: 'default') {
   @if $size == 'wide' {
-    .nb-periodic-table-legend {
+    .nb-pt-legend {
       padding: $nb-periodic-table-legend-padding-vert $nb-periodic-table-legend-padding-horz;
       border: 1px dotted $nb-periodic-table-cell-border;
     }
 
-    .nb-periodic-table-element-legend {
+    .nb-pt-element-legend {
       &--at-default {
         display: none;
       }
@@ -53,13 +53,13 @@
       }
 
       &__notes {
-        .nb-periodic-table-element {
+        .nb-pt-element {
           &__atomic-number,
           &__symbol,
           &__name,
           &__atomic-mass,
           &__electronegativity {
-            .nb-periodic-table-element-legend__note {
+            .nb-pt-element-legend__note {
               font-size: $nb-periodic-table-legend-label-font-size--wide;
             }
           }
@@ -67,7 +67,7 @@
       }
     }
 
-    .nb-periodic-table-category-legend {
+    .nb-pt-category-legend {
       &--at-default {
         display: none;
       }
@@ -77,11 +77,11 @@
       }
     }
 
-    .nb-periodic-table-category-legend-item {
+    .nb-pt-category-legend-item {
       font-size: $nb-periodic-table-legend-label-font-size--wide;
     }
 
-    .nb-periodic-table-table {
+    .nb-pt-table {
       display: table;
       width: auto;
       max-width: none;
@@ -91,18 +91,18 @@
       }
     }
 
-    .nb-periodic-table-row {
+    .nb-pt-row {
       display: table-row;
     }
 
-    .nb-periodic-table-cell {
+    .nb-pt-cell {
       display: table-cell;
       margin: 0;
 
       &--axis {
         display: table-cell;
 
-        .nb-periodic-table-label {
+        .nb-pt-label {
           font-size: $nb-periodic-table-axis-label-font-size--wide;
         }
       }
@@ -124,7 +124,7 @@
       }
     }
 
-    .nb-periodic-table-element {
+    .nb-pt-element {
       display: block;
       padding: .5em .25em;
 
@@ -178,19 +178,19 @@
       }
     }
 
-    .nb-periodic-table-table--18 {
-      .nb-periodic-table-cell {
+    .nb-pt-table--18 {
+      .nb-pt-cell {
         width: (100% / 18);
       }
     }
   }
   @else {
-    .nb-periodic-table-legend {
+    .nb-pt-legend {
       padding: 0;
       border: 0;
     }
 
-    .nb-periodic-table-element-legend {
+    .nb-pt-element-legend {
       &--at-default {
         display: inline-block;
       }
@@ -202,7 +202,7 @@
       &__caption {
         font-size: $nb-periodic-table-legend-label-font-size;
 
-        .nb-periodic-table-element {
+        .nb-pt-element {
           &__atomic-number,
           &__symbol,
           &__name,
@@ -222,7 +222,7 @@
       }
     }
 
-    .nb-periodic-table-category-legend {
+    .nb-pt-category-legend {
       &--at-default {
         display: none;
       }
@@ -232,11 +232,11 @@
       }
     }
 
-    .nb-periodic-table-category-legend-item {
+    .nb-pt-category-legend-item {
       font-size: $nb-periodic-table-legend-label-font-size;
     }
 
-    .nb-periodic-table-table {
+    .nb-pt-table {
       display: block;
       width: 100%;
       max-width: 24em;
@@ -246,18 +246,18 @@
       }
     }
 
-    .nb-periodic-table-row {
+    .nb-pt-row {
       display: block;
     }
 
-    .nb-periodic-table-cell {
+    .nb-pt-cell {
       display: block;
       margin: 0 auto -1px;
 
       &--axis {
         display: none;
 
-        .nb-periodic-table-label {
+        .nb-pt-label {
           font-size: $nb-periodic-table-axis-label-font-size;
         }
       }
@@ -279,7 +279,7 @@
       }
     }
 
-    .nb-periodic-table-element {
+    .nb-pt-element {
       display: table;
       padding: .5em;
 
@@ -333,8 +333,8 @@
       }
     }
 
-    .nb-periodic-table-table--18 {
-      .nb-periodic-table-cell {
+    .nb-pt-table--18 {
+      .nb-pt-cell {
         width: 100%;
       }
     }
