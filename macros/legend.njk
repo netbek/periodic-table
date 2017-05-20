@@ -121,7 +121,7 @@
     <table class="nb-periodic-table-category-legend-table">
       <caption>Categories</caption>
       <tbody>
-      {%- for elementCategory, items in elements | groupby("category") %}
+      {%- for category in categories %}
         {%- if loop.index % 2 === 1 %}
           {%- if loop.first === false %}
         </tr>
@@ -129,7 +129,7 @@
         <tr class="nb-periodic-table-category-legend-row">
           {%- endif %}
 
-        {%- for category in categories %}
+        {%- for elementCategory, items in elements | groupby("category") %}
           {%- if category.id === elementCategory %}
           <td class="nb-periodic-table-category-legend-cell">
             <span class="nb-periodic-table-category-legend-item" data-category="{{ category.id }}">
