@@ -280,7 +280,8 @@ gulp.task('build-demo-page', function (cb) {
     .then(function () {
       return Promise.props({
         categories: periodicTable.loadCategories(),
-        elements: periodicTable.loadElements()
+        elements: periodicTable.loadElements(),
+        groups: periodicTable.loadGroups()
       });
     })
     .then(function (data) {

@@ -25,5 +25,15 @@ module.exports = {
       .then(function (data) {
         return Promise.resolve(yaml.safeLoad(data));
       });
+  },
+  /**
+   *
+   * @returns {Promise}
+   */
+  loadGroups: function () {
+    return fs.readFileAsync(path.resolve(__dirname, 'data/groups.yml'), 'utf8')
+      .then(function (data) {
+        return Promise.resolve(yaml.safeLoad(data));
+      });
   }
 };

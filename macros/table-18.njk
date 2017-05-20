@@ -3,12 +3,12 @@
 {%- from "./empty-cell.njk" import emptyCell %}
 {%- from "./blockholder-element-cell.njk" import blockholderElementCell %}
 
-{%- macro table(elements) %}
+{%- macro table(elements, groups) %}
 <table class="nb-periodic-table-table nb-periodic-table-table--18">
   <tr class="nb-periodic-table-row">
     {%- for i in range(0, 18) %}
       {%- if i == 0 or i == 17 %}
-        {{ axisCell(i + 1) }}
+        {{ axisCell(groups[i + 1] | safe) }}
       {%- else %}
         {{ emptyCell() }}
       {%- endif %}
@@ -24,7 +24,7 @@
       {%- if element.atomicNumber == 2 %}
         {%- for i in range(0, 16) %}
           {%- if i == 0 or i >= 11 %}
-            {{ axisCell(1 + i + 1) }}
+            {{ axisCell(groups[1 + i + 1] | safe) }}
           {%- else %}
             {{ emptyCell() }}
           {%- endif %}
@@ -32,7 +32,7 @@
       {%- elif element.atomicNumber == 5 %}
         {%- for i in range(0, 10) %}{{ emptyCell() }}{%- endfor %}
       {%- elif element.atomicNumber == 13 %}
-        {%- for i in range(0, 10) %}{{ axisCell(2 + i + 1) }}{%- endfor %}
+        {%- for i in range(0, 10) %}{{ axisCell(groups[2 + i + 1] | safe) }}{%- endfor %}
       {%- endif %}
 
       {%- if element.atomicNumber == 57 %}
