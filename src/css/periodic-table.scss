@@ -2,6 +2,6 @@
 @import 'variables';
 @import 'mixins';
 
-@include nb-periodic-table;
+@include nb-periodic-table-base;
 @include nb-periodic-table-color;
 @include nb-periodic-table-size;
