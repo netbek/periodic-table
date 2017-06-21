@@ -1,0 +1,353 @@
+@mixin nb-periodic-table() {
+  // CATEGORY LEGEND
+
+  .nb-pt-category-legend {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .nb-pt-category-legend-table {
+    display: table;
+    border-collapse: collapse;
+    width: auto;
+
+    caption {
+      display: none;
+    }
+  }
+
+  .nb-pt-category-legend-row {
+    display: table-row;
+
+    &:last-child {
+      .nb-pt-category-legend-cell {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .nb-pt-category-legend-cell {
+    box-sizing: border-box;
+    display: table-cell;
+    padding: 0 ($nb-periodic-table-legend-padding-horz * 2) ($nb-periodic-table-legend-padding-horz * .25) 0;
+    vertical-align: top;
+
+    &:nth-child(2n+2) {
+      padding-right: 0;
+    }
+  }
+
+  .nb-pt-category-legend-item {
+    $block: '.nb-pt-category-legend-item';
+    $swatch-size: ($nb-periodic-table-legend-label-line-height * 1em);
+
+    display: block;
+    line-height: $nb-periodic-table-legend-label-line-height;
+    text-align: left;
+
+    &__swatch {
+      box-sizing: border-box;
+      display: inline-block;
+      width: $swatch-size;
+      height: $swatch-size;
+      vertical-align: middle;
+      float: left;
+      border: 1px solid $nb-periodic-table-cell-border;
+    }
+
+    &__label {
+      box-sizing: border-box;
+      display: block;
+      margin-left: $swatch-size + .75em;
+    }
+
+    @each $category in map-keys($nb-periodic-table-category-color-map) {
+      $color: map-get($nb-periodic-table-category-color-map, $category);
+
+      &[data-category='#{$category}'] {
+        #{$block}__swatch {
+          background: $color;
+        }
+      }
+    }
+  }
+
+  // ELEMENT LEGEND
+
+  .nb-pt-element-legend {
+    $block: '.nb-pt-element-legend';
+
+    display: inline-block;
+    vertical-align: top;
+
+    &--at-wide {
+      margin-right: $nb-periodic-table-legend-padding-horz * 6;
+    }
+
+    &__caption {
+      margin: ($nb-periodic-table-legend-label-line-height * 1em) auto;
+      line-height: $nb-periodic-table-legend-label-line-height;
+    }
+
+    &__subject {
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      z-index: 0;
+
+      .nb-pt-element {
+        display: inline-block;
+        width: 5em;
+        padding: .5em;
+        background: $nb-periodic-table-cell-bg;
+        border: 1px solid $nb-periodic-table-cell-border;
+      }
+    }
+
+    &__notes {
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      z-index: 1;
+
+      &--left {
+        margin-right: .75em;
+
+        .nb-pt-element {
+          #{$block}__connector {
+            right: -1.75em;
+          }
+
+          &__atomic-number {
+            top: 0;
+            margin-bottom: -$nb-periodic-table-symbol-padding-top--wide;
+          }
+
+          &__atomic-number,
+          &__symbol,
+          &__name,
+          &__atomic-mass,
+          &__electronegativity {
+            position: relative;
+            text-align: right;
+          }
+
+          &__symbol,
+          &__name,
+          &__atomic-mass,
+          &__electronegativity {
+            display: none;
+          }
+        }
+      }
+
+      &--right {
+        margin-left: .75em;
+
+        .nb-pt-element {
+          #{$block}__connector {
+            left: -1.75em;
+          }
+
+          &__atomic-number {
+            top: 0;
+            margin-bottom: -$nb-periodic-table-symbol-padding-top--wide;
+          }
+
+          &__atomic-number,
+          &__symbol,
+          &__name,
+          &__atomic-mass,
+          &__electronegativity {
+            position: relative;
+            text-align: left;
+          }
+
+          &__electronegativity {
+            display: none;
+          }
+        }
+      }
+
+      .nb-pt-element {
+        display: inline-block;
+        width: auto;
+        max-width: none;
+        background: none;
+        border-color: transparent;
+
+        #{$block}__connector {
+          border-top: 1px solid #999;
+          display: block;
+          position: absolute;
+          top: $nb-periodic-table-legend-label-line-height * .5em;
+          width: 1.25em;
+          height: 1px;
+        }
+
+        &__atomic-number {
+          left: auto;
+        }
+
+        &__atomic-number,
+        &__symbol,
+        &__name,
+        &__atomic-mass,
+        &__electronegativity {
+          #{$block}__note {
+            display: inline-block;
+            position: relative;
+            font-family: $nb-periodic-table-legend-label-font-family;
+            line-height: $nb-periodic-table-legend-label-line-height;
+            font-style: normal;
+            font-weight: normal;
+            white-space: nowrap;
+          }
+        }
+
+        &__atomic-number {
+          #{$block}__note {
+            margin: (-.5em * $nb-periodic-table-legend-label-font-size--wide / $nb-periodic-table-atomic-number-font-size--wide) 0;
+          }
+        }
+
+        &__symbol {
+          #{$block}__note {
+            margin: (-.5em * $nb-periodic-table-legend-label-font-size--wide / $nb-periodic-table-symbol-font-size--wide) 0;
+          }
+        }
+
+        &__name {
+          #{$block}__note {
+            margin: (-.5em * $nb-periodic-table-legend-label-font-size--wide / $nb-periodic-table-name-font-size--wide) 0;
+          }
+        }
+
+        &__atomic-mass {
+          #{$block}__note {
+            margin: (-.5em * $nb-periodic-table-legend-label-font-size--wide / $nb-periodic-table-atomic-mass-font-size--wide) 0;
+          }
+        }
+
+        &__electronegativity {
+          #{$block}__note {
+            margin: (-.5em * $nb-periodic-table-legend-label-font-size--wide / $nb-periodic-table-electronegativity-font-size--wide) 0;
+          }
+        }
+      }
+    }
+  }
+
+  // LEGEND
+
+  .nb-pt-legend {
+    display: inline-block;
+  }
+
+  // TABLE
+
+  .nb-pt-table {
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+
+  .nb-pt-cell {
+    box-sizing: border-box;
+    display: block;
+    vertical-align: top;
+    padding: 0;
+    border: 1px solid $nb-periodic-table-cell-border;
+
+    &--axis {
+      border: none;
+      text-align: center;
+      vertical-align: bottom;
+
+      .nb-pt-label {
+        display: inline-block;
+        font-family: $nb-periodic-table-axis-label-font-family;
+        line-height: $nb-periodic-table-axis-label-line-height;
+        font-style: $nb-periodic-table-axis-label-font-style;
+        font-weight: $nb-periodic-table-axis-label-font-weight;
+        padding: $nb-periodic-table-axis-label-padding-vert $nb-periodic-table-axis-label-padding-horz;
+      }
+    }
+
+    &--empty {
+      border: none;
+
+      .nb-pt-element {
+        height: $nb-periodic-table-empty-cell-height;
+      }
+    }
+  }
+
+  .nb-pt-element {
+    box-sizing: border-box;
+    border-collapse: collapse;
+    position: relative;
+    width: 100%;
+
+    &__basic {
+      vertical-align: middle;
+    }
+
+    &__extended {
+      vertical-align: middle;
+    }
+
+    &__atomic-number {
+      box-sizing: border-box;
+      display: block;
+      position: absolute;
+      text-align: left;
+      font-family: $nb-periodic-table-atomic-number-font-family;
+      line-height: $nb-periodic-table-atomic-number-line-height;
+    }
+
+    &__symbol {
+      box-sizing: border-box;
+      display: block;
+      position: relative;
+      margin: 0 auto;
+      text-align: center;
+      font-family: $nb-periodic-table-symbol-font-family;
+      line-height: $nb-periodic-table-symbol-line-height;
+    }
+
+    &__name {
+      box-sizing: border-box;
+      display: block;
+      position: relative;
+      margin: 0 auto;
+      font-family: $nb-periodic-table-name-font-family;
+      line-height: $nb-periodic-table-name-line-height;
+    }
+
+    &__properties {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    &__atomic-mass {
+      box-sizing: border-box;
+      position: relative;
+      margin: 0 auto;
+      padding: .25em 0;
+      font-family: $nb-periodic-table-atomic-mass-font-family;
+      line-height: $nb-periodic-table-atomic-mass-line-height;
+      font-style: $nb-periodic-table-atomic-mass-font-style;
+      font-weight: $nb-periodic-table-atomic-mass-font-weight;
+    }
+
+    &__electronegativity {
+      box-sizing: border-box;
+      position: relative;
+      margin: 0 auto;
+      font-family: $nb-periodic-table-electronegativity-font-family;
+      line-height: $nb-periodic-table-electronegativity-line-height;
+      font-style: $nb-periodic-table-electronegativity-font-style;
+      font-weight: $nb-periodic-table-electronegativity-font-weight;
+    }
+  }
+}

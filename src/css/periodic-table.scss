@@ -2,10 +2,6 @@
 @import 'variables';
 @import 'mixins';
 
-@import 'category-legend';
-@import 'element-legend';
-@import 'legend';
-@import 'table';
-
+@include nb-periodic-table;
 @include nb-periodic-table-color;
 @include nb-periodic-table-size;

@@ -1,0 +1,33 @@
+@mixin nb-periodic-table-color($style: 'default') {
+  .nb-pt-cell {
+    @if $style == 'block' {
+      @each $block in map-keys($nb-periodic-table-block-color-map) {
+        $color: map-get($nb-periodic-table-block-color-map, $block);
+
+        &[data-block='#{$block}'] {
+          background: $color;
+        }
+      }
+    }
+    @else if $style == 'category' {
+      @each $category in map-keys($nb-periodic-table-category-color-map) {
+        $color: map-get($nb-periodic-table-category-color-map, $category);
+
+        &[data-category='#{$category}'] {
+          background: $color;
+        }
+      }
+    }
+    @else {
+      background: $nb-periodic-table-cell-bg;
+    }
+
+    &--axis {
+      background: transparent;
+    }
+
+    &--empty {
+      background: transparent;
+    }
+  }
+}
