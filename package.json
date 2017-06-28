@@ -1,6 +1,6 @@
 {
   "name": "@netbek/periodic-table",
-  "version": "0.1.38",
+  "version": "0.1.39",
   "description": "",
   "main": "index.js",
   "repository": {
@@ -33,7 +33,7 @@
     "chai-as-promised": "^5.3.0",
     "cheerio": "^0.22.0",
     "cheerio-tableparser": "^1.0.1",
-    "chrys": "^0.0.6",
+    "chrys": "^0.0.8",
     "csvtojson": "^1.0.3",
     "decimal.js": "^7.1.0",
     "del": "^2.2.2",
