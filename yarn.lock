@@ -340,9 +340,9 @@ chokidar@^1.6.0:
   optionalDependencies:
     fsevents "^1.0.0"
 
-chrys@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/chrys/-/chrys-1.0.2.tgz#ccf8a7f91ca2a5d1ef57789dd12e3894d2d261ea"
+chrys@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/chrys/-/chrys-1.0.4.tgz#7fb99e383daf1fdd20a84f4e08fe2299ef9545bf"
   dependencies:
     normalize-css "git://github.com/necolas/normalize.css.git#02c5c7adbbec1707900fde86068405735c733b42"
 
