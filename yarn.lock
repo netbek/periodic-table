@@ -627,9 +627,9 @@ chownr@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/chownr/-/chownr-1.0.1.tgz#e2a75042a9551908bebd25b8523d5f9769d79181"
 
-chrys@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/chrys/-/chrys-2.0.1.tgz#0cbf5f4b5a3ae8f7ce6d71752f6e80eeab50de96"
+chrys@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/chrys/-/chrys-2.0.2.tgz#fd3d549193f0ec6957acf3af001baa2eacaa3b1e"
   dependencies:
     normalize-css "git://github.com/necolas/normalize.css.git#02c5c7adbbec1707900fde86068405735c733b42"
 

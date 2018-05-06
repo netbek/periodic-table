@@ -29,7 +29,7 @@
     "chai-as-promised": "^7.1.1",
     "cheerio": "^0.22.0",
     "cheerio-tableparser": "^1.0.1",
-    "chrys": "^2.0.1",
+    "chrys": "^2.0.2",
     "csvtojson": "^1.1.9",
     "decimal.js": "^10.0.0",
     "del": "^3.0.0",
