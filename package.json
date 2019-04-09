@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "autoprefixer": "8.6.5",
+    "babel-eslint": "8.2.6",
     "bluebird": "3.5.4",
     "chai": "4.2.0",
     "chai-as-promised": "7.1.1",
