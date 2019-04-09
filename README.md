@@ -16,7 +16,7 @@ Install or update local Node dependencies:
 
 ```
 cd /path/to/periodic-table
-yarn install
+npm install
 ```
 
 Automatically build and refresh browser during development:
