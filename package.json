@@ -33,7 +33,7 @@
     "chai-as-promised": "7.1.1",
     "cheerio": "0.22.0",
     "cheerio-tableparser": "1.0.1",
-    "chrys": "2.0.21",
+    "chrys": "2.0.27",
     "csvtojson": "1.1.12",
     "decimal.js": "10.2.0",
     "del": "3.0.0",
@@ -71,7 +71,7 @@
     "postcss": "6.0.23",
     "postcss-color-rgba-fallback": "3.0.0",
     "postcss-opacity": "5.0.0",
-    "prettier": "1.18.2",
+    "prettier": "1.19.1",
     "run-sequence": "2.2.1"
   }
 }
