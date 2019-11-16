@@ -73,7 +73,7 @@ $nb-periodic-table-block-color-map: (
   f:                                              #9bff99
 ) !default;
 
-$category-color-map:                              map-get(map-get($chrys-color-map, 'brewer-set3'), 11);
+$category-color-map:                              map-get(map-get($chrys-palettes, 'bokeh-set-3'), 11);
 $nb-periodic-table-category-color-map: (
   metalloid:                                      nth($category-color-map, 1),
   unknown-properties:                             nth($category-color-map, 2),
