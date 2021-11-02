@@ -23,7 +23,7 @@
     "eslint-scope": "3.7.1"
   },
   "dependencies": {
-    "normalize-css": "git://github.com/necolas/normalize.css.git#02c5c7adbbec1707900fde86068405735c733b42"
+    "normalize-css": "git+https://github.com/necolas/normalize.css.git#02c5c7adbbec1707900fde86068405735c733b42"
   },
   "devDependencies": {
     "autoprefixer": "8.6.5",
