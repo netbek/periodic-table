@@ -21,7 +21,7 @@ var postcssOpacity = require('postcss-opacity');
 var Promise = require('bluebird');
 var rename = require('gulp-rename');
 var runSequence = require('run-sequence');
-var sass = require('gulp-sass');
+var sass = require('gulp-sass')(require('node-sass'));
 var webserver = require('gulp-webserver');
 var yaml = require('js-yaml');
 
@@ -33,7 +33,13 @@ Promise.promisifyAll(fs);
 
 var config = require('./gulp-config.js');
 
-var livereloadOpen = (config.webserver.https ? 'https' : 'http') + '://' + config.webserver.host + ':' + config.webserver.port + (config.webserver.open ? config.webserver.open : '/');
+var livereloadOpen =
+  (config.webserver.https ? 'https' : 'http') +
+  '://' +
+  config.webserver.host +
+  ':' +
+  config.webserver.port +
+  (config.webserver.open ? config.webserver.open : '/');
 
 /*******************************************************************************
  * Misc
@@ -65,19 +71,25 @@ function buildCss(src, dist) {
   return gulp
     .src(src)
     .pipe(sass(config.css.params).on('error', sass.logError))
-    .pipe(postcss([
-      autoprefixer(config.autoprefixer),
-      pixrem,
-      postcssColorRgbaFallback,
-      postcssOpacity
-    ]))
+    .pipe(
+      postcss([
+        autoprefixer(config.autoprefixer),
+        pixrem,
+        postcssColorRgbaFallback,
+        postcssOpacity
+      ])
+    )
     .pipe(gulp.dest(dist))
-    .pipe(cssmin({
-      advanced: false
-    }))
-    .pipe(rename({
-      suffix: '.min'
-    }))
+    .pipe(
+      cssmin({
+        advanced: false
+      })
+    )
+    .pipe(
+      rename({
+        suffix: '.min'
+      })
+    )
     .pipe(gulp.dest(dist));
 }
 
@@ -93,7 +105,7 @@ function startWatch(files, tasks, livereload) {
     tasks.push('livereload-reload');
   }
 
-  gulp.watch(files, function () {
+  gulp.watch(files, function() {
     runSequence.apply(null, tasks);
   });
 }
@@ -103,17 +115,18 @@ function startWatch(files, tasks, livereload) {
  ******************************************************************************/
 
 // Start webserver.
-gulp.task('webserver-init', function (cb) {
+gulp.task('webserver-init', function(cb) {
   var conf = _.clone(config.webserver);
   conf.open = false;
 
-  gulp.src('./')
+  gulp
+    .src('./')
     .pipe(webserver(conf))
     .on('end', cb);
 });
 
 // Start livereload server
-gulp.task('livereload-init', function (cb) {
+gulp.task('livereload-init', function(cb) {
   if (!flags.livereloadInit) {
     flags.livereloadInit = true;
     server = livereload.createServer();
@@ -124,7 +137,7 @@ gulp.task('livereload-init', function (cb) {
 });
 
 // Refresh page
-gulp.task('livereload-reload', function (cb) {
+gulp.task('livereload-reload', function(cb) {
   server.refresh(livereloadOpen);
   cb();
 });
@@ -133,7 +146,7 @@ gulp.task('livereload-reload', function (cb) {
  * Tasks
  ******************************************************************************/
 
-gulp.task('build-data', function (cb) {
+gulp.task('build-data', function(cb) {
   var blocksData;
   var wikidata;
   var categoryColorMap = {};
@@ -165,8 +178,8 @@ gulp.task('build-data', function (cb) {
     noheader: true
   });
 
-  converter.on('end_parsed', function (rows) {
-    rows = _.map(rows, function (row) {
+  converter.on('end_parsed', function(rows) {
+    rows = _.map(rows, function(row) {
       row = _.pick(row, [
         'atomicNumber',
         'symbol',
@@ -184,7 +197,9 @@ gulp.task('build-data', function (cb) {
 
       if (!isNaN(row.atomicMass)) {
         row.atomicMass = Number(row.atomicMass);
-        row.atomicMass = (new Decimal(row.atomicMass)).toDecimalPlaces(2).valueOf();
+        row.atomicMass = new Decimal(row.atomicMass)
+          .toDecimalPlaces(2)
+          .valueOf();
       }
 
       if (!isNaN(row.electronegativity)) {
@@ -203,9 +218,15 @@ gulp.task('build-data', function (cb) {
       if (wikidataIndex > -1) {
         row.symbol = wikidata[1][wikidataIndex];
         row.name = wikidata[2][wikidataIndex];
-        row.group = wikidata[4][wikidataIndex] ? Number(wikidata[4][wikidataIndex]) : '';
-        row.period = wikidata[5][wikidataIndex] ? Number(wikidata[5][wikidataIndex]) : '';
-        row.category = wikidata[13][wikidataIndex] ? wikidata[13][wikidataIndex] : '';
+        row.group = wikidata[4][wikidataIndex]
+          ? Number(wikidata[4][wikidataIndex])
+          : '';
+        row.period = wikidata[5][wikidataIndex]
+          ? Number(wikidata[5][wikidataIndex])
+          : '';
+        row.category = wikidata[13][wikidataIndex]
+          ? wikidata[13][wikidataIndex]
+          : '';
       }
 
       return row;
@@ -213,45 +234,52 @@ gulp.task('build-data', function (cb) {
 
     var str = yaml.safeDump(rows);
 
-    fs.writeFileAsync('data/elements.yml', str, 'utf8')
-      .then(function () {
-        cb();
-      });
+    fs.writeFileAsync('data/elements.yml', str, 'utf8').then(function() {
+      cb();
+    });
   });
 
   fs.readFileAsync('data/src/blocks.yml', 'utf8')
-    .then(function (str) {
+    .then(function(str) {
       blocksData = yaml.safeLoad(str);
 
       return fs.readFileAsync('data/categories.yml', 'utf8');
     })
-    .then(function (str) {
+    .then(function(str) {
       var values = yaml.safeLoad(str);
 
-      _.forEach(values, function (value) {
+      _.forEach(values, function(value) {
         categoryColorMap[value.id] = value.color;
       });
 
-      return fs.readFileAsync('data/src/list-of-chemical-elements.html', 'utf8');
+      return fs.readFileAsync(
+        'data/src/list-of-chemical-elements.html',
+        'utf8'
+      );
     })
-    .then(function (str) {
+    .then(function(str) {
       var $ = cheerio.load(str);
 
       var categories = [];
 
-      $('table.wikitable > tr > td:nth-child(2)').each(function (i, elm) {
+      $('table.wikitable > tr > td:nth-child(2)').each(function(i, elm) {
         var $elm = $(this);
-        var color = $elm.css('background').trim().toLowerCase();
-        var category = _.findKey(categoryColorMap, function (value) {
+        var color = $elm
+          .css('background')
+          .trim()
+          .toLowerCase();
+        var category = _.findKey(categoryColorMap, function(value) {
           return value == color;
         });
         categories.push(category);
       });
 
       cheerioTableparser($);
-      var data = $('table.wikitable').first().parsetable(false, false, true);
+      var data = $('table.wikitable')
+        .first()
+        .parsetable(false, false, true);
 
-      data = _.map(data, function (value) {
+      data = _.map(data, function(value) {
         return value.slice(2);
       });
 
@@ -259,55 +287,50 @@ gulp.task('build-data', function (cb) {
 
       return data;
     })
-    .then(function (data) {
+    .then(function(data) {
       wikidata = data;
 
-      fs.createReadStream('data/src/pt-data1.csv')
-        .pipe(converter);
-    })
+      fs.createReadStream('data/src/pt-data1.csv').pipe(converter);
+    });
 });
 
-gulp.task('build-demo-css', function (cb) {
-  buildCss([
-      'src/css/**/*.scss',
-      'src/demo/css/**/*.scss'
-    ], 'demo/css/')
-    .on('end', cb);
+gulp.task('build-demo-css', function(cb) {
+  buildCss(['src/css/**/*.scss', 'src/demo/css/**/*.scss'], 'demo/css/').on(
+    'end',
+    cb
+  );
 });
 
-gulp.task('build-demo-page', function (cb) {
+gulp.task('build-demo-page', function(cb) {
   fs.mkdirpAsync('demo/')
-    .then(function () {
+    .then(function() {
       return Promise.props({
         categories: periodicTable.loadCategories(),
         elements: periodicTable.loadElements(),
         groups: periodicTable.loadGroups()
       });
     })
-    .then(function (data) {
-      var res = nunjucks.render('src/demo/index.njk', data, function (err, res) {
+    .then(function(data) {
+      var res = nunjucks.render('src/demo/index.njk', data, function(err, res) {
         if (err) {
           console.log(err);
           cb();
-        }
-        else {
-          fs.writeFileAsync('demo/index.html', res, 'utf8')
-            .then(function () {
-              cb();
-            });
+        } else {
+          fs.writeFileAsync('demo/index.html', res, 'utf8').then(function() {
+            cb();
+          });
         }
       });
     });
 });
 
-gulp.task('build-demo-vendor', function () {
-  return gulp.src([
-      'node_modules/normalize-css/**/*.css'
-    ])
+gulp.task('build-demo-vendor', function() {
+  return gulp
+    .src(['node_modules/normalize-css/**/*.css'])
     .pipe(gulp.dest('demo/css/'));
 });
 
-gulp.task('build', function (cb) {
+gulp.task('build', function(cb) {
   runSequence(
     'build-data',
     'build-demo-css',
@@ -317,18 +340,12 @@ gulp.task('build', function (cb) {
   );
 });
 
-gulp.task('deploy', function () {
-  return gulp.src('demo/**/*')
-    .pipe(ghPages());
+gulp.task('deploy', function() {
+  return gulp.src('demo/**/*').pipe(ghPages());
 });
 
-gulp.task('livereload', function () {
-  runSequence(
-    'build',
-    'webserver-init',
-    'livereload-init',
-    'watch:livereload'
-  );
+gulp.task('livereload', function() {
+  runSequence('build', 'webserver-init', 'livereload-init', 'watch:livereload');
 });
 
 /*******************************************************************************
@@ -336,10 +353,10 @@ gulp.task('livereload', function () {
  ******************************************************************************/
 
 // Watch with livereload that doesn't rebuild docs
-gulp.task('watch:livereload', function (cb) {
+gulp.task('watch:livereload', function(cb) {
   var livereloadTask = 'livereload-reload';
 
-  _.forEach(config.watchTasks, function (watchConfig) {
+  _.forEach(config.watchTasks, function(watchConfig) {
     var tasks = _.clone(watchConfig.tasks);
     tasks.push(livereloadTask);
     startWatch(watchConfig.files, tasks);
