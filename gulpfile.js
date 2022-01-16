@@ -153,116 +153,26 @@ gulp.task('watch:livereload', function(cb) {
  * Tasks
  ---------------------------------------------------------------------------- */
 
-gulp.task('build-data', function(cb) {
+gulp.task('build-data', () => {
   var blocksData;
   var wikidata;
   var categoryColorMap = {};
 
-  var Converter = csvtojson.Converter;
-  var converter = new Converter({
-    headers: [
-      'string#!atomicNumber',
-      'string#!symbol',
-      'string#!name',
-      'string#!atomicMass',
-      'string#!cpkHexColor',
-      'string#!electronConfiguration',
-      'string#!electronegativity',
-      'string#!atomicRadius',
-      'string#!ionRadius',
-      'string#!vanDelWaalsRadius',
-      'string#!ionizationEnergy',
-      'string#!electronAffinity',
-      'string#!oxidationStates',
-      'string#!standardState',
-      'string#!bondingType',
-      'string#!meltingPoint',
-      'string#!boilingPoint',
-      'string#!density',
-      'string#!groupBlock',
-      'string#!yearDiscovered'
-    ],
-    noheader: true
-  });
-
-  converter.on('end_parsed', function(rows) {
-    rows = _.map(rows, function(row) {
-      row = _.pick(row, [
-        'atomicNumber',
-        'symbol',
-        'name',
-        'atomicMass',
-        'electronegativity'
-      ]);
-
-      if (!isNaN(row.atomicNumber)) {
-        row.atomicNumber = Number(row.atomicNumber);
-      }
-
-      row.atomicMass = row.atomicMass.replace(/^([0-9\.]+).*$/, '$1');
-      row.atomicMass = row.atomicMass.replace(/\[/, '(').replace(/\]/, ')');
-
-      if (!isNaN(row.atomicMass)) {
-        row.atomicMass = Number(row.atomicMass);
-        row.atomicMass = new Decimal(row.atomicMass)
-          .toDecimalPlaces(2)
-          .valueOf();
-      }
-
-      if (!isNaN(row.electronegativity)) {
-        row.electronegativity = Number(row.electronegativity);
-      }
-
-      row.block = _.find(blocksData, {
-        atomicNumber: row.atomicNumber
-      }).block;
-      row.group = '';
-      row.period = '';
-      row.category = '';
-
-      var wikidataIndex = wikidata[0].indexOf(row.atomicNumber.toString());
-
-      if (wikidataIndex > -1) {
-        row.symbol = wikidata[1][wikidataIndex];
-        row.name = wikidata[2][wikidataIndex];
-        row.group = wikidata[4][wikidataIndex]
-          ? Number(wikidata[4][wikidataIndex])
-          : '';
-        row.period = wikidata[5][wikidataIndex]
-          ? Number(wikidata[5][wikidataIndex])
-          : '';
-        row.category = wikidata[13][wikidataIndex]
-          ? wikidata[13][wikidataIndex]
-          : '';
-      }
-
-      return row;
-    });
-
-    var str = yaml.safeDump(rows);
-
-    fs.writeFileAsync('data/elements.yml', str, 'utf8').then(function() {
-      cb();
-    });
-  });
-
-  fs.readFileAsync('data/src/blocks.yml', 'utf8')
+  return fs
+    .readFile('data/src/blocks.yml', 'utf8')
     .then(function(str) {
-      blocksData = yaml.safeLoad(str);
+      blocksData = yaml.load(str);
 
-      return fs.readFileAsync('data/categories.yml', 'utf8');
+      return fs.readFile('data/categories.yml', 'utf8');
     })
     .then(function(str) {
-      var values = yaml.safeLoad(str);
+      var values = yaml.load(str);
 
       _.forEach(values, function(value) {
         categoryColorMap[value.id] = value.color;
       });
 
-      return fs.readFileAsync(
-        'data/src/list-of-chemical-elements.html',
-        'utf8'
-      );
+      return fs.readFile('data/src/list-of-chemical-elements.html', 'utf8');
     })
     .then(function(str) {
       var $ = cheerio.load(str);
@@ -294,10 +204,94 @@ gulp.task('build-data', function(cb) {
 
       return data;
     })
-    .then(function(data) {
+    .then(data => {
       wikidata = data;
 
-      fs.createReadStream('data/src/pt-data1.csv').pipe(converter);
+      const parserParams = {
+        headers: [
+          'atomicNumber',
+          'symbol',
+          'name',
+          'atomicMass',
+          'cpkHexColor',
+          'electronConfiguration',
+          'electronegativity',
+          'atomicRadius',
+          'ionRadius',
+          'vanDelWaalsRadius',
+          'ionizationEnergy',
+          'electronAffinity',
+          'oxidationStates',
+          'standardState',
+          'bondingType',
+          'meltingPoint',
+          'boilingPoint',
+          'density',
+          'groupBlock',
+          'yearDiscovered'
+        ],
+        noheader: true
+      };
+
+      return csvtojson(parserParams).fromFile('data/src/pt-data1.csv');
+    })
+    .then(jsonArray => {
+      const rows = _.map(jsonArray, function(row) {
+        row = _.pick(row, [
+          'atomicNumber',
+          'symbol',
+          'name',
+          'atomicMass',
+          'electronegativity'
+        ]);
+
+        if (!isNaN(row.atomicNumber)) {
+          row.atomicNumber = Number(row.atomicNumber);
+        }
+
+        row.atomicMass = row.atomicMass.replace(/^([0-9\.]+).*$/, '$1');
+        row.atomicMass = row.atomicMass.replace(/\[/, '(').replace(/\]/, ')');
+
+        if (!isNaN(row.atomicMass)) {
+          row.atomicMass = Number(row.atomicMass);
+          row.atomicMass = new Decimal(row.atomicMass)
+            .toDecimalPlaces(2)
+            .valueOf();
+        }
+
+        if (!isNaN(row.electronegativity)) {
+          row.electronegativity = Number(row.electronegativity);
+        }
+
+        row.block = _.find(blocksData, {
+          atomicNumber: row.atomicNumber
+        }).block;
+        row.group = '';
+        row.period = '';
+        row.category = '';
+
+        var wikidataIndex = wikidata[0].indexOf(row.atomicNumber.toString());
+
+        if (wikidataIndex > -1) {
+          row.symbol = wikidata[1][wikidataIndex];
+          row.name = wikidata[2][wikidataIndex];
+          row.group = wikidata[4][wikidataIndex]
+            ? Number(wikidata[4][wikidataIndex])
+            : '';
+          row.period = wikidata[5][wikidataIndex]
+            ? Number(wikidata[5][wikidataIndex])
+            : '';
+          row.category = wikidata[13][wikidataIndex]
+            ? wikidata[13][wikidataIndex]
+            : '';
+        }
+
+        return row;
+      });
+
+      const str = yaml.dump(rows);
+
+      return fs.writeFile('data/elements.yml', str, 'utf8');
     });
 });
 

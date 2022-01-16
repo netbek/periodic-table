@@ -1,16 +1,8 @@
+const {browserslist} = require('./package.json');
+
 module.exports = {
   autoprefixer: {
-    browsers: [
-      'last 2 versions',
-      'ie >= 8',
-      'ff >= 5',
-      'chrome >= 20',
-      'opera >= 12',
-      'safari >= 4',
-      'ios >= 6',
-      'android >= 2',
-      'bb >= 6'
-    ]
+    overrideBrowserslist: browserslist
   },
   css: {
     params: {
