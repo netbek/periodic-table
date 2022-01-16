@@ -10,30 +10,33 @@ module.exports = {
    *
    * @returns {Promise}
    */
-  loadCategories: function () {
-    return fs.readFileAsync(path.resolve(__dirname, 'data/categories.yml'), 'utf8')
-      .then(function (data) {
-        return Promise.resolve(yaml.safeLoad(data));
+  loadCategories: function() {
+    return fs
+      .readFile(path.resolve(__dirname, 'data/categories.yml'), 'utf8')
+      .then(function(data) {
+        return Promise.resolve(yaml.load(data));
       });
   },
   /**
    *
    * @returns {Promise}
    */
-  loadElements: function () {
-    return fs.readFileAsync(path.resolve(__dirname, 'data/elements.yml'), 'utf8')
-      .then(function (data) {
-        return Promise.resolve(yaml.safeLoad(data));
+  loadElements: function() {
+    return fs
+      .readFile(path.resolve(__dirname, 'data/elements.yml'), 'utf8')
+      .then(function(data) {
+        return Promise.resolve(yaml.load(data));
       });
   },
   /**
    *
    * @returns {Promise}
    */
-  loadGroups: function () {
-    return fs.readFileAsync(path.resolve(__dirname, 'data/groups.yml'), 'utf8')
-      .then(function (data) {
-        return Promise.resolve(yaml.safeLoad(data));
+  loadGroups: function() {
+    return fs
+      .readFile(path.resolve(__dirname, 'data/groups.yml'), 'utf8')
+      .then(function(data) {
+        return Promise.resolve(yaml.load(data));
       });
   }
 };
