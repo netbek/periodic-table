@@ -5,7 +5,6 @@ var cheerioTableparser = require('cheerio-tableparser');
 var cssmin = require('gulp-cssmin');
 var csvtojson = require('csvtojson');
 var Decimal = require('decimal.js');
-var del = require('del');
 var fs = require('fs-extra');
 var ghPages = require('gulp-gh-pages');
 var gulp = require('gulp');
@@ -20,16 +19,15 @@ var postcssColorRgbaFallback = require('postcss-color-rgba-fallback');
 var postcssOpacity = require('postcss-opacity');
 var Promise = require('bluebird');
 var rename = require('gulp-rename');
-var runSequence = require('run-sequence');
 var sass = require('gulp-sass')(require('node-sass'));
 var webserver = require('gulp-webserver');
 var yaml = require('js-yaml');
 
 Promise.promisifyAll(fs);
 
-/*******************************************************************************
+/* -----------------------------------------------------------------------------
  * Config
- ******************************************************************************/
+ ---------------------------------------------------------------------------- */
 
 var config = require('./gulp-config.js');
 
@@ -41,9 +39,9 @@ var livereloadOpen =
   config.webserver.port +
   (config.webserver.open ? config.webserver.open : '/');
 
-/*******************************************************************************
+/* -----------------------------------------------------------------------------
  * Misc
- ******************************************************************************/
+ ---------------------------------------------------------------------------- */
 
 var flags = {
   livereloadInit: false // Whether `livereload-init` task has been run
@@ -57,9 +55,9 @@ if (_.has(config.webserver.browsers, platform)) {
   browser = config.webserver.browsers[platform];
 }
 
-/*******************************************************************************
+/* -----------------------------------------------------------------------------
  * Functions
- ******************************************************************************/
+ ---------------------------------------------------------------------------- */
 
 /**
  *
@@ -105,14 +103,12 @@ function startWatch(files, tasks, livereload) {
     tasks.push('livereload-reload');
   }
 
-  gulp.watch(files, function() {
-    runSequence.apply(null, tasks);
-  });
+  return gulp.watch(files, gulp.series(...tasks));
 }
 
-/*******************************************************************************
+/* -----------------------------------------------------------------------------
  * Livereload tasks
- ******************************************************************************/
+ ---------------------------------------------------------------------------- */
 
 // Start webserver.
 gulp.task('webserver-init', function(cb) {
@@ -142,9 +138,20 @@ gulp.task('livereload-reload', function(cb) {
   cb();
 });
 
-/*******************************************************************************
+// Watch with livereload that doesn't rebuild docs
+gulp.task('watch:livereload', function(cb) {
+  var livereloadTask = 'livereload-reload';
+
+  _.forEach(config.watchTasks, function(watchConfig) {
+    var tasks = _.clone(watchConfig.tasks);
+    tasks.push(livereloadTask);
+    startWatch(watchConfig.files, tasks);
+  });
+});
+
+/* -----------------------------------------------------------------------------
  * Tasks
- ******************************************************************************/
+ ---------------------------------------------------------------------------- */
 
 gulp.task('build-data', function(cb) {
   var blocksData;
@@ -330,41 +337,27 @@ gulp.task('build-demo-vendor', function() {
     .pipe(gulp.dest('demo/css/'));
 });
 
-gulp.task('build', function(cb) {
-  runSequence(
+gulp.task(
+  'build',
+  gulp.series(
     'build-data',
     'build-demo-css',
     'build-demo-page',
-    'build-demo-vendor',
-    cb
-  );
-});
+    'build-demo-vendor'
+  )
+);
 
 gulp.task('deploy', function() {
   return gulp.src('demo/**/*').pipe(ghPages());
 });
 
-gulp.task('livereload', function() {
-  runSequence('build', 'webserver-init', 'livereload-init', 'watch:livereload');
-});
+gulp.task(
+  'livereload',
+  gulp.series('build', 'webserver-init', 'livereload-init', 'watch:livereload')
+);
 
-/*******************************************************************************
- * Watch tasks
- ******************************************************************************/
-
-// Watch with livereload that doesn't rebuild docs
-gulp.task('watch:livereload', function(cb) {
-  var livereloadTask = 'livereload-reload';
-
-  _.forEach(config.watchTasks, function(watchConfig) {
-    var tasks = _.clone(watchConfig.tasks);
-    tasks.push(livereloadTask);
-    startWatch(watchConfig.files, tasks);
-  });
-});
-
-/*******************************************************************************
+/* -----------------------------------------------------------------------------
  * Default task
- ******************************************************************************/
+ ---------------------------------------------------------------------------- */
 
-gulp.task('default', ['build']);
+gulp.task('default', gulp.series('build'));
