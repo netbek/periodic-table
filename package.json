@@ -36,7 +36,6 @@
     "chrys": "4.0.9",
     "csvtojson": "1.1.12",
     "decimal.js": "10.3.1",
-    "del": "3.0.0",
     "eslint": "4.19.1",
     "eslint-config-airbnb": "16.1.0",
     "eslint-config-prettier": "2.10.0",
@@ -71,7 +70,6 @@
     "postcss": "6.0.23",
     "postcss-color-rgba-fallback": "3.0.0",
     "postcss-opacity": "5.0.0",
-    "prettier": "1.19.1",
-    "run-sequence": "2.2.1"
+    "prettier": "1.19.1"
   }
 }
