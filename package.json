@@ -1,6 +1,6 @@
 {
   "name": "@netbek/periodic-table",
-  "version": "0.1.71",
+  "version": "0.1.72",
   "browserslist": [
     "last 5 years",
     "bb >= 6",
