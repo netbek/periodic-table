@@ -1,6 +1,10 @@
 {
   "name": "@netbek/periodic-table",
   "version": "0.1.81",
+  "engines": {
+    "node": "18.16.0",
+    "npm": "9.6.7"
+  },
   "browserslist": [
     "last 5 years",
     "bb >= 6",
@@ -39,10 +43,10 @@
     "chai-as-promised": "7.1.1",
     "cheerio": "0.22.0",
     "cheerio-tableparser": "1.0.1",
-    "chrys": "4.0.26",
+    "chrys": "4.0.27",
     "csvtojson": "2.0.10",
     "decimal.js": "10.4.3",
-    "eslint": "8.41.0",
+    "eslint": "8.42.0",
     "eslint-config-prettier": "8.8.0",
     "eslint-plugin-prettier": "4.2.1",
     "espree": "9.5.2",
