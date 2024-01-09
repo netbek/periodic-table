@@ -1,6 +1,6 @@
 {
   "name": "@netbek/periodic-table",
-  "version": "0.1.82",
+  "version": "0.1.83",
   "engines": {
     "node": "20.10.0",
     "npm": "10.2.3"
