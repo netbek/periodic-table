@@ -28,14 +28,13 @@ gulp livereload
 Build the Python distribution package:
 
 ```shell
-npm run build-py
+npm run build-dist
 ```
 
 Publish the Node and Python distribution packages:
 
 ```shell
-npm publish
-npm run publish-py
+npm run publish-dist
 ```
 
 ## Feature ideas

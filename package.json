@@ -20,8 +20,8 @@
     "src/css"
   ],
   "scripts": {
-    "build-py": "python3 -m build",
-    "publish-py": "python3 -m twine upload --config-file .pypirc --verbose dist/*",
+    "build-dist": "./scripts/build.sh",
+    "publish-dist": "./scripts/publish.sh",
     "test": "echo test"
   },
   "author": {
