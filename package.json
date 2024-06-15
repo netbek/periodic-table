@@ -15,7 +15,13 @@
     "type": "git",
     "url": "git://github.com/netbek/periodic-table"
   },
+  "files": [
+    "macros",
+    "src/css"
+  ],
   "scripts": {
+    "build-py": "python3 -m build",
+    "publish-py": "python3 -m twine upload --config-file .pypirc --verbose dist/*",
     "test": "echo test"
   },
   "author": {

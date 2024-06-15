@@ -1,6 +1,12 @@
 bower_components
 node_modules
 npm-debug.log
+*.bak
+*.egg-info
+*.pyc
+build/
+venv/
+.pypirc
 
 # IDE files
 nbproject

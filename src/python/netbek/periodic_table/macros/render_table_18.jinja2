@@ -1,9 +1,9 @@
-{%- from "./axis_cell.jinja2" import render_axis_cell %}
-{%- from "./element_cell.jinja2" import render_element_cell %}
-{%- from "./empty_cell.jinja2" import render_empty_cell %}
-{%- from "./blockholder_element_cell.jinja2" import render_blockholder_element_cell %}
+{%- from "./render_axis_cell.jinja2" import render_axis_cell %}
+{%- from "./render_element_cell.jinja2" import render_element_cell %}
+{%- from "./render_empty_cell.jinja2" import render_empty_cell %}
+{%- from "./render_blockholder_element_cell.jinja2" import render_blockholder_element_cell %}
 
-{%- macro table(elements, groups) %}
+{%- macro render_table(elements, groups) %}
 <table class="nb-pt-table nb-pt-table--18">
   <tr class="nb-pt-row">
     {%- for i in range(0, 18) %}

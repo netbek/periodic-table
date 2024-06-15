@@ -3,8 +3,8 @@ requires = ["setuptools >= 51.1.2"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "periodic-table"
-version = "0.1.86"
+name = "netbek-periodic-table"
+version = "0.1.87"
 authors = [
     {name = "Hein Bekker", email = "hein@netbek.co.za"},
 ]
@@ -26,3 +26,9 @@ Documentation = "https://netbek.github.io/periodic-table"
 Repository = "https://github.com/netbek/periodic-table.git"
 Issues = "https://github.com/netbek/periodic-table/issues"
 Changelog = "https://github.com/netbek/periodic-table/releases"
+
+[tool.setuptools.packages.find]
+where = ["src/python"]
+
+[tool.setuptools.package-data]
+"*" = ["*.jinja2"]

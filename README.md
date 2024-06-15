@@ -14,15 +14,28 @@ See [github.com/netbek/periodic-table-demo](https://github.com/netbek/periodic-t
 
 Install or update local Node dependencies:
 
-```
+```shell
 cd /path/to/periodic-table
 npm install
 ```
 
 Automatically build and refresh browser during development:
 
-```
+```shell
 gulp livereload
+```
+
+Build the Python distribution package:
+
+```shell
+npm run build-py
+```
+
+Publish the Node and Python distribution packages:
+
+```shell
+npm publish
+npm run publish-py
 ```
 
 ## Feature ideas
@@ -32,8 +45,8 @@ gulp livereload
 
 ## Credit
 
-* Wikipedia contributors, "List of chemical elements," Wikipedia, The Free Encyclopedia, https://en.wikipedia.org/w/index.php?title=List_of_chemical_elements&oldid=755677624 (accessed December 19, 2016). (CC BY-SA 3.0)
-* Doug Hogan, "Periodic Table Data" http://php.scripts.psu.edu/djh300/cmpsc221/p3s11-pt-data.htm (?)
+* Wikipedia contributors, "List of chemical elements," Wikipedia, The Free Encyclopedia, [https://en.wikipedia.org/w/index.php?title=List_of_chemical_elements&oldid=755677624](https://en.wikipedia.org/w/index.php?title=List_of_chemical_elements&oldid=755677624) (accessed December 19, 2016). (CC BY-SA 3.0)
+* Doug Hogan, "Periodic Table Data" [http://php.scripts.psu.edu/djh300/cmpsc221/p3s11-pt-data.htm](http://php.scripts.psu.edu/djh300/cmpsc221/p3s11-pt-data.htm) (?)
 
 ## License
 
