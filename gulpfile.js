@@ -205,7 +205,7 @@ gulp.task('build-data', () => {
           'symbol',
           'name',
           'atomic_mass',
-          'cpkHexColor',
+          'cpk_hex_color',
           'electron_configuration',
           'electronegativity',
           'atomic_radius',
@@ -326,7 +326,7 @@ gulp.task('build-demo-vendor', function () {
 gulp.task(
   'build',
   gulp.series(
-    'build-data',
+    // 'build-data',
     'build-demo-css',
     'build-demo-page',
     'build-demo-vendor'

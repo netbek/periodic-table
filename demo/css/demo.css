@@ -15,24 +15,26 @@ header {
   .nb-pt-cell[data-category='metalloid'] {
     background: #8dd3c7; }
   .nb-pt-cell[data-category='unknown_properties'] {
-    background: #ffffb3; }
+    background: #d9d9d9; }
   .nb-pt-cell[data-category='alkali_metal'] {
     background: #bebada; }
   .nb-pt-cell[data-category='alkaline_earth_metal'] {
     background: #fb8072; }
   .nb-pt-cell[data-category='lanthanide'] {
-    background: #80b1d3; }
+    background: #ffffb3; }
   .nb-pt-cell[data-category='actinide'] {
-    background: #fdb462; }
+    background: #ffed6f; }
   .nb-pt-cell[data-category='transition_metal'] {
-    background: #b3de69; }
+    background: #80b1d3; }
   .nb-pt-cell[data-category='post_transition_metal'] {
-    background: #fccde5; }
+    background: #fdb462; }
   .nb-pt-cell[data-category='polyatomic_non_metal'] {
-    background: #d9d9d9; }
+    background: #b3de69; }
   .nb-pt-cell[data-category='diatomic_non_metal'] {
-    background: #bc80bd; }
+    background: #fccde5; }
   .nb-pt-cell[data-category='noble_gas'] {
+    background: #bc80bd; }
+  .nb-pt-cell[data-category='hydrogen'] {
     background: #ccebc5; }
   .nb-pt-cell--axis {
     background: transparent; }

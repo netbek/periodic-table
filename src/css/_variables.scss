@@ -73,17 +73,18 @@ $nb-periodic-table-block-color-map: (
   f:                                              #9bff99
 ) !default;
 
-$category-color-map:                              map-get(map-get($chrys-palettes, 'bokeh-set-3'), 11);
+$category-color-map:                              map-get(map-get($chrys-palettes, 'bokeh-set-3'), 12);
 $nb-periodic-table-category-color-map: (
   metalloid:                                      nth($category-color-map, 1),
-  unknown_properties:                             nth($category-color-map, 2),
+  unknown_properties:                             nth($category-color-map, 9),
   alkali_metal:                                   nth($category-color-map, 3),
   alkaline_earth_metal:                           nth($category-color-map, 4),
-  lanthanide:                                     nth($category-color-map, 5),
-  actinide:                                       nth($category-color-map, 6),
-  transition_metal:                               nth($category-color-map, 7),
-  post_transition_metal:                          nth($category-color-map, 8),
-  polyatomic_non_metal:                           nth($category-color-map, 9),
-  diatomic_non_metal:                             nth($category-color-map, 10),
-  noble_gas:                                      nth($category-color-map, 11)
-) !default;
+  lanthanide:                                     nth($category-color-map, 2),
+  actinide:                                       nth($category-color-map, 12),
+  transition_metal:                               nth($category-color-map, 5),
+  post_transition_metal:                          nth($category-color-map, 6),
+  polyatomic_non_metal:                           nth($category-color-map, 7),
+  diatomic_non_metal:                             nth($category-color-map, 8),
+  noble_gas:                                      nth($category-color-map, 10),
+  hydrogen:                                       nth($category-color-map, 11)
+);
