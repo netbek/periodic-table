@@ -1,4 +1,7 @@
-class Category:
+from enum import Enum
+
+
+class Category(Enum):
     ALKALI_METAL = "alkali_metal"
     ALKALINE_EARTH_METAL = "alkaline_earth_metal"
     TRANSITION_METAL = "transition_metal"
@@ -55,7 +58,6 @@ element_columns = {
     "name": "Name",
     "atomic_mass": "Relative atomic mass",
     "electronegativity": "Electronegativity",
-    "work_function": "Work function",
     "block": "Block",
     "group": "Group",
     "period": "Period",

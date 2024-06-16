@@ -121,7 +121,7 @@
     <table class="nb-pt-category-legend-table">
       <caption>Categories</caption>
       <tbody>
-      {%- for category_id, category_name in categories.items() %}
+      {%- for category_enum, category_name in categories.items() %}
         {%- if loop.index % 2 == 1 %}
           {%- if loop.first == false %}
         </tr>
@@ -129,10 +129,10 @@
         <tr class="nb-pt-category-legend-row">
           {%- endif %}
 
-        {%- for element_category, items in elements | groupby("category") %}
-          {%- if category_id == element_category %}
+        {%- for key, value in elements | map(attribute="category") | groupby("value") %}
+          {%- if category_enum.value == key %}
           <td class="nb-pt-category-legend-cell">
-            <span class="nb-pt-category-legend-item" data-category="{{ category_id }}">
+            <span class="nb-pt-category-legend-item" data-category="{{ category_enum.value }}">
               <span class="nb-pt-category-legend-item__swatch"></span>
               <span class="nb-pt-category-legend-item__label">{{ category_name }}</span>
             </span>

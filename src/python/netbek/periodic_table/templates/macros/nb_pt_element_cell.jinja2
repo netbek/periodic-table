@@ -9,7 +9,7 @@
   {%- if add_class_name %}
     {%- set class_name = class_name + " " + add_class_name %}
   {%- endif %}
-<td class="{{ class_name }}" data-block="{{ element.block }}" data-category="{{ element.category }}">
+<td class="{{ class_name }}" data-block="{{ element.block }}" data-category="{{ element.category.value }}">
   <span class="nb-pt-element">
     <span class="nb-pt-element__basic">
       <span class="nb-pt-element__atomic-number">
