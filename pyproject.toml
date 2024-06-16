@@ -28,7 +28,7 @@ Issues = "https://github.com/netbek/periodic-table/issues"
 Changelog = "https://github.com/netbek/periodic-table/releases"
 
 [tool.setuptools.packages.find]
-where = ["src/python"]
+where = ["python/src"]
 
 [tool.setuptools.package-data]
 "*" = ["*.jinja2"]
