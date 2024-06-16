@@ -8,7 +8,78 @@ Periodic table with responsive layout.
 
 ## Integration
 
-See [github.com/netbek/periodic-table-demo](https://github.com/netbek/periodic-table-demo) for a demo integration into the frontend environment/workflow.
+Install the package:
+
+```shell
+npm install @netbek/periodic-table
+```
+
+Create a Sass file:
+
+```scss
+@import 'node_modules/@netbek/periodic-table/src/css/mixins';
+
+// Define vars that should override defaults
+$nb-periodic-table-cell-bg:                       #eee;
+$nb-periodic-table-cell-border:                   #ccc;
+
+// Load default vars
+@import 'node_modules/@netbek/periodic-table/src/css/variables';
+
+// Mobile-first layout
+@include nb-periodic-table-base;
+@include nb-periodic-table-color;
+@include nb-periodic-table-size;
+
+// Wide breakpoint layout
+@media (min-width: 82em) {
+  @include nb-periodic-table-color('category');
+  @include nb-periodic-table-size('wide');
+}
+```
+
+Create a Nunjucks template:
+
+```html
+{%- from "path/to/node_modules/@netbek/periodic-table/macros/legend.njk" import legend %}
+{%- from "path/to/node_modules/@netbek/periodic-table/macros/table-18.njk" import table %}
+<html>
+  <body>
+    {% set element_columns = {
+        atomic_number: 'Atomic number',
+        symbol: 'Symbol',
+        name: 'Name',
+        atomic_mass: 'Atomic mass',
+        electronegativity: 'Electronegativity'
+    } %}
+    {{ legend(elements, categories, element_columns) }}
+    {{ table(elements, groups) }}
+  </body>
+</html>
+```
+
+Render the Nunjucks template:
+
+```js
+import nunjucks from 'nunjucks';
+import periodicTable from '@netbek/periodic-table';
+
+async function render() {
+  const categories = await periodicTable.loadCategories();
+  const elements = await periodicTable.loadElements();
+  const groups = await periodicTable.loadGroups();
+
+  const data = {
+    categories,
+    elements,
+    groups
+  };
+
+  return nunjucks.render('path/to/template.njk', data);
+}
+
+render();
+```
 
 ## Development
 
