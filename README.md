@@ -1,4 +1,4 @@
-# Periodic table [![Build Status](https://secure.travis-ci.org/netbek/periodic-table.png?branch=master)](http://travis-ci.org/netbek/periodic-table)
+# Periodic table
 
 Periodic table with responsive layout.
 
