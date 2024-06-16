@@ -41,8 +41,8 @@ $nb-periodic-table-cell-border:                   #ccc;
 Create a Nunjucks template:
 
 ```html
-{%- from "path/to/node_modules/@netbek/periodic-table/macros/legend.njk" import legend %}
-{%- from "path/to/node_modules/@netbek/periodic-table/macros/table-18.njk" import table %}
+{%- from "path/to/node_modules/@netbek/periodic-table/macros/nb_pt_legend.njk" import nb_pt_legend %}
+{%- from "path/to/node_modules/@netbek/periodic-table/macros/nb_pt_table_18.njk" import nb_pt_table_18 %}
 <html>
   <body>
     {% set element_columns = {
@@ -52,8 +52,8 @@ Create a Nunjucks template:
         atomic_mass: 'Atomic mass',
         electronegativity: 'Electronegativity'
     } %}
-    {{ legend(elements, categories, element_columns) }}
-    {{ table(elements, groups) }}
+    {{ nb_pt_legend(elements, categories, element_columns) }}
+    {{ nb_pt_table_18(elements, groups) }}
   </body>
 </html>
 ```

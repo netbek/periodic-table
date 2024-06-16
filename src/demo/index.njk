@@ -1,5 +1,5 @@
-{%- from "./../../macros/legend.njk" import legend %}
-{%- from "./../../macros/table-18.njk" import table %}
+{%- from "./../../macros/nb_pt_legend.njk" import nb_pt_legend %}
+{%- from "./../../macros/nb_pt_table_18.njk" import nb_pt_table_18 %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -18,17 +18,18 @@
           <h1>Periodic Table of Elements</h1>
         </header>
 
-        {{ legend(elements, categories, {
-          atomic_number: 'Atomic number',
-          symbol: 'Symbol',
-          name: 'Name',
-          atomic_mass: 'Atomic mass',
-          electronegativity: 'Electronegativity'
-        }) }}
+        {% set element_columns = {
+            atomic_number: 'Atomic number',
+            symbol: 'Symbol',
+            name: 'Name',
+            atomic_mass: 'Atomic mass',
+            electronegativity: 'Electronegativity'
+        } %}
+        {{ nb_pt_legend(elements, categories, element_columns) }}
       </div>
 
       <div class="constraint constraint--periodic-table">
-        {{ table(elements, groups) }}
+        {{ nb_pt_table_18(elements, groups) }}
       </div>
     </main>
   </body>
