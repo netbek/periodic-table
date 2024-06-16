@@ -16,7 +16,6 @@
 
 .nb-pt-category-legend-cell {
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
           box-sizing: border-box;
   display: table-cell;
   padding: 0 2em 0.25em 0;
@@ -30,7 +29,6 @@
   text-align: left; }
   .nb-pt-category-legend-item__swatch {
     -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
             box-sizing: border-box;
     display: inline-block;
     width: 1.5em;
@@ -40,31 +38,32 @@
     border: 1px solid #ccc; }
   .nb-pt-category-legend-item__label {
     -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
             box-sizing: border-box;
     display: block;
     margin-left: 2.25em; }
   .nb-pt-category-legend-item[data-category='metalloid'] .nb-pt-category-legend-item__swatch {
     background: #8dd3c7; }
-  .nb-pt-category-legend-item[data-category='unknown-properties'] .nb-pt-category-legend-item__swatch {
-    background: #ffffb3; }
-  .nb-pt-category-legend-item[data-category='alkali-metal'] .nb-pt-category-legend-item__swatch {
+  .nb-pt-category-legend-item[data-category='unknown_properties'] .nb-pt-category-legend-item__swatch {
+    background: #d9d9d9; }
+  .nb-pt-category-legend-item[data-category='alkali_metal'] .nb-pt-category-legend-item__swatch {
     background: #bebada; }
-  .nb-pt-category-legend-item[data-category='alkaline-earth-metal'] .nb-pt-category-legend-item__swatch {
+  .nb-pt-category-legend-item[data-category='alkaline_earth_metal'] .nb-pt-category-legend-item__swatch {
     background: #fb8072; }
   .nb-pt-category-legend-item[data-category='lanthanide'] .nb-pt-category-legend-item__swatch {
-    background: #80b1d3; }
+    background: #ffffb3; }
   .nb-pt-category-legend-item[data-category='actinide'] .nb-pt-category-legend-item__swatch {
+    background: #ffed6f; }
+  .nb-pt-category-legend-item[data-category='transition_metal'] .nb-pt-category-legend-item__swatch {
+    background: #80b1d3; }
+  .nb-pt-category-legend-item[data-category='post_transition_metal'] .nb-pt-category-legend-item__swatch {
     background: #fdb462; }
-  .nb-pt-category-legend-item[data-category='transition-metal'] .nb-pt-category-legend-item__swatch {
+  .nb-pt-category-legend-item[data-category='polyatomic_non_metal'] .nb-pt-category-legend-item__swatch {
     background: #b3de69; }
-  .nb-pt-category-legend-item[data-category='post-transition-metal'] .nb-pt-category-legend-item__swatch {
+  .nb-pt-category-legend-item[data-category='diatomic_non_metal'] .nb-pt-category-legend-item__swatch {
     background: #fccde5; }
-  .nb-pt-category-legend-item[data-category='polyatomic-nonmetal'] .nb-pt-category-legend-item__swatch {
-    background: #d9d9d9; }
-  .nb-pt-category-legend-item[data-category='diatomic-nonmetal'] .nb-pt-category-legend-item__swatch {
+  .nb-pt-category-legend-item[data-category='noble_gas'] .nb-pt-category-legend-item__swatch {
     background: #bc80bd; }
-  .nb-pt-category-legend-item[data-category='noble-gas'] .nb-pt-category-legend-item__swatch {
+  .nb-pt-category-legend-item[data-category='hydrogen'] .nb-pt-category-legend-item__swatch {
     background: #ccebc5; }
 
 .nb-pt-element-legend {
@@ -158,7 +157,6 @@
 
 .nb-pt-cell {
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
           box-sizing: border-box;
   display: block;
   vertical-align: top;
@@ -182,7 +180,6 @@
 
 .nb-pt-element {
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
           box-sizing: border-box;
   border-collapse: collapse;
   position: relative;
@@ -193,7 +190,6 @@
     vertical-align: middle; }
   .nb-pt-element__atomic-number {
     -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
             box-sizing: border-box;
     display: block;
     position: absolute;
@@ -202,7 +198,6 @@
     line-height: 1; }
   .nb-pt-element__symbol {
     -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
             box-sizing: border-box;
     display: block;
     position: relative;
@@ -212,7 +207,6 @@
     line-height: 1; }
   .nb-pt-element__name {
     -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
             box-sizing: border-box;
     display: block;
     position: relative;
@@ -224,7 +218,6 @@
     width: 100%; }
   .nb-pt-element__atomic-mass {
     -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
             box-sizing: border-box;
     position: relative;
     margin: 0 auto;
@@ -235,7 +228,6 @@
     font-weight: inherit; }
   .nb-pt-element__electronegativity {
     -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
             box-sizing: border-box;
     position: relative;
     margin: 0 auto;
