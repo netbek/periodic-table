@@ -21,6 +21,7 @@
   ],
   "scripts": {
     "build-dist": "./scripts/build.sh",
+    "format-js": "prettier --parser babel --write *.js",
     "publish-dist": "./scripts/publish.sh",
     "test": "echo test"
   },

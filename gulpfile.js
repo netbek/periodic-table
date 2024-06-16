@@ -1,27 +1,27 @@
-var _ = require('lodash');
-var autoprefixer = require('autoprefixer');
-var cheerio = require('cheerio');
-var cheerioTableparser = require('cheerio-tableparser');
-var cssmin = require('gulp-cssmin');
-var csvtojson = require('csvtojson');
-var Decimal = require('decimal.js');
-var fs = require('fs-extra');
-var ghPages = require('gulp-gh-pages');
-var gulp = require('gulp');
-var livereload = require('livereload');
-var nunjucks = require('nunjucks');
-var open = require('open');
-var os = require('os');
-var periodicTable = require('.');
-var pixrem = require('pixrem');
-var postcss = require('gulp-postcss');
-var postcssColorRgbaFallback = require('postcss-color-rgba-fallback');
-var postcssOpacity = require('postcss-opacity');
-var Promise = require('bluebird');
-var rename = require('gulp-rename');
-var sass = require('gulp-sass')(require('node-sass'));
-var webserver = require('gulp-webserver');
-var yaml = require('js-yaml');
+const _ = require('lodash');
+const autoprefixer = require('autoprefixer');
+const cheerio = require('cheerio');
+const cheerioTableparser = require('cheerio-tableparser');
+const cssmin = require('gulp-cssmin');
+const csvtojson = require('csvtojson');
+const Decimal = require('decimal.js');
+const fs = require('fs-extra');
+const ghPages = require('gulp-gh-pages');
+const gulp = require('gulp');
+const livereload = require('livereload');
+const nunjucks = require('nunjucks');
+const open = require('open');
+const os = require('os');
+const periodicTable = require('.');
+const pixrem = require('pixrem');
+const postcss = require('gulp-postcss');
+const postcssColorRgbaFallback = require('postcss-color-rgba-fallback');
+const postcssOpacity = require('postcss-opacity');
+const Promise = require('bluebird');
+const rename = require('gulp-rename');
+const sass = require('gulp-sass')(require('node-sass'));
+const webserver = require('gulp-webserver');
+const yaml = require('js-yaml');
 
 Promise.promisifyAll(fs);
 
@@ -29,9 +29,9 @@ Promise.promisifyAll(fs);
  * Config
  ---------------------------------------------------------------------------- */
 
-var config = require('./gulp-config.js');
+const config = require('./gulp-config.js');
 
-var livereloadOpen =
+const livereloadOpen =
   (config.webserver.https ? 'https' : 'http') +
   '://' +
   config.webserver.host +
@@ -43,14 +43,14 @@ var livereloadOpen =
  * Misc
  ---------------------------------------------------------------------------- */
 
-var flags = {
+const flags = {
   livereloadInit: false // Whether `livereload-init` task has been run
 };
-var server;
+let server;
 
 // Choose browser for node-open.
-var browser = config.webserver.browsers.default;
-var platform = os.platform();
+let browser = config.webserver.browsers.default;
+const platform = os.platform();
 if (_.has(config.webserver.browsers, platform)) {
   browser = config.webserver.browsers[platform];
 }
@@ -111,18 +111,15 @@ function startWatch(files, tasks, livereload) {
  ---------------------------------------------------------------------------- */
 
 // Start webserver.
-gulp.task('webserver-init', function(cb) {
-  var conf = _.clone(config.webserver);
+gulp.task('webserver-init', function (cb) {
+  const conf = _.clone(config.webserver);
   conf.open = false;
 
-  gulp
-    .src('./')
-    .pipe(webserver(conf))
-    .on('end', cb);
+  gulp.src('./').pipe(webserver(conf)).on('end', cb);
 });
 
 // Start livereload server
-gulp.task('livereload-init', function(cb) {
+gulp.task('livereload-init', function (cb) {
   if (!flags.livereloadInit) {
     flags.livereloadInit = true;
     server = livereload.createServer();
@@ -133,17 +130,17 @@ gulp.task('livereload-init', function(cb) {
 });
 
 // Refresh page
-gulp.task('livereload-reload', function(cb) {
+gulp.task('livereload-reload', function (cb) {
   server.refresh(livereloadOpen);
   cb();
 });
 
 // Watch with livereload that doesn't rebuild docs
-gulp.task('watch:livereload', function(cb) {
-  var livereloadTask = 'livereload-reload';
+gulp.task('watch:livereload', function () {
+  const livereloadTask = 'livereload-reload';
 
-  _.forEach(config.watchTasks, function(watchConfig) {
-    var tasks = _.clone(watchConfig.tasks);
+  _.forEach(config.watchTasks, function (watchConfig) {
+    const tasks = _.clone(watchConfig.tasks);
     tasks.push(livereloadTask);
     startWatch(watchConfig.files, tasks);
   });
@@ -154,49 +151,44 @@ gulp.task('watch:livereload', function(cb) {
  ---------------------------------------------------------------------------- */
 
 gulp.task('build-data', () => {
-  var blocksData;
-  var wikidata;
-  var categoryColorMap = {};
+  let blocksData;
+  let wikidata;
+  const categoryColorMap = {};
 
   return fs
-    .readFile('data/src/blocks.yml', 'utf8')
-    .then(function(str) {
+    .readFile('data/src/blocks.yml', 'utf-8')
+    .then(function (str) {
       blocksData = yaml.load(str);
 
-      return fs.readFile('data/categories.yml', 'utf8');
+      return fs.readFile('data/categories.yml', 'utf-8');
     })
-    .then(function(str) {
-      var values = yaml.load(str);
+    .then(function (str) {
+      const values = yaml.load(str);
 
-      _.forEach(values, function(value) {
+      _.forEach(values, function (value) {
         categoryColorMap[value.id] = value.color;
       });
 
-      return fs.readFile('data/src/list-of-chemical-elements.html', 'utf8');
+      return fs.readFile('data/src/list-of-chemical-elements.html', 'utf-8');
     })
-    .then(function(str) {
-      var $ = cheerio.load(str);
+    .then(function (str) {
+      const $ = cheerio.load(str);
 
-      var categories = [];
+      const categories = [];
 
-      $('table.wikitable > tr > td:nth-child(2)').each(function(i, elm) {
-        var $elm = $(this);
-        var color = $elm
-          .css('background')
-          .trim()
-          .toLowerCase();
-        var category = _.findKey(categoryColorMap, function(value) {
+      $('table.wikitable > tr > td:nth-child(2)').each(function () {
+        const $elm = $(this);
+        const color = $elm.css('background').trim().toLowerCase();
+        const category = _.findKey(categoryColorMap, function (value) {
           return value == color;
         });
         categories.push(category);
       });
 
       cheerioTableparser($);
-      var data = $('table.wikitable')
-        .first()
-        .parsetable(false, false, true);
+      let data = $('table.wikitable').first().parsetable(false, false, true);
 
-      data = _.map(data, function(value) {
+      data = _.map(data, function (value) {
         return value.slice(2);
       });
 
@@ -204,7 +196,7 @@ gulp.task('build-data', () => {
 
       return data;
     })
-    .then(data => {
+    .then((data) => {
       wikidata = data;
 
       const parserParams = {
@@ -235,8 +227,8 @@ gulp.task('build-data', () => {
 
       return csvtojson(parserParams).fromFile('data/src/pt-data1.csv');
     })
-    .then(jsonArray => {
-      const rows = _.map(jsonArray, function(row) {
+    .then((jsonArray) => {
+      const rows = _.map(jsonArray, function (row) {
         row = _.pick(row, [
           'atomicNumber',
           'symbol',
@@ -249,7 +241,7 @@ gulp.task('build-data', () => {
           row.atomicNumber = Number(row.atomicNumber);
         }
 
-        row.atomicMass = row.atomicMass.replace(/^([0-9\.]+).*$/, '$1');
+        row.atomicMass = row.atomicMass.replace(/^([0-9.]+).*$/, '$1');
         row.atomicMass = row.atomicMass.replace(/\[/, '(').replace(/\]/, ')');
 
         if (!isNaN(row.atomicMass)) {
@@ -270,7 +262,7 @@ gulp.task('build-data', () => {
         row.period = '';
         row.category = '';
 
-        var wikidataIndex = wikidata[0].indexOf(row.atomicNumber.toString());
+        const wikidataIndex = wikidata[0].indexOf(row.atomicNumber.toString());
 
         if (wikidataIndex > -1) {
           row.symbol = wikidata[1][wikidataIndex];
@@ -291,33 +283,33 @@ gulp.task('build-data', () => {
 
       const str = yaml.dump(rows);
 
-      return fs.writeFile('data/elements.yml', str, 'utf8');
+      return fs.writeFile('data/elements.yml', str, 'utf-8');
     });
 });
 
-gulp.task('build-demo-css', function(cb) {
+gulp.task('build-demo-css', function (cb) {
   buildCss(['src/css/**/*.scss', 'src/demo/css/**/*.scss'], 'demo/css/').on(
     'end',
     cb
   );
 });
 
-gulp.task('build-demo-page', function(cb) {
+gulp.task('build-demo-page', function (cb) {
   fs.mkdirpAsync('demo/')
-    .then(function() {
+    .then(function () {
       return Promise.props({
         categories: periodicTable.loadCategories(),
         elements: periodicTable.loadElements(),
         groups: periodicTable.loadGroups()
       });
     })
-    .then(function(data) {
-      var res = nunjucks.render('src/demo/index.njk', data, function(err, res) {
+    .then(function (data) {
+      nunjucks.render('src/demo/index.njk', data, function (err, res) {
         if (err) {
           console.log(err);
           cb();
         } else {
-          fs.writeFileAsync('demo/index.html', res, 'utf8').then(function() {
+          fs.writeFileAsync('demo/index.html', res, 'utf-8').then(function () {
             cb();
           });
         }
@@ -325,7 +317,7 @@ gulp.task('build-demo-page', function(cb) {
     });
 });
 
-gulp.task('build-demo-vendor', function() {
+gulp.task('build-demo-vendor', function () {
   return gulp
     .src(['node_modules/normalize-css/**/*.css'])
     .pipe(gulp.dest('demo/css/'));
@@ -341,7 +333,7 @@ gulp.task(
   )
 );
 
-gulp.task('deploy', function() {
+gulp.task('deploy', function () {
   return gulp.src('demo/**/*').pipe(ghPages());
 });
 
