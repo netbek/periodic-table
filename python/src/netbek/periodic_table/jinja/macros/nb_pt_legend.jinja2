@@ -1,4 +1,12 @@
 {%- macro nb_pt_legend(elements, categories, element_columns) %}
+  {%- set element_categories = elements | map(attribute="category") | list | unique | list %}
+  {%- set matched_categories = [] %}
+  {%- for k, v in categories.items() %}
+    {%- if k in element_categories %}
+      {%- do matched_categories.append([k | attr("value") | default(k), v]) %}
+    {%- endif %}
+  {%- endfor %}
+
 <div class="nb-pt-legend">
   <div class="nb-pt-element-legend nb-pt-element-legend--at-default">
     <p class="nb-pt-element-legend__caption">
@@ -121,25 +129,19 @@
     <table class="nb-pt-category-legend-table">
       <caption>Categories</caption>
       <tbody>
-      {%- for category_enum, category_name in categories.items() %}
+      {%- for category_id, category_name in matched_categories %}
         {%- if loop.index % 2 == 1 %}
           {%- if loop.first == false %}
         </tr>
           {%- endif %}
         <tr class="nb-pt-category-legend-row">
           {%- endif %}
-
-        {%- for key, value in elements | map(attribute="category") | groupby("value") %}
-          {%- if category_enum.value == key %}
           <td class="nb-pt-category-legend-cell">
-            <span class="nb-pt-category-legend-item" data-category="{{ category_enum.value }}">
+            <span class="nb-pt-category-legend-item" data-category="{{ category_id }}">
               <span class="nb-pt-category-legend-item__swatch"></span>
               <span class="nb-pt-category-legend-item__label">{{ category_name }}</span>
             </span>
           </td>
-          {%- endif %}
-        {%- endfor %}
-
         {%- if loop.last %}
           {%- if loop.index % 2 == 1 %}
           <td class="nb-pt-category-legend-cell"></td>
