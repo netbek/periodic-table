@@ -41,8 +41,8 @@ $nb-periodic-table-cell-border:                   #ccc;
 Create a Nunjucks template:
 
 ```html
-{%- from "path/to/node_modules/@netbek/periodic-table/macros/nb_pt_legend.njk" import nb_pt_legend %}
-{%- from "path/to/node_modules/@netbek/periodic-table/macros/nb_pt_table_18.njk" import nb_pt_table_18 %}
+{%- from "path/to/node_modules/@netbek/periodic-table/nunjucks/macros/nb_pt_legend.njk" import nb_pt_legend %}
+{%- from "path/to/node_modules/@netbek/periodic-table/nunjucks/macros/nb_pt_table_18.njk" import nb_pt_table_18 %}
 <html>
   <body>
     {% set element_columns = {

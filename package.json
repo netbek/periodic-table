@@ -16,7 +16,7 @@
     "url": "git://github.com/netbek/periodic-table"
   },
   "files": [
-    "macros",
+    "nunjucks/macros",
     "src/css"
   ],
   "scripts": {
