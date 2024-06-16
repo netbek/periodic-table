@@ -121,7 +121,7 @@
     <table class="nb-pt-category-legend-table">
       <caption>Categories</caption>
       <tbody>
-      {%- for category in categories %}
+      {%- for category_id, category_name in categories.items() %}
         {%- if loop.index % 2 == 1 %}
           {%- if loop.first == false %}
         </tr>
@@ -130,11 +130,11 @@
           {%- endif %}
 
         {%- for element_category, items in elements | groupby("category") %}
-          {%- if category.id == element_category %}
+          {%- if category_id == element_category %}
           <td class="nb-pt-category-legend-cell">
-            <span class="nb-pt-category-legend-item" data-category="{{ category.id }}">
+            <span class="nb-pt-category-legend-item" data-category="{{ category_id }}">
               <span class="nb-pt-category-legend-item__swatch"></span>
-              <span class="nb-pt-category-legend-item__label">{{ category.name }}</span>
+              <span class="nb-pt-category-legend-item__label">{{ category_name }}</span>
             </span>
           </td>
           {%- endif %}
