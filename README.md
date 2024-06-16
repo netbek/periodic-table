@@ -111,7 +111,7 @@ npm run publish-dist
 ## Feature ideas
 
 * Group and period axes
-* Color by group or block; different palettes ([lmmentel/mendeleevapp](https://mendeleev.readthedocs.io/en/stable/bibliography.htmlapp))
+* Color by group or block; different palettes ([mendeleevapp](https://github.com/lmmentel/mendeleevapp))
 
 ## Credit
 
