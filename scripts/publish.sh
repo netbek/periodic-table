@@ -10,6 +10,6 @@ fi
 
 npm publish
 
-python3 -m twine upload --config-file .pypirc --verbose dist/*
+python3 -m twine upload --config-file .pypirc --verbose python/dist/*
 
 gh release create $1
