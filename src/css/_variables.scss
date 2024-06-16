@@ -76,14 +76,14 @@ $nb-periodic-table-block-color-map: (
 $category-color-map:                              map-get(map-get($chrys-palettes, 'bokeh-set-3'), 11);
 $nb-periodic-table-category-color-map: (
   metalloid:                                      nth($category-color-map, 1),
-  unknown-properties:                             nth($category-color-map, 2),
-  alkali-metal:                                   nth($category-color-map, 3),
-  alkaline-earth-metal:                           nth($category-color-map, 4),
+  unknown_properties:                             nth($category-color-map, 2),
+  alkali_metal:                                   nth($category-color-map, 3),
+  alkaline_earth_metal:                           nth($category-color-map, 4),
   lanthanide:                                     nth($category-color-map, 5),
   actinide:                                       nth($category-color-map, 6),
-  transition-metal:                               nth($category-color-map, 7),
-  post-transition-metal:                          nth($category-color-map, 8),
-  polyatomic-nonmetal:                            nth($category-color-map, 9),
-  diatomic-nonmetal:                              nth($category-color-map, 10),
-  noble-gas:                                      nth($category-color-map, 11)
+  transition_metal:                               nth($category-color-map, 7),
+  post_transition_metal:                          nth($category-color-map, 8),
+  polyatomic_non_metal:                           nth($category-color-map, 9),
+  diatomic_non_metal:                             nth($category-color-map, 10),
+  noble_gas:                                      nth($category-color-map, 11)
 ) !default;
