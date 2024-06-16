@@ -49,7 +49,7 @@ groups = {
     18: "18",
 }
 
-keys = {
+element_columns = {
     "atomic_number": "Atomic number",
     "symbol": "Symbol",
     "name": "Name",
