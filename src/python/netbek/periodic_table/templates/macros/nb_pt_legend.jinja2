@@ -1,13 +1,13 @@
-{%- macro nb_pt_legend(elements, categories, keys) %}
+{%- macro nb_pt_legend(elements, categories, element_columns) %}
 <div class="nb-pt-legend">
   <div class="nb-pt-element-legend nb-pt-element-legend--at-default">
     <p class="nb-pt-element-legend__caption">
       Left to right:
-      <span class="nb-pt-element__atomic-number">{{ keys.atomic_number }}</span>,
-      <span class="nb-pt-element__symbol">{{ keys.symbol }}</span>,
-      <span class="nb-pt-element__name">{{ keys.name }}</span>,
-      <span class="nb-pt-element__atomic-mass">{{ keys.atomic_mass }}</span>,
-      <span class="nb-pt-element__electronegativity">{{ keys.electronegativity }}</span>
+      <span class="nb-pt-element__atomic-number">{{ element_columns.atomic_number }}</span>,
+      <span class="nb-pt-element__symbol">{{ element_columns.symbol }}</span>,
+      <span class="nb-pt-element__name">{{ element_columns.name }}</span>,
+      <span class="nb-pt-element__atomic-mass">{{ element_columns.atomic_mass }}</span>,
+      <span class="nb-pt-element__electronegativity">{{ element_columns.electronegativity }}</span>
     </p>
   </div>
 
@@ -18,13 +18,13 @@
           <span class="nb-pt-element__atomic-number">
             <span class="nb-pt-element-legend__note">
               <span class="nb-pt-element-legend__connector"></span>
-              {{ keys.atomic_number }}
+              {{ element_columns.atomic_number }}
             </span>
           </span>
           <span class="nb-pt-element__symbol">
             <span class="nb-pt-element-legend__note">
               <span class="nb-pt-element-legend__connector"></span>
-              {{ keys.symbol }}
+              {{ element_columns.symbol }}
             </span>
           </span>
         </span>
@@ -32,20 +32,20 @@
           <span class="nb-pt-element__name">
             <span class="nb-pt-element-legend__note">
               <span class="nb-pt-element-legend__connector"></span>
-              {{ keys.name }}
+              {{ element_columns.name }}
             </span>
           </span>
           <span class="nb-pt-element__properties">
             <span class="nb-pt-element__atomic-mass">
               <span class="nb-pt-element-legend__note">
                 <span class="nb-pt-element-legend__connector"></span>
-                {{ keys.atomic_mass }}
+                {{ element_columns.atomic_mass }}
               </span>
             </span>
             <span class="nb-pt-element__electronegativity">
               <span class="nb-pt-element-legend__note">
                 <span class="nb-pt-element-legend__connector"></span>
-                {{ keys.electronegativity }}
+                {{ element_columns.electronegativity }}
               </span>
             </span>
           </span>
@@ -81,13 +81,13 @@
           <span class="nb-pt-element__atomic-number">
             <span class="nb-pt-element-legend__note">
               <span class="nb-pt-element-legend__connector"></span>
-              {{ keys.electronegativity }}
+              {{ element_columns.electronegativity }}
             </span>
           </span>
           <span class="nb-pt-element__symbol">
             <span class="nb-pt-element-legend__note">
               <span class="nb-pt-element-legend__connector"></span>
-              {{ keys.symbol }}
+              {{ element_columns.symbol }}
             </span>
           </span>
         </span>
@@ -95,20 +95,20 @@
           <span class="nb-pt-element__name">
             <span class="nb-pt-element-legend__note">
               <span class="nb-pt-element-legend__connector"></span>
-              {{ keys.name }}
+              {{ element_columns.name }}
             </span>
           </span>
           <span class="nb-pt-element__properties">
             <span class="nb-pt-element__atomic-mass">
               <span class="nb-pt-element-legend__note">
                 <span class="nb-pt-element-legend__connector"></span>
-                {{ keys.atomic_mass }}
+                {{ element_columns.atomic_mass }}
               </span>
             </span>
             <span class="nb-pt-element__electronegativity">
               <span class="nb-pt-element-legend__note">
                 <span class="nb-pt-element-legend__connector"></span>
-                {{ keys.electronegativity }}
+                {{ element_columns.electronegativity }}
               </span>
             </span>
           </span>
