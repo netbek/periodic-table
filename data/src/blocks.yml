@@ -1,236 +1,236 @@
-- atomicNumber: 1
+- atomic_number: 1
   block: s
-- atomicNumber: 2
+- atomic_number: 2
   block: s
-- atomicNumber: 3
+- atomic_number: 3
   block: s
-- atomicNumber: 4
+- atomic_number: 4
   block: s
-- atomicNumber: 5
+- atomic_number: 5
   block: p
-- atomicNumber: 6
+- atomic_number: 6
   block: p
-- atomicNumber: 7
+- atomic_number: 7
   block: p
-- atomicNumber: 8
+- atomic_number: 8
   block: p
-- atomicNumber: 9
+- atomic_number: 9
   block: p
-- atomicNumber: 10
+- atomic_number: 10
   block: p
-- atomicNumber: 11
+- atomic_number: 11
   block: s
-- atomicNumber: 12
+- atomic_number: 12
   block: s
-- atomicNumber: 13
+- atomic_number: 13
   block: p
-- atomicNumber: 14
+- atomic_number: 14
   block: p
-- atomicNumber: 15
+- atomic_number: 15
   block: p
-- atomicNumber: 16
+- atomic_number: 16
   block: p
-- atomicNumber: 17
+- atomic_number: 17
   block: p
-- atomicNumber: 18
+- atomic_number: 18
   block: p
-- atomicNumber: 19
+- atomic_number: 19
   block: s
-- atomicNumber: 20
+- atomic_number: 20
   block: s
-- atomicNumber: 21
+- atomic_number: 21
   block: d
-- atomicNumber: 22
+- atomic_number: 22
   block: d
-- atomicNumber: 23
+- atomic_number: 23
   block: d
-- atomicNumber: 24
+- atomic_number: 24
   block: d
-- atomicNumber: 25
+- atomic_number: 25
   block: d
-- atomicNumber: 26
+- atomic_number: 26
   block: d
-- atomicNumber: 27
+- atomic_number: 27
   block: d
-- atomicNumber: 28
+- atomic_number: 28
   block: d
-- atomicNumber: 29
+- atomic_number: 29
   block: d
-- atomicNumber: 30
+- atomic_number: 30
   block: d
-- atomicNumber: 31
+- atomic_number: 31
   block: p
-- atomicNumber: 32
+- atomic_number: 32
   block: p
-- atomicNumber: 33
+- atomic_number: 33
   block: p
-- atomicNumber: 34
+- atomic_number: 34
   block: p
-- atomicNumber: 35
+- atomic_number: 35
   block: p
-- atomicNumber: 36
+- atomic_number: 36
   block: p
-- atomicNumber: 37
+- atomic_number: 37
   block: s
-- atomicNumber: 38
+- atomic_number: 38
   block: s
-- atomicNumber: 39
+- atomic_number: 39
   block: d
-- atomicNumber: 40
+- atomic_number: 40
   block: d
-- atomicNumber: 41
+- atomic_number: 41
   block: d
-- atomicNumber: 42
+- atomic_number: 42
   block: d
-- atomicNumber: 43
+- atomic_number: 43
   block: d
-- atomicNumber: 44
+- atomic_number: 44
   block: d
-- atomicNumber: 45
+- atomic_number: 45
   block: d
-- atomicNumber: 46
+- atomic_number: 46
   block: d
-- atomicNumber: 47
+- atomic_number: 47
   block: d
-- atomicNumber: 48
+- atomic_number: 48
   block: d
-- atomicNumber: 49
+- atomic_number: 49
   block: p
-- atomicNumber: 50
+- atomic_number: 50
   block: p
-- atomicNumber: 51
+- atomic_number: 51
   block: p
-- atomicNumber: 52
+- atomic_number: 52
   block: p
-- atomicNumber: 53
+- atomic_number: 53
   block: p
-- atomicNumber: 54
+- atomic_number: 54
   block: p
-- atomicNumber: 55
+- atomic_number: 55
   block: s
-- atomicNumber: 56
+- atomic_number: 56
   block: s
-- atomicNumber: 57
+- atomic_number: 57
   block: f
-- atomicNumber: 58
+- atomic_number: 58
   block: f
-- atomicNumber: 59
+- atomic_number: 59
   block: f
-- atomicNumber: 60
+- atomic_number: 60
   block: f
-- atomicNumber: 61
+- atomic_number: 61
   block: f
-- atomicNumber: 62
+- atomic_number: 62
   block: f
-- atomicNumber: 63
+- atomic_number: 63
   block: f
-- atomicNumber: 64
+- atomic_number: 64
   block: f
-- atomicNumber: 65
+- atomic_number: 65
   block: f
-- atomicNumber: 66
+- atomic_number: 66
   block: f
-- atomicNumber: 67
+- atomic_number: 67
   block: f
-- atomicNumber: 68
+- atomic_number: 68
   block: f
-- atomicNumber: 69
+- atomic_number: 69
   block: f
-- atomicNumber: 70
+- atomic_number: 70
   block: f
-- atomicNumber: 71
+- atomic_number: 71
   block: d
-- atomicNumber: 72
+- atomic_number: 72
   block: d
-- atomicNumber: 73
+- atomic_number: 73
   block: d
-- atomicNumber: 74
+- atomic_number: 74
   block: d
-- atomicNumber: 75
+- atomic_number: 75
   block: d
-- atomicNumber: 76
+- atomic_number: 76
   block: d
-- atomicNumber: 77
+- atomic_number: 77
   block: d
-- atomicNumber: 78
+- atomic_number: 78
   block: d
-- atomicNumber: 79
+- atomic_number: 79
   block: d
-- atomicNumber: 80
+- atomic_number: 80
   block: d
-- atomicNumber: 81
+- atomic_number: 81
   block: p
-- atomicNumber: 82
+- atomic_number: 82
   block: p
-- atomicNumber: 83
+- atomic_number: 83
   block: p
-- atomicNumber: 84
+- atomic_number: 84
   block: p
-- atomicNumber: 85
+- atomic_number: 85
   block: p
-- atomicNumber: 86
+- atomic_number: 86
   block: p
-- atomicNumber: 87
+- atomic_number: 87
   block: s
-- atomicNumber: 88
+- atomic_number: 88
   block: s
-- atomicNumber: 89
+- atomic_number: 89
   block: f
-- atomicNumber: 90
+- atomic_number: 90
   block: f
-- atomicNumber: 91
+- atomic_number: 91
   block: f
-- atomicNumber: 92
+- atomic_number: 92
   block: f
-- atomicNumber: 93
+- atomic_number: 93
   block: f
-- atomicNumber: 94
+- atomic_number: 94
   block: f
-- atomicNumber: 95
+- atomic_number: 95
   block: f
-- atomicNumber: 96
+- atomic_number: 96
   block: f
-- atomicNumber: 97
+- atomic_number: 97
   block: f
-- atomicNumber: 98
+- atomic_number: 98
   block: f
-- atomicNumber: 99
+- atomic_number: 99
   block: f
-- atomicNumber: 100
+- atomic_number: 100
   block: f
-- atomicNumber: 101
+- atomic_number: 101
   block: f
-- atomicNumber: 102
+- atomic_number: 102
   block: f
-- atomicNumber: 103
+- atomic_number: 103
   block: d
-- atomicNumber: 104
+- atomic_number: 104
   block: d
-- atomicNumber: 105
+- atomic_number: 105
   block: d
-- atomicNumber: 106
+- atomic_number: 106
   block: d
-- atomicNumber: 107
+- atomic_number: 107
   block: d
-- atomicNumber: 108
+- atomic_number: 108
   block: d
-- atomicNumber: 109
+- atomic_number: 109
   block: d
-- atomicNumber: 110
+- atomic_number: 110
   block: d
-- atomicNumber: 111
+- atomic_number: 111
   block: d
-- atomicNumber: 112
+- atomic_number: 112
   block: d
-- atomicNumber: 113
+- atomic_number: 113
   block: p
-- atomicNumber: 114
+- atomic_number: 114
   block: p
-- atomicNumber: 115
+- atomic_number: 115
   block: p
-- atomicNumber: 116
+- atomic_number: 116
   block: p
-- atomicNumber: 117
+- atomic_number: 117
   block: p
-- atomicNumber: 118
+- atomic_number: 118
   block: p

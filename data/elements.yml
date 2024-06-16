@@ -1,1060 +1,1060 @@
-- atomicNumber: 1
+- atomic_number: 1
   symbol: H
   name: Hydrogen
-  atomicMass: '1.01'
+  atomic_mass: '1.01'
   electronegativity: 2.2
   block: s
   group: 1
   period: 1
   category: diatomic_non_metal
-- atomicNumber: 2
+- atomic_number: 2
   symbol: He
   name: Helium
-  atomicMass: '4'
+  atomic_mass: '4'
   electronegativity: 0
   block: s
   group: 18
   period: 1
   category: noble_gas
-- atomicNumber: 3
+- atomic_number: 3
   symbol: Li
   name: Lithium
-  atomicMass: '6.94'
+  atomic_mass: '6.94'
   electronegativity: 0.98
   block: s
   group: 1
   period: 2
   category: alkali_metal
-- atomicNumber: 4
+- atomic_number: 4
   symbol: Be
   name: Beryllium
-  atomicMass: '9.01'
+  atomic_mass: '9.01'
   electronegativity: 1.57
   block: s
   group: 2
   period: 2
   category: alkaline_earth_metal
-- atomicNumber: 5
+- atomic_number: 5
   symbol: B
   name: Boron
-  atomicMass: '10.81'
+  atomic_mass: '10.81'
   electronegativity: 2.04
   block: p
   group: 13
   period: 2
   category: metalloid
-- atomicNumber: 6
+- atomic_number: 6
   symbol: C
   name: Carbon
-  atomicMass: '12.01'
+  atomic_mass: '12.01'
   electronegativity: 2.55
   block: p
   group: 14
   period: 2
   category: polyatomic_non_metal
-- atomicNumber: 7
+- atomic_number: 7
   symbol: 'N'
   name: Nitrogen
-  atomicMass: '14.01'
+  atomic_mass: '14.01'
   electronegativity: 3.04
   block: p
   group: 15
   period: 2
   category: diatomic_non_metal
-- atomicNumber: 8
+- atomic_number: 8
   symbol: O
   name: Oxygen
-  atomicMass: '16'
+  atomic_mass: '16'
   electronegativity: 3.44
   block: p
   group: 16
   period: 2
   category: diatomic_non_metal
-- atomicNumber: 9
+- atomic_number: 9
   symbol: F
   name: Fluorine
-  atomicMass: '19'
+  atomic_mass: '19'
   electronegativity: 3.98
   block: p
   group: 17
   period: 2
   category: diatomic_non_metal
-- atomicNumber: 10
+- atomic_number: 10
   symbol: Ne
   name: Neon
-  atomicMass: '20.18'
+  atomic_mass: '20.18'
   electronegativity: 0
   block: p
   group: 18
   period: 2
   category: noble_gas
-- atomicNumber: 11
+- atomic_number: 11
   symbol: Na
   name: Sodium
-  atomicMass: '22.99'
+  atomic_mass: '22.99'
   electronegativity: 0.93
   block: s
   group: 1
   period: 3
   category: alkali_metal
-- atomicNumber: 12
+- atomic_number: 12
   symbol: Mg
   name: Magnesium
-  atomicMass: '24.31'
+  atomic_mass: '24.31'
   electronegativity: 1.31
   block: s
   group: 2
   period: 3
   category: alkaline_earth_metal
-- atomicNumber: 13
+- atomic_number: 13
   symbol: Al
   name: Aluminium
-  atomicMass: '26.98'
+  atomic_mass: '26.98'
   electronegativity: 1.61
   block: p
   group: 13
   period: 3
   category: post_transition_metal
-- atomicNumber: 14
+- atomic_number: 14
   symbol: Si
   name: Silicon
-  atomicMass: '28.09'
+  atomic_mass: '28.09'
   electronegativity: 1.9
   block: p
   group: 14
   period: 3
   category: metalloid
-- atomicNumber: 15
+- atomic_number: 15
   symbol: P
   name: Phosphorus
-  atomicMass: '30.97'
+  atomic_mass: '30.97'
   electronegativity: 2.19
   block: p
   group: 15
   period: 3
   category: polyatomic_non_metal
-- atomicNumber: 16
+- atomic_number: 16
   symbol: S
   name: Sulfur
-  atomicMass: '32.07'
+  atomic_mass: '32.07'
   electronegativity: 2.58
   block: p
   group: 16
   period: 3
   category: polyatomic_non_metal
-- atomicNumber: 17
+- atomic_number: 17
   symbol: Cl
   name: Chlorine
-  atomicMass: '35.45'
+  atomic_mass: '35.45'
   electronegativity: 3.16
   block: p
   group: 17
   period: 3
   category: diatomic_non_metal
-- atomicNumber: 18
+- atomic_number: 18
   symbol: Ar
   name: Argon
-  atomicMass: '39.95'
+  atomic_mass: '39.95'
   electronegativity: 0
   block: p
   group: 18
   period: 3
   category: noble_gas
-- atomicNumber: 19
+- atomic_number: 19
   symbol: K
   name: Potassium
-  atomicMass: '39.1'
+  atomic_mass: '39.1'
   electronegativity: 0.82
   block: s
   group: 1
   period: 4
   category: alkali_metal
-- atomicNumber: 20
+- atomic_number: 20
   symbol: Ca
   name: Calcium
-  atomicMass: '40.08'
+  atomic_mass: '40.08'
   electronegativity: 1
   block: s
   group: 2
   period: 4
   category: alkaline_earth_metal
-- atomicNumber: 21
+- atomic_number: 21
   symbol: Sc
   name: Scandium
-  atomicMass: '44.96'
+  atomic_mass: '44.96'
   electronegativity: 1.36
   block: d
   group: 3
   period: 4
   category: transition_metal
-- atomicNumber: 22
+- atomic_number: 22
   symbol: Ti
   name: Titanium
-  atomicMass: '47.87'
+  atomic_mass: '47.87'
   electronegativity: 1.54
   block: d
   group: 4
   period: 4
   category: transition_metal
-- atomicNumber: 23
+- atomic_number: 23
   symbol: V
   name: Vanadium
-  atomicMass: '50.94'
+  atomic_mass: '50.94'
   electronegativity: 1.63
   block: d
   group: 5
   period: 4
   category: transition_metal
-- atomicNumber: 24
+- atomic_number: 24
   symbol: Cr
   name: Chromium
-  atomicMass: '52'
+  atomic_mass: '52'
   electronegativity: 1.66
   block: d
   group: 6
   period: 4
   category: transition_metal
-- atomicNumber: 25
+- atomic_number: 25
   symbol: Mn
   name: Manganese
-  atomicMass: '54.94'
+  atomic_mass: '54.94'
   electronegativity: 1.55
   block: d
   group: 7
   period: 4
   category: transition_metal
-- atomicNumber: 26
+- atomic_number: 26
   symbol: Fe
   name: Iron
-  atomicMass: '55.85'
+  atomic_mass: '55.85'
   electronegativity: 1.83
   block: d
   group: 8
   period: 4
   category: transition_metal
-- atomicNumber: 27
+- atomic_number: 27
   symbol: Co
   name: Cobalt
-  atomicMass: '58.93'
+  atomic_mass: '58.93'
   electronegativity: 1.88
   block: d
   group: 9
   period: 4
   category: transition_metal
-- atomicNumber: 28
+- atomic_number: 28
   symbol: Ni
   name: Nickel
-  atomicMass: '58.69'
+  atomic_mass: '58.69'
   electronegativity: 1.91
   block: d
   group: 10
   period: 4
   category: transition_metal
-- atomicNumber: 29
+- atomic_number: 29
   symbol: Cu
   name: Copper
-  atomicMass: '63.55'
+  atomic_mass: '63.55'
   electronegativity: 1.9
   block: d
   group: 11
   period: 4
   category: transition_metal
-- atomicNumber: 30
+- atomic_number: 30
   symbol: Zn
   name: Zinc
-  atomicMass: '65.38'
+  atomic_mass: '65.38'
   electronegativity: 1.65
   block: d
   group: 12
   period: 4
   category: transition_metal
-- atomicNumber: 31
+- atomic_number: 31
   symbol: Ga
   name: Gallium
-  atomicMass: '69.72'
+  atomic_mass: '69.72'
   electronegativity: 1.81
   block: p
   group: 13
   period: 4
   category: post_transition_metal
-- atomicNumber: 32
+- atomic_number: 32
   symbol: Ge
   name: Germanium
-  atomicMass: '72.64'
+  atomic_mass: '72.64'
   electronegativity: 2.01
   block: p
   group: 14
   period: 4
   category: metalloid
-- atomicNumber: 33
+- atomic_number: 33
   symbol: As
   name: Arsenic
-  atomicMass: '74.92'
+  atomic_mass: '74.92'
   electronegativity: 2.18
   block: p
   group: 15
   period: 4
   category: metalloid
-- atomicNumber: 34
+- atomic_number: 34
   symbol: Se
   name: Selenium
-  atomicMass: '78.96'
+  atomic_mass: '78.96'
   electronegativity: 2.55
   block: p
   group: 16
   period: 4
   category: polyatomic_non_metal
-- atomicNumber: 35
+- atomic_number: 35
   symbol: Br
   name: Bromine
-  atomicMass: '79.9'
+  atomic_mass: '79.9'
   electronegativity: 2.96
   block: p
   group: 17
   period: 4
   category: diatomic_non_metal
-- atomicNumber: 36
+- atomic_number: 36
   symbol: Kr
   name: Krypton
-  atomicMass: '83.8'
+  atomic_mass: '83.8'
   electronegativity: 0
   block: p
   group: 18
   period: 4
   category: noble_gas
-- atomicNumber: 37
+- atomic_number: 37
   symbol: Rb
   name: Rubidium
-  atomicMass: '85.47'
+  atomic_mass: '85.47'
   electronegativity: 0.82
   block: s
   group: 1
   period: 5
   category: alkali_metal
-- atomicNumber: 38
+- atomic_number: 38
   symbol: Sr
   name: Strontium
-  atomicMass: '87.62'
+  atomic_mass: '87.62'
   electronegativity: 0.95
   block: s
   group: 2
   period: 5
   category: alkaline_earth_metal
-- atomicNumber: 39
+- atomic_number: 39
   symbol: 'Y'
   name: Yttrium
-  atomicMass: '88.91'
+  atomic_mass: '88.91'
   electronegativity: 1.22
   block: d
   group: 3
   period: 5
   category: transition_metal
-- atomicNumber: 40
+- atomic_number: 40
   symbol: Zr
   name: Zirconium
-  atomicMass: '91.22'
+  atomic_mass: '91.22'
   electronegativity: 1.33
   block: d
   group: 4
   period: 5
   category: transition_metal
-- atomicNumber: 41
+- atomic_number: 41
   symbol: Nb
   name: Niobium
-  atomicMass: '92.91'
+  atomic_mass: '92.91'
   electronegativity: 1.6
   block: d
   group: 5
   period: 5
   category: transition_metal
-- atomicNumber: 42
+- atomic_number: 42
   symbol: Mo
   name: Molybdenum
-  atomicMass: '95.96'
+  atomic_mass: '95.96'
   electronegativity: 2.16
   block: d
   group: 6
   period: 5
   category: transition_metal
-- atomicNumber: 43
+- atomic_number: 43
   symbol: Tc
   name: Technetium
-  atomicMass: (98)
+  atomic_mass: (98)
   electronegativity: 1.9
   block: d
   group: 7
   period: 5
   category: transition_metal
-- atomicNumber: 44
+- atomic_number: 44
   symbol: Ru
   name: Ruthenium
-  atomicMass: '101.07'
+  atomic_mass: '101.07'
   electronegativity: 2.2
   block: d
   group: 8
   period: 5
   category: transition_metal
-- atomicNumber: 45
+- atomic_number: 45
   symbol: Rh
   name: Rhodium
-  atomicMass: '102.91'
+  atomic_mass: '102.91'
   electronegativity: 2.28
   block: d
   group: 9
   period: 5
   category: transition_metal
-- atomicNumber: 46
+- atomic_number: 46
   symbol: Pd
   name: Palladium
-  atomicMass: '106.42'
+  atomic_mass: '106.42'
   electronegativity: 2.2
   block: d
   group: 10
   period: 5
   category: transition_metal
-- atomicNumber: 47
+- atomic_number: 47
   symbol: Ag
   name: Silver
-  atomicMass: '107.87'
+  atomic_mass: '107.87'
   electronegativity: 1.93
   block: d
   group: 11
   period: 5
   category: transition_metal
-- atomicNumber: 48
+- atomic_number: 48
   symbol: Cd
   name: Cadmium
-  atomicMass: '112.41'
+  atomic_mass: '112.41'
   electronegativity: 1.69
   block: d
   group: 12
   period: 5
   category: transition_metal
-- atomicNumber: 49
+- atomic_number: 49
   symbol: In
   name: Indium
-  atomicMass: '114.82'
+  atomic_mass: '114.82'
   electronegativity: 1.78
   block: p
   group: 13
   period: 5
   category: post_transition_metal
-- atomicNumber: 50
+- atomic_number: 50
   symbol: Sn
   name: Tin
-  atomicMass: '118.71'
+  atomic_mass: '118.71'
   electronegativity: 1.96
   block: p
   group: 14
   period: 5
   category: post_transition_metal
-- atomicNumber: 51
+- atomic_number: 51
   symbol: Sb
   name: Antimony
-  atomicMass: '121.76'
+  atomic_mass: '121.76'
   electronegativity: 2.05
   block: p
   group: 15
   period: 5
   category: metalloid
-- atomicNumber: 52
+- atomic_number: 52
   symbol: Te
   name: Tellurium
-  atomicMass: '127.6'
+  atomic_mass: '127.6'
   electronegativity: 2.1
   block: p
   group: 16
   period: 5
   category: metalloid
-- atomicNumber: 53
+- atomic_number: 53
   symbol: I
   name: Iodine
-  atomicMass: '126.9'
+  atomic_mass: '126.9'
   electronegativity: 2.66
   block: p
   group: 17
   period: 5
   category: diatomic_non_metal
-- atomicNumber: 54
+- atomic_number: 54
   symbol: Xe
   name: Xenon
-  atomicMass: '131.29'
+  atomic_mass: '131.29'
   electronegativity: 0
   block: p
   group: 18
   period: 5
   category: noble_gas
-- atomicNumber: 55
+- atomic_number: 55
   symbol: Cs
   name: Caesium
-  atomicMass: '132.91'
+  atomic_mass: '132.91'
   electronegativity: 0.79
   block: s
   group: 1
   period: 6
   category: alkali_metal
-- atomicNumber: 56
+- atomic_number: 56
   symbol: Ba
   name: Barium
-  atomicMass: '137.33'
+  atomic_mass: '137.33'
   electronegativity: 0.89
   block: s
   group: 2
   period: 6
   category: alkaline_earth_metal
-- atomicNumber: 57
+- atomic_number: 57
   symbol: La
   name: Lanthanum
-  atomicMass: '138.91'
+  atomic_mass: '138.91'
   electronegativity: 1.1
   block: f
   group: ''
   period: 6
   category: lanthanide
-- atomicNumber: 58
+- atomic_number: 58
   symbol: Ce
   name: Cerium
-  atomicMass: '140.12'
+  atomic_mass: '140.12'
   electronegativity: 1.12
   block: f
   group: ''
   period: 6
   category: lanthanide
-- atomicNumber: 59
+- atomic_number: 59
   symbol: Pr
   name: Praseodymium
-  atomicMass: '140.91'
+  atomic_mass: '140.91'
   electronegativity: 1.13
   block: f
   group: ''
   period: 6
   category: lanthanide
-- atomicNumber: 60
+- atomic_number: 60
   symbol: Nd
   name: Neodymium
-  atomicMass: '144.24'
+  atomic_mass: '144.24'
   electronegativity: 1.14
   block: f
   group: ''
   period: 6
   category: lanthanide
-- atomicNumber: 61
+- atomic_number: 61
   symbol: Pm
   name: Promethium
-  atomicMass: (145)
+  atomic_mass: (145)
   electronegativity: 1.13
   block: f
   group: ''
   period: 6
   category: lanthanide
-- atomicNumber: 62
+- atomic_number: 62
   symbol: Sm
   name: Samarium
-  atomicMass: '150.36'
+  atomic_mass: '150.36'
   electronegativity: 1.17
   block: f
   group: ''
   period: 6
   category: lanthanide
-- atomicNumber: 63
+- atomic_number: 63
   symbol: Eu
   name: Europium
-  atomicMass: '151.96'
+  atomic_mass: '151.96'
   electronegativity: 1.2
   block: f
   group: ''
   period: 6
   category: lanthanide
-- atomicNumber: 64
+- atomic_number: 64
   symbol: Gd
   name: Gadolinium
-  atomicMass: '157.25'
+  atomic_mass: '157.25'
   electronegativity: 1.2
   block: f
   group: ''
   period: 6
   category: lanthanide
-- atomicNumber: 65
+- atomic_number: 65
   symbol: Tb
   name: Terbium
-  atomicMass: '158.93'
+  atomic_mass: '158.93'
   electronegativity: 1.2
   block: f
   group: ''
   period: 6
   category: lanthanide
-- atomicNumber: 66
+- atomic_number: 66
   symbol: Dy
   name: Dysprosium
-  atomicMass: '162.5'
+  atomic_mass: '162.5'
   electronegativity: 1.22
   block: f
   group: ''
   period: 6
   category: lanthanide
-- atomicNumber: 67
+- atomic_number: 67
   symbol: Ho
   name: Holmium
-  atomicMass: '164.93'
+  atomic_mass: '164.93'
   electronegativity: 1.23
   block: f
   group: ''
   period: 6
   category: lanthanide
-- atomicNumber: 68
+- atomic_number: 68
   symbol: Er
   name: Erbium
-  atomicMass: '167.26'
+  atomic_mass: '167.26'
   electronegativity: 1.24
   block: f
   group: ''
   period: 6
   category: lanthanide
-- atomicNumber: 69
+- atomic_number: 69
   symbol: Tm
   name: Thulium
-  atomicMass: '168.93'
+  atomic_mass: '168.93'
   electronegativity: 1.25
   block: f
   group: ''
   period: 6
   category: lanthanide
-- atomicNumber: 70
+- atomic_number: 70
   symbol: Yb
   name: Ytterbium
-  atomicMass: '173.05'
+  atomic_mass: '173.05'
   electronegativity: 1.1
   block: f
   group: ''
   period: 6
   category: lanthanide
-- atomicNumber: 71
+- atomic_number: 71
   symbol: Lu
   name: Lutetium
-  atomicMass: '174.97'
+  atomic_mass: '174.97'
   electronegativity: 1.27
   block: d
   group: 3
   period: 6
   category: lanthanide
-- atomicNumber: 72
+- atomic_number: 72
   symbol: Hf
   name: Hafnium
-  atomicMass: '178.49'
+  atomic_mass: '178.49'
   electronegativity: 1.3
   block: d
   group: 4
   period: 6
   category: transition_metal
-- atomicNumber: 73
+- atomic_number: 73
   symbol: Ta
   name: Tantalum
-  atomicMass: '180.95'
+  atomic_mass: '180.95'
   electronegativity: 1.5
   block: d
   group: 5
   period: 6
   category: transition_metal
-- atomicNumber: 74
+- atomic_number: 74
   symbol: W
   name: Tungsten
-  atomicMass: '183.84'
+  atomic_mass: '183.84'
   electronegativity: 2.36
   block: d
   group: 6
   period: 6
   category: transition_metal
-- atomicNumber: 75
+- atomic_number: 75
   symbol: Re
   name: Rhenium
-  atomicMass: '186.21'
+  atomic_mass: '186.21'
   electronegativity: 1.9
   block: d
   group: 7
   period: 6
   category: transition_metal
-- atomicNumber: 76
+- atomic_number: 76
   symbol: Os
   name: Osmium
-  atomicMass: '190.23'
+  atomic_mass: '190.23'
   electronegativity: 2.2
   block: d
   group: 8
   period: 6
   category: transition_metal
-- atomicNumber: 77
+- atomic_number: 77
   symbol: Ir
   name: Iridium
-  atomicMass: '192.22'
+  atomic_mass: '192.22'
   electronegativity: 2.2
   block: d
   group: 9
   period: 6
   category: transition_metal
-- atomicNumber: 78
+- atomic_number: 78
   symbol: Pt
   name: Platinum
-  atomicMass: '195.08'
+  atomic_mass: '195.08'
   electronegativity: 2.28
   block: d
   group: 10
   period: 6
   category: transition_metal
-- atomicNumber: 79
+- atomic_number: 79
   symbol: Au
   name: Gold
-  atomicMass: '196.97'
+  atomic_mass: '196.97'
   electronegativity: 2.54
   block: d
   group: 11
   period: 6
   category: transition_metal
-- atomicNumber: 80
+- atomic_number: 80
   symbol: Hg
   name: Mercury
-  atomicMass: '200.59'
+  atomic_mass: '200.59'
   electronegativity: 2
   block: d
   group: 12
   period: 6
   category: transition_metal
-- atomicNumber: 81
+- atomic_number: 81
   symbol: Tl
   name: Thallium
-  atomicMass: '204.38'
+  atomic_mass: '204.38'
   electronegativity: 2.04
   block: p
   group: 13
   period: 6
   category: post_transition_metal
-- atomicNumber: 82
+- atomic_number: 82
   symbol: Pb
   name: Lead
-  atomicMass: '207.2'
+  atomic_mass: '207.2'
   electronegativity: 2.33
   block: p
   group: 14
   period: 6
   category: post_transition_metal
-- atomicNumber: 83
+- atomic_number: 83
   symbol: Bi
   name: Bismuth
-  atomicMass: '208.98'
+  atomic_mass: '208.98'
   electronegativity: 2.02
   block: p
   group: 15
   period: 6
   category: post_transition_metal
-- atomicNumber: 84
+- atomic_number: 84
   symbol: Po
   name: Polonium
-  atomicMass: (209)
+  atomic_mass: (209)
   electronegativity: 2
   block: p
   group: 16
   period: 6
   category: post_transition_metal
-- atomicNumber: 85
+- atomic_number: 85
   symbol: At
   name: Astatine
-  atomicMass: (210)
+  atomic_mass: (210)
   electronegativity: 2.2
   block: p
   group: 17
   period: 6
   category: metalloid
-- atomicNumber: 86
+- atomic_number: 86
   symbol: Rn
   name: Radon
-  atomicMass: (222)
+  atomic_mass: (222)
   electronegativity: 0
   block: p
   group: 18
   period: 6
   category: noble_gas
-- atomicNumber: 87
+- atomic_number: 87
   symbol: Fr
   name: Francium
-  atomicMass: (223)
+  atomic_mass: (223)
   electronegativity: 0.7
   block: s
   group: 1
   period: 7
   category: alkali_metal
-- atomicNumber: 88
+- atomic_number: 88
   symbol: Ra
   name: Radium
-  atomicMass: (226)
+  atomic_mass: (226)
   electronegativity: 0.9
   block: s
   group: 2
   period: 7
   category: alkaline_earth_metal
-- atomicNumber: 89
+- atomic_number: 89
   symbol: Ac
   name: Actinium
-  atomicMass: (227)
+  atomic_mass: (227)
   electronegativity: 1.1
   block: f
   group: ''
   period: 7
   category: actinide
-- atomicNumber: 90
+- atomic_number: 90
   symbol: Th
   name: Thorium
-  atomicMass: '232.04'
+  atomic_mass: '232.04'
   electronegativity: 1.3
   block: f
   group: ''
   period: 7
   category: actinide
-- atomicNumber: 91
+- atomic_number: 91
   symbol: Pa
   name: Protactinium
-  atomicMass: '231.04'
+  atomic_mass: '231.04'
   electronegativity: 1.5
   block: f
   group: ''
   period: 7
   category: actinide
-- atomicNumber: 92
+- atomic_number: 92
   symbol: U
   name: Uranium
-  atomicMass: '238.03'
+  atomic_mass: '238.03'
   electronegativity: 1.38
   block: f
   group: ''
   period: 7
   category: actinide
-- atomicNumber: 93
+- atomic_number: 93
   symbol: Np
   name: Neptunium
-  atomicMass: (237)
+  atomic_mass: (237)
   electronegativity: 1.36
   block: f
   group: ''
   period: 7
   category: actinide
-- atomicNumber: 94
+- atomic_number: 94
   symbol: Pu
   name: Plutonium
-  atomicMass: (244)
+  atomic_mass: (244)
   electronegativity: 1.28
   block: f
   group: ''
   period: 7
   category: actinide
-- atomicNumber: 95
+- atomic_number: 95
   symbol: Am
   name: Americium
-  atomicMass: (243)
+  atomic_mass: (243)
   electronegativity: 1.3
   block: f
   group: ''
   period: 7
   category: actinide
-- atomicNumber: 96
+- atomic_number: 96
   symbol: Cm
   name: Curium
-  atomicMass: (247)
+  atomic_mass: (247)
   electronegativity: 1.3
   block: f
   group: ''
   period: 7
   category: actinide
-- atomicNumber: 97
+- atomic_number: 97
   symbol: Bk
   name: Berkelium
-  atomicMass: (247)
+  atomic_mass: (247)
   electronegativity: 1.3
   block: f
   group: ''
   period: 7
   category: actinide
-- atomicNumber: 98
+- atomic_number: 98
   symbol: Cf
   name: Californium
-  atomicMass: (251)
+  atomic_mass: (251)
   electronegativity: 1.3
   block: f
   group: ''
   period: 7
   category: actinide
-- atomicNumber: 99
+- atomic_number: 99
   symbol: Es
   name: Einsteinium
-  atomicMass: (252)
+  atomic_mass: (252)
   electronegativity: 1.3
   block: f
   group: ''
   period: 7
   category: actinide
-- atomicNumber: 100
+- atomic_number: 100
   symbol: Fm
   name: Fermium
-  atomicMass: (257)
+  atomic_mass: (257)
   electronegativity: 1.3
   block: f
   group: ''
   period: 7
   category: actinide
-- atomicNumber: 101
+- atomic_number: 101
   symbol: Md
   name: Mendelevium
-  atomicMass: (258)
+  atomic_mass: (258)
   electronegativity: 1.3
   block: f
   group: ''
   period: 7
   category: actinide
-- atomicNumber: 102
+- atomic_number: 102
   symbol: 'No'
   name: Nobelium
-  atomicMass: (259)
+  atomic_mass: (259)
   electronegativity: 1.3
   block: f
   group: ''
   period: 7
   category: actinide
-- atomicNumber: 103
+- atomic_number: 103
   symbol: Lr
   name: Lawrencium
-  atomicMass: (262)
+  atomic_mass: (262)
   electronegativity: 1.3
   block: d
   group: 3
   period: 7
   category: actinide
-- atomicNumber: 104
+- atomic_number: 104
   symbol: Rf
   name: Rutherfordium
-  atomicMass: (267)
+  atomic_mass: (267)
   electronegativity: 0
   block: d
   group: 4
   period: 7
   category: transition_metal
-- atomicNumber: 105
+- atomic_number: 105
   symbol: Db
   name: Dubnium
-  atomicMass: (268)
+  atomic_mass: (268)
   electronegativity: 0
   block: d
   group: 5
   period: 7
   category: transition_metal
-- atomicNumber: 106
+- atomic_number: 106
   symbol: Sg
   name: Seaborgium
-  atomicMass: (271)
+  atomic_mass: (271)
   electronegativity: 0
   block: d
   group: 6
   period: 7
   category: transition_metal
-- atomicNumber: 107
+- atomic_number: 107
   symbol: Bh
   name: Bohrium
-  atomicMass: (272)
+  atomic_mass: (272)
   electronegativity: 0
   block: d
   group: 7
   period: 7
   category: transition_metal
-- atomicNumber: 108
+- atomic_number: 108
   symbol: Hs
   name: Hassium
-  atomicMass: (270)
+  atomic_mass: (270)
   electronegativity: 0
   block: d
   group: 8
   period: 7
   category: transition_metal
-- atomicNumber: 109
+- atomic_number: 109
   symbol: Mt
   name: Meitnerium
-  atomicMass: (276)
+  atomic_mass: (276)
   electronegativity: 0
   block: d
   group: 9
   period: 7
   category: unknown_properties
-- atomicNumber: 110
+- atomic_number: 110
   symbol: Ds
   name: Darmstadtium
-  atomicMass: (281)
+  atomic_mass: (281)
   electronegativity: 0
   block: d
   group: 10
   period: 7
   category: unknown_properties
-- atomicNumber: 111
+- atomic_number: 111
   symbol: Rg
   name: Roentgenium
-  atomicMass: (280)
+  atomic_mass: (280)
   electronegativity: 0
   block: d
   group: 11
   period: 7
   category: unknown_properties
-- atomicNumber: 112
+- atomic_number: 112
   symbol: Cn
   name: Copernicium
-  atomicMass: (285)
+  atomic_mass: (285)
   electronegativity: 0
   block: d
   group: 12
   period: 7
   category: transition_metal
-- atomicNumber: 113
+- atomic_number: 113
   symbol: Nh
   name: Nihonium
-  atomicMass: (284)
+  atomic_mass: (284)
   electronegativity: 0
   block: p
   group: 13
   period: 7
   category: unknown_properties
-- atomicNumber: 114
+- atomic_number: 114
   symbol: Fl
   name: Flerovium
-  atomicMass: (289)
+  atomic_mass: (289)
   electronegativity: 0
   block: p
   group: 14
   period: 7
   category: post_transition_metal
-- atomicNumber: 115
+- atomic_number: 115
   symbol: Mc
   name: Moscovium
-  atomicMass: (288)
+  atomic_mass: (288)
   electronegativity: 0
   block: p
   group: 15
   period: 7
   category: unknown_properties
-- atomicNumber: 116
+- atomic_number: 116
   symbol: Lv
   name: Livermorium
-  atomicMass: (293)
+  atomic_mass: (293)
   electronegativity: 0
   block: p
   group: 16
   period: 7
   category: unknown_properties
-- atomicNumber: 117
+- atomic_number: 117
   symbol: Ts
   name: Tennessine
-  atomicMass: '0'
+  atomic_mass: '0'
   electronegativity: 0
   block: p
   group: 17
   period: 7
   category: unknown_properties
-- atomicNumber: 118
+- atomic_number: 118
   symbol: Og
   name: Oganesson
-  atomicMass: (294)
+  atomic_mass: (294)
   electronegativity: 0
   block: p
   group: 18

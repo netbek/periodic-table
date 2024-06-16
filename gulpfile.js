@@ -201,26 +201,26 @@ gulp.task('build-data', () => {
 
       const parserParams = {
         headers: [
-          'atomicNumber',
+          'atomic_number',
           'symbol',
           'name',
-          'atomicMass',
+          'atomic_mass',
           'cpkHexColor',
-          'electronConfiguration',
+          'electron_configuration',
           'electronegativity',
-          'atomicRadius',
-          'ionRadius',
-          'vanDelWaalsRadius',
-          'ionizationEnergy',
-          'electronAffinity',
-          'oxidationStates',
-          'standardState',
-          'bondingType',
-          'meltingPoint',
-          'boilingPoint',
+          'atomic_radius',
+          'ion_radius',
+          'van_del_waals_radius',
+          'ionization_energy',
+          'electron_affinity',
+          'oxidation_states',
+          'standard_state',
+          'bonding_type',
+          'melting_point',
+          'boiling_point',
           'density',
-          'groupBlock',
-          'yearDiscovered'
+          'group_block',
+          'year_discovered'
         ],
         noheader: true
       };
@@ -230,23 +230,23 @@ gulp.task('build-data', () => {
     .then((jsonArray) => {
       const rows = _.map(jsonArray, function (row) {
         row = _.pick(row, [
-          'atomicNumber',
+          'atomic_number',
           'symbol',
           'name',
-          'atomicMass',
+          'atomic_mass',
           'electronegativity'
         ]);
 
-        if (!isNaN(row.atomicNumber)) {
-          row.atomicNumber = Number(row.atomicNumber);
+        if (!isNaN(row.atomic_number)) {
+          row.atomic_number = Number(row.atomic_number);
         }
 
-        row.atomicMass = row.atomicMass.replace(/^([0-9.]+).*$/, '$1');
-        row.atomicMass = row.atomicMass.replace(/\[/, '(').replace(/\]/, ')');
+        row.atomic_mass = row.atomic_mass.replace(/^([0-9.]+).*$/, '$1');
+        row.atomic_mass = row.atomic_mass.replace(/\[/, '(').replace(/\]/, ')');
 
-        if (!isNaN(row.atomicMass)) {
-          row.atomicMass = Number(row.atomicMass);
-          row.atomicMass = new Decimal(row.atomicMass)
+        if (!isNaN(row.atomic_mass)) {
+          row.atomic_mass = Number(row.atomic_mass);
+          row.atomic_mass = new Decimal(row.atomic_mass)
             .toDecimalPlaces(2)
             .valueOf();
         }
@@ -256,13 +256,13 @@ gulp.task('build-data', () => {
         }
 
         row.block = _.find(blocksData, {
-          atomicNumber: row.atomicNumber
+          atomic_number: row.atomic_number
         }).block;
         row.group = '';
         row.period = '';
         row.category = '';
 
-        const wikidataIndex = wikidata[0].indexOf(row.atomicNumber.toString());
+        const wikidataIndex = wikidata[0].indexOf(row.atomic_number.toString());
 
         if (wikidataIndex > -1) {
           row.symbol = wikidata[1][wikidataIndex];

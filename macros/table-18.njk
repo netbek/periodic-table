@@ -16,12 +16,12 @@
   </tr>
   <tr class="nb-pt-row">
     {%- for element in elements %}
-      {%- if element.atomicNumber == 3 or element.atomicNumber == 11 or element.atomicNumber == 19 or element.atomicNumber == 37 or element.atomicNumber == 55 or element.atomicNumber == 87 %}
+      {%- if element.atomic_number == 3 or element.atomic_number == 11 or element.atomic_number == 19 or element.atomic_number == 37 or element.atomic_number == 55 or element.atomic_number == 87 %}
   </tr>
   <tr class="nb-pt-row">
       {%- endif %}
 
-      {%- if element.atomicNumber == 2 %}
+      {%- if element.atomic_number == 2 %}
         {%- for i in range(0, 16) %}
           {%- if i == 0 or i >= 11 %}
             {{ axisCell(groups[1 + i + 1] | safe) }}
@@ -29,21 +29,21 @@
             {{ emptyCell() }}
           {%- endif %}
         {%- endfor %}
-      {%- elif element.atomicNumber == 5 %}
+      {%- elif element.atomic_number == 5 %}
         {%- for i in range(0, 10) %}{{ emptyCell() }}{%- endfor %}
-      {%- elif element.atomicNumber == 13 %}
+      {%- elif element.atomic_number == 13 %}
         {%- for i in range(0, 10) %}{{ axisCell(groups[2 + i + 1] | safe) }}{%- endfor %}
       {%- endif %}
 
-      {%- if element.atomicNumber == 57 %}
+      {%- if element.atomic_number == 57 %}
         {{ blockholderElementCell(57, 71, "lanthanide") }}
-      {%- elif element.atomicNumber == 89 %}
+      {%- elif element.atomic_number == 89 %}
         {{ blockholderElementCell(89, 103, "actinide") }}
       {%- endif %}
 
-      {%- if element.atomicNumber >= 57 and element.atomicNumber <= 71 %}
+      {%- if element.atomic_number >= 57 and element.atomic_number <= 71 %}
         {{ elementCell(element, true) }}
-      {%- elif element.atomicNumber >= 89 and element.atomicNumber <= 103 %}
+      {%- elif element.atomic_number >= 89 and element.atomic_number <= 103 %}
         {{ elementCell(element, true) }}
       {%- else %}
         {{ elementCell(element) }}
@@ -59,7 +59,7 @@
     {{ emptyCell() }}
     {{ emptyCell() }}
     {%- for element in elements %}
-      {%- if element.atomicNumber >= 57 and element.atomicNumber <= 71 %}
+      {%- if element.atomic_number >= 57 and element.atomic_number <= 71 %}
         {{ elementCell(element, false, true) }}
       {%- endif %}
     {%- endfor %}
@@ -70,7 +70,7 @@
     {{ emptyCell() }}
     {{ emptyCell() }}
     {%- for element in elements %}
-      {%- if element.atomicNumber >= 89 and element.atomicNumber <= 103 %}
+      {%- if element.atomic_number >= 89 and element.atomic_number <= 103 %}
         {{ elementCell(element, false, true) }}
       {%- endif %}
     {%- endfor %}

@@ -13,7 +13,7 @@
   <span class="nb-pt-element">
     <span class="nb-pt-element__basic">
       <span class="nb-pt-element__atomic-number">
-        {{ element.atomicNumber }}
+        {{ element.atomic_number }}
       </span>
       <span class="nb-pt-element__symbol">
         {{ element.symbol }}
@@ -25,8 +25,8 @@
       </span>
       <span class="nb-pt-element__properties">
         <span class="nb-pt-element__atomic-mass">
-          {%- if element.atomicMass %}
-            {{ element.atomicMass }}
+          {%- if element.atomic_mass %}
+            {{ element.atomic_mass }}
           {%- endif %}
         </span>
         <span class="nb-pt-element__electronegativity">
