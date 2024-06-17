@@ -1,0 +1,2 @@
+mendeleev==0.17.0
+PyYAML==6.0.1

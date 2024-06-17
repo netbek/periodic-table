@@ -2,6 +2,6 @@
 set -e
 
 virtualenv --python=python3.8 venv
-venv/bin/pip install mendeleev==0.17.0 PyYAML==6.0.1
+venv/bin/pip install -r requirements_dev.txt
 
-npm install
+npm ci
