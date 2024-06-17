@@ -7,6 +7,7 @@ from mendeleev.fetch import fetch_table
 
 
 data_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), "..", "data")
+src_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), "..", "src")
 
 
 def dict_merge(*dicts):
@@ -18,7 +19,7 @@ def dict_merge(*dicts):
 
 def main():
     # Load patch data
-    with open(os.path.join(data_dir, "src", "patch.yml"), "rt") as fp:
+    with open(os.path.join(src_dir, "data", "elements.yml"), "rt") as fp:
         data = yaml.safe_load(fp)
 
     patch_dict = {}
