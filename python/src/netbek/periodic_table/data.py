@@ -1,7 +1,4 @@
-from enum import Enum
-
-
-class Category(Enum):
+class Category:
     ALKALI_METAL = "alkali_metal"
     ALKALINE_EARTH_METAL = "alkaline_earth_metal"
     TRANSITION_METAL = "transition_metal"

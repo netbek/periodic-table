@@ -1,36 +1,24 @@
 - id: alkali_metal
   name: Alkali metals
-  # color: '#ff6666'
 - id: alkaline_earth_metal
   name: Alkaline earth metals
-  # color: '#ffdead'
 - id: transition_metal
   name: Transition metals
-  # color: '#ffc0c0'
 - id: post_transition_metal
   name: Post-transition metals
-  # color: '#cccccc'
 - id: metalloid
   name: Metalloids
-  # color: '#cccc99'
 - id: polyatomic_non_metal
   name: Polyatomic nonmetals
-  # color: '#a1ffc3'
 - id: diatomic_non_metal
   name: Diatomic nonmetals
-  # color: '#e7ff8f'
 - id: noble_gas
   name: Noble gases
-  # color: '#c0ffff'
 - id: lanthanide
   name: Lanthanides
-  # color: '#ffbfff'
 - id: actinide
   name: Actinides
-  # color: '#ff99cc'
 - id: hydrogen
   name: Hydrogen
-  # color: '#c0ffff'
 - id: unknown_properties
   name: Unknown properties
-  # color: '#e8e8e8'

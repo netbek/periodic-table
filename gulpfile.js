@@ -1,10 +1,6 @@
 const _ = require('lodash');
 const autoprefixer = require('autoprefixer');
-const cheerio = require('cheerio');
-const cheerioTableparser = require('cheerio-tableparser');
 const cssmin = require('gulp-cssmin');
-const csvtojson = require('csvtojson');
-const Decimal = require('decimal.js');
 const fs = require('fs-extra');
 const ghPages = require('gulp-gh-pages');
 const gulp = require('gulp');
@@ -21,7 +17,6 @@ const Promise = require('bluebird');
 const rename = require('gulp-rename');
 const sass = require('gulp-sass')(require('node-sass'));
 const webserver = require('gulp-webserver');
-const yaml = require('js-yaml');
 
 Promise.promisifyAll(fs);
 
@@ -150,143 +145,6 @@ gulp.task('watch:livereload', function () {
  * Tasks
  ---------------------------------------------------------------------------- */
 
-gulp.task('build-data', () => {
-  let blocksData;
-  let wikidata;
-  const categoryColorMap = {};
-
-  return fs
-    .readFile('data/src/blocks.yml', 'utf-8')
-    .then(function (str) {
-      blocksData = yaml.load(str);
-
-      return fs.readFile('data/categories.yml', 'utf-8');
-    })
-    .then(function (str) {
-      const values = yaml.load(str);
-
-      _.forEach(values, function (value) {
-        categoryColorMap[value.id] = value.color;
-      });
-
-      return fs.readFile('data/src/list-of-chemical-elements.html', 'utf-8');
-    })
-    .then(function (str) {
-      const $ = cheerio.load(str);
-
-      const categories = [];
-
-      $('table.wikitable > tr > td:nth-child(2)').each(function () {
-        const $elm = $(this);
-        const color = $elm.css('background').trim().toLowerCase();
-        const category = _.findKey(categoryColorMap, function (value) {
-          return value == color;
-        });
-        categories.push(category);
-      });
-
-      cheerioTableparser($);
-      let data = $('table.wikitable').first().parsetable(false, false, true);
-
-      data = _.map(data, function (value) {
-        return value.slice(2);
-      });
-
-      data.push(categories);
-
-      return data;
-    })
-    .then((data) => {
-      wikidata = data;
-
-      const parserParams = {
-        headers: [
-          'atomic_number',
-          'symbol',
-          'name',
-          'atomic_mass',
-          'cpk_hex_color',
-          'electron_configuration',
-          'electronegativity',
-          'atomic_radius',
-          'ion_radius',
-          'van_del_waals_radius',
-          'ionization_energy',
-          'electron_affinity',
-          'oxidation_states',
-          'standard_state',
-          'bonding_type',
-          'melting_point',
-          'boiling_point',
-          'density',
-          'group_block',
-          'year_discovered'
-        ],
-        noheader: true
-      };
-
-      return csvtojson(parserParams).fromFile('data/src/pt-data1.csv');
-    })
-    .then((jsonArray) => {
-      const rows = _.map(jsonArray, function (row) {
-        row = _.pick(row, [
-          'atomic_number',
-          'symbol',
-          'name',
-          'atomic_mass',
-          'electronegativity'
-        ]);
-
-        if (!isNaN(row.atomic_number)) {
-          row.atomic_number = Number(row.atomic_number);
-        }
-
-        row.atomic_mass = row.atomic_mass.replace(/^([0-9.]+).*$/, '$1');
-        row.atomic_mass = row.atomic_mass.replace(/\[/, '(').replace(/\]/, ')');
-
-        if (!isNaN(row.atomic_mass)) {
-          row.atomic_mass = Number(row.atomic_mass);
-          row.atomic_mass = new Decimal(row.atomic_mass)
-            .toDecimalPlaces(2)
-            .valueOf();
-        }
-
-        if (!isNaN(row.electronegativity)) {
-          row.electronegativity = Number(row.electronegativity);
-        }
-
-        row.block = _.find(blocksData, {
-          atomic_number: row.atomic_number
-        }).block;
-        row.group = '';
-        row.period = '';
-        row.category = '';
-
-        const wikidataIndex = wikidata[0].indexOf(row.atomic_number.toString());
-
-        if (wikidataIndex > -1) {
-          row.symbol = wikidata[1][wikidataIndex];
-          row.name = wikidata[2][wikidataIndex];
-          row.group = wikidata[4][wikidataIndex]
-            ? Number(wikidata[4][wikidataIndex])
-            : '';
-          row.period = wikidata[5][wikidataIndex]
-            ? Number(wikidata[5][wikidataIndex])
-            : '';
-          row.category = wikidata[13][wikidataIndex]
-            ? wikidata[13][wikidataIndex]
-            : '';
-        }
-
-        return row;
-      });
-
-      const str = yaml.dump(rows);
-
-      return fs.writeFile('data/elements.yml', str, 'utf-8');
-    });
-});
-
 gulp.task('build-demo-css', function (cb) {
   buildCss(['src/css/**/*.scss', 'src/demo/css/**/*.scss'], 'demo/css/').on(
     'end',
@@ -325,12 +183,7 @@ gulp.task('build-demo-vendor', function () {
 
 gulp.task(
   'build',
-  gulp.series(
-    // 'build-data',
-    'build-demo-css',
-    'build-demo-page',
-    'build-demo-vendor'
-  )
+  gulp.series('build-demo-css', 'build-demo-page', 'build-demo-vendor')
 );
 
 gulp.task('deploy', function () {

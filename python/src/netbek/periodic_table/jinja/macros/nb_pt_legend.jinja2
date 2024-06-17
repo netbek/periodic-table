@@ -3,7 +3,8 @@
   {%- set matched_categories = [] %}
   {%- for k, v in categories.items() %}
     {%- if k in element_categories %}
-      {%- do matched_categories.append([k | attr("value") | default(k), v]) %}
+      {# {%- do matched_categories.append([k | attr("value") | default(k), v]) %} #}
+      {%- do matched_categories.append([k, v]) %}
     {%- endif %}
   {%- endfor %}
 

@@ -115,9 +115,7 @@ npm run publish-dist
 
 ## Credit
 
-* Wikipedia contributors, "List of chemical elements," Wikipedia, The Free Encyclopedia, [https://en.wikipedia.org/w/index.php?title=List_of_chemical_elements&oldid=755677624](https://en.wikipedia.org/w/index.php?title=List_of_chemical_elements&oldid=755677624) (accessed December 19, 2016). (CC BY-SA 3.0)
-* Doug Hogan, "Periodic Table Data" [http://php.scripts.psu.edu/djh300/cmpsc221/p3s11-pt-data.htm](http://php.scripts.psu.edu/djh300/cmpsc221/p3s11-pt-data.htm) (?)
-* [mendeleev](https://mendeleev.readthedocs.io/en/stable/bibliography.html) (MIT License)
+Data from [mendeleev](https://mendeleev.readthedocs.io/en/stable/bibliography.html) (MIT License)
 
 ## License
 
