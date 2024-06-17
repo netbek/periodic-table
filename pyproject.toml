@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "netbek-periodic-table"
-version = "0.1.96"
+version = "0.1.97"
 authors = [
     {name = "Hein Bekker", email = "hein@netbek.co.za"},
 ]
