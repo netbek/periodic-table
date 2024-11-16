@@ -20,21 +20,19 @@ const Promise = require('bluebird');
 const sass = require('sass-embedded');
 const webserver = require('gulp-webserver');
 
-Promise.promisifyAll(fs);
-
 /* -----------------------------------------------------------------------------
  * Config
  ---------------------------------------------------------------------------- */
 
-const config = require('./gulp-config.js');
+const gulpConfig = require('./gulp-config.js');
 
 const livereloadOpen =
-  (config.webserver.https ? 'https' : 'http') +
+  (gulpConfig.webserver.https ? 'https' : 'http') +
   '://' +
-  config.webserver.host +
+  gulpConfig.webserver.host +
   ':' +
-  config.webserver.port +
-  (config.webserver.open ? config.webserver.open : '/');
+  gulpConfig.webserver.port +
+  (gulpConfig.webserver.open ? gulpConfig.webserver.open : '/');
 
 /* -----------------------------------------------------------------------------
  * Misc
@@ -46,10 +44,10 @@ const flags = {
 let server;
 
 // Choose browser for node-open.
-let browser = config.webserver.browsers.default;
+let browser = gulpConfig.webserver.browsers.default;
 const platform = os.platform();
-if (_.has(config.webserver.browsers, platform)) {
-  browser = config.webserver.browsers[platform];
+if (_.has(gulpConfig.webserver.browsers, platform)) {
+  browser = gulpConfig.webserver.browsers[platform];
 }
 
 /* -----------------------------------------------------------------------------
@@ -60,11 +58,11 @@ async function buildCss(src, destDir) {
   const files = await globby(src);
 
   for (const file of files) {
-    let css = (await sass.compileAsync(file, config.sass)).css;
+    let css = (await sass.compileAsync(file, gulpConfig.sass)).css;
 
     css = (
       await postcss([
-        autoprefixer(config.autoprefixer),
+        autoprefixer(gulpConfig.autoprefixer),
         pixrem,
         postcssColorRgbaFallback,
         postcssOpacity
@@ -115,7 +113,7 @@ function startWatch(files, tasks, livereload) {
 
 // Start webserver.
 gulp.task('webserver-init', function (cb) {
-  const conf = _.clone(config.webserver);
+  const conf = _.clone(gulpConfig.webserver);
   conf.open = false;
 
   gulp.src('./').pipe(webserver(conf)).on('end', cb);
@@ -142,7 +140,7 @@ gulp.task('livereload-reload', function (cb) {
 gulp.task('watch:livereload', function () {
   const livereloadTask = 'livereload-reload';
 
-  _.forEach(config.watchTasks, function (watchConfig) {
+  _.forEach(gulpConfig.watchTasks, function (watchConfig) {
     const tasks = _.clone(watchConfig.tasks);
     tasks.push(livereloadTask);
     startWatch(watchConfig.files, tasks);
