@@ -1,21 +1,23 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const _ = require('lodash');
 const autoprefixer = require('autoprefixer');
-const cssmin = require('gulp-cssmin');
+const esbuild = require('esbuild');
 const fs = require('fs-extra');
 const ghPages = require('gulp-gh-pages');
+const globby = require('globby');
 const gulp = require('gulp');
 const livereload = require('livereload');
 const nunjucks = require('nunjucks');
 const open = require('open');
 const os = require('os');
+const path = require('path');
 const periodicTable = require('.');
 const pixrem = require('pixrem');
-const postcss = require('gulp-postcss');
+const postcss = require('postcss');
 const postcssColorRgbaFallback = require('postcss-color-rgba-fallback');
 const postcssOpacity = require('postcss-opacity');
 const Promise = require('bluebird');
-const rename = require('gulp-rename');
-const sass = require('gulp-sass')(require('node-sass'));
+const sass = require('sass-embedded');
 const webserver = require('gulp-webserver');
 
 Promise.promisifyAll(fs);
@@ -54,36 +56,42 @@ if (_.has(config.webserver.browsers, platform)) {
  * Functions
  ---------------------------------------------------------------------------- */
 
-/**
- *
- * @param  {String} src
- * @param  {String} dist
- * @return {Stream}
- */
-function buildCss(src, dist) {
-  return gulp
-    .src(src)
-    .pipe(sass(config.css.params).on('error', sass.logError))
-    .pipe(
-      postcss([
+async function buildCss(src, destDir) {
+  const files = await globby(src);
+
+  for (const file of files) {
+    let css = (await sass.compileAsync(file, config.sass)).css;
+
+    css = (
+      await postcss([
         autoprefixer(config.autoprefixer),
         pixrem,
         postcssColorRgbaFallback,
         postcssOpacity
-      ])
-    )
-    .pipe(gulp.dest(dist))
-    .pipe(
-      cssmin({
-        advanced: false
+      ]).process(css, {
+        from: undefined,
+        to: destDir
       })
-    )
-    .pipe(
-      rename({
-        suffix: '.min'
+    ).css;
+
+    const cssMin = (
+      await esbuild.transform(css, {
+        loader: 'css',
+        minify: true,
+        legalComments: 'none'
       })
-    )
-    .pipe(gulp.dest(dist));
+    ).code;
+
+    const basename = path.basename(file);
+    const destPath = path.join(destDir, basename.replace(/\.scss$/, '.css'));
+    const destMinPath = path.join(
+      destDir,
+      basename.replace(/\.scss$/, '.min.css')
+    );
+
+    await fs.outputFile(destPath, css, 'utf-8');
+    await fs.outputFile(destMinPath, cssMin, 'utf-8');
+  }
 }
 
 /**
@@ -145,12 +153,9 @@ gulp.task('watch:livereload', function () {
  * Tasks
  ---------------------------------------------------------------------------- */
 
-gulp.task('build-demo-css', function (cb) {
-  buildCss(['src/css/**/*.scss', 'src/demo/css/**/*.scss'], 'demo/css/').on(
-    'end',
-    cb
-  );
-});
+gulp.task('build-demo-css', async () =>
+  buildCss(['src/css/**/!(_)*.scss', 'src/demo/css/**/!(_)*.scss'], 'demo/css')
+);
 
 gulp.task('build-demo-page', function (cb) {
   fs.mkdirpAsync('demo/')
