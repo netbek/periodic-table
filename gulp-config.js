@@ -4,12 +4,6 @@ module.exports = {
   autoprefixer: {
     overrideBrowserslist: browserslist
   },
-  css: {
-    params: {
-      includePaths: ['node_modules/chrys/src/css/'],
-      errLogToConsole: true
-    }
-  },
   sass: {
     loadPaths: ['.'],
     outputStyle: 'expanded',
