@@ -21,7 +21,6 @@
   ],
   "scripts": {
     "build-dist": "./scripts/build.sh",
-    "format-js": "prettier --parser babel --write *.js",
     "publish-dist": "./scripts/publish.sh",
     "test": "echo test"
   },
@@ -40,13 +39,14 @@
   "devDependencies": {
     "@babel/core": "7.26.0",
     "@babel/eslint-parser": "7.25.9",
+    "@typescript-eslint/eslint-plugin": "7.18.0",
+    "@typescript-eslint/parser": "7.18.0",
     "autoprefixer": "10.4.20",
     "bluebird": "3.7.2",
     "chrys": "4.0.30",
     "eslint": "8.57.1",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-prettier": "5.2.1",
-    "espree": "10.3.0",
     "fs-extra": "11.2.0",
     "gulp": "4.0.2",
     "gulp-cssmin": "0.2.0",
@@ -64,6 +64,7 @@
     "postcss": "8.4.49",
     "postcss-color-rgba-fallback": "4.0.0",
     "postcss-opacity": "5.0.0",
-    "prettier": "3.3.3"
+    "prettier": "3.3.3",
+    "typescript": "5.6.3"
   }
 }
