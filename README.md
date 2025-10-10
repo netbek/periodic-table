@@ -81,14 +81,39 @@ async function render() {
 render();
 ```
 
-## Development
+## Development: Installation
 
-Install Node and Python dependencies:
+1. Install Node 22.x:
 
-```shell
-cd /path/to/periodic-table
-./scripts/install.sh
-```
+    ```shell
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+    source ~/.bashrc
+    nvm install 22
+    nvm use 22
+    ```
+
+2. Install uv:
+
+    ```shell
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+    ```
+
+3. Create `.pypirc`:
+
+    ```shell
+    cp example.pypirc .pypirc
+    ```
+
+4. Enter a [PyPI API token](https://pypi.org/manage/account/#api-tokens) as the password in `.pypirc`.
+
+5. Install Node and Python dependencies:
+
+    ```shell
+    npm ci
+    uv sync
+    ```
+
+## Development: Usage
 
 Automatically build and refresh browser during development:
 
