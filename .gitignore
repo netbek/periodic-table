@@ -1,18 +1,21 @@
-bower_components
-node_modules
-npm-debug.log
+__pycache__
+.pypirc
+.pytest_cache
+.ruff_cache
+.venv
 *.bak
 *.egg-info
 *.pyc
-build/
-venv/
-.pypirc
+bower_components
+build
+node_modules
+npm-debug.log
+venv
 
 # IDE files
 nbproject
 .idea
 .netbeans.xml
-.vscode
 
 # GH pages
 .publish
