@@ -8,5 +8,6 @@ cd "${repo_dir}"
 .venv/bin/python python/dump.py
 gulp
 find python/dist -maxdepth 1 ! -name ".gitignore" -type f -exec rm -f {} +
-uv build -o python/dist
+uv build -o python/dist --sdist
+uv build -o python/dist --wheel
 .venv/bin/twine check python/dist/*

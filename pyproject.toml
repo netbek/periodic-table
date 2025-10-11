@@ -1,6 +1,6 @@
 [project]
 name = "netbek-periodic-table"
-version = "0.2.2"
+version = "0.2.3"
 description = "Periodic table with responsive layout"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -21,8 +21,8 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build]
-packages = ["python/src"]
-include = ["**/*.jinja2"]
+packages = ["python/src/netbek"]
+sources = ["python/src"]
 
 [tool.isort]
 force_alphabetical_sort = true
