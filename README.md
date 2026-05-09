@@ -83,35 +83,42 @@ render();
 
 ## Development: Installation
 
-1. Install Node 22.x:
+1. Install Nix:
 
     ```shell
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-    source ~/.bashrc
-    nvm install 22
-    nvm use 22
+    sh <(curl -L https://nixos.org/nix/install) --daemon
     ```
 
-2. Install uv:
+2. Configure Nix. Edit `/etc/nix/nix.conf` (for a multi-user installation) or `~/.config/nix/nix.conf` (for a single-user installation) to include the following lines:
 
     ```shell
-    curl -LsSf https://astral.sh/uv/install.sh | sh
+    experimental-features = nix-command flakes
+    trusted-users = root <USER>
     ```
 
-3. Create `.pypirc`:
+    Replace `<USER>` with your username on your computer.
+
+3. Install direnv:
 
     ```shell
-    cp example.pypirc .pypirc
+    sudo apt install direnv
     ```
 
-4. Enter a [PyPI API token](https://pypi.org/manage/account/#api-tokens) as the password in `.pypirc`.
+4. Enable direnv in your shell by adding a line to your shell configuration file.
 
-5. Install Node and Python dependencies:
+    For Bash, edit `~/.bashrc`:
 
     ```shell
-    npm ci
-    uv sync
+    eval "$(direnv hook bash)"
     ```
+
+5. Allow `.envrc`:
+
+    ```shell
+    direnv allow
+    ```
+
+6. Enter a [PyPI API token](https://pypi.org/manage/account/#api-tokens) as the password in `.pypirc`.
 
 ## Development: Usage
 
@@ -121,16 +128,15 @@ Automatically build and refresh browser during development:
 gulp livereload
 ```
 
-Build the Python distribution package:
+Build and publish the JavaScript and Python distribution packages:
 
 ```shell
-npm run build-dist
-```
-
-Publish the Node and Python distribution packages:
-
-```shell
-npm run publish-dist
+make bump-version [major|minor|patch]
+git push
+make build-and-commit
+git push
+make create-release
+make publish
 ```
 
 ## Feature ideas
