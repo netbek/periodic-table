@@ -63,6 +63,6 @@
     "postcss-opacity": "5.0.0",
     "prettier": "3.8.3",
     "sass-embedded": "1.99.0",
-    "typescript": "5.9.3"
+    "typescript": "6.0.3"
   }
 }
