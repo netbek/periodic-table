@@ -19,3 +19,8 @@ nbproject
 
 # GH pages
 .publish
+
+# Dev environment
+.devenv*
+.direnv
+devenv.local.nix

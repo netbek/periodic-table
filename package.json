@@ -20,8 +20,6 @@
     "src/css"
   ],
   "scripts": {
-    "build-dist": "./scripts/build.sh",
-    "publish-dist": "./scripts/publish.sh",
     "test": "echo test"
   },
   "author": {
@@ -55,6 +53,7 @@
     "gulp-webserver": "0.9.1",
     "livereload": "0.10.3",
     "lodash": "4.17.21",
+    "npm-check-updates": "22.1.1",
     "nunjucks": "3.2.4",
     "open": "8.4.2",
     "patch-package": "8.0.1",
