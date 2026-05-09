@@ -50,7 +50,7 @@ build:
 
 build-and-commit:
 	@VERSION=$$(uv version --short); \
-	@$(MAKE) --no-print-directory build-dist; \
+	$(MAKE) --no-print-directory build; \
 	git add cjs css demo illustrator umd; \
 	git commit -m "Build $$VERSION";
 

@@ -12,6 +12,7 @@
     nixfmt
     pre-commit
     ripgrep
+    zlib
   ];
 
   languages = {
