@@ -51,7 +51,7 @@ build:
 build-and-commit:
 	@VERSION=$$(uv version --short); \
 	$(MAKE) --no-print-directory build; \
-	git add cjs css demo illustrator umd; \
+	git add data demo; \
 	git commit -m "Build $$VERSION";
 
 create-release:
