@@ -1,0 +1,7 @@
+allowBuilds:
+  "chrys@4.3.0": true
+  "esbuild@0.27.7": true
+
+# Create flat node_modules without symlinks. This is a workaround for chrys@4.3.0 postinstall script
+# that fails without a specific error (presumably from patch-package).
+nodeLinker: hoisted
