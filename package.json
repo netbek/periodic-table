@@ -32,7 +32,7 @@
     "url": "https://github.com/netbek/periodic-table/issues"
   },
   "dependencies": {
-    "normalize-css": "git+https://github.com/necolas/normalize.css.git#02c5c7adbbec1707900fde86068405735c733b42"
+    "normalize.css": "8.0.1"
   },
   "devDependencies": {
     "@babel/core": "7.29.0",

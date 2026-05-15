@@ -180,7 +180,7 @@ gulp.task('build-demo-page', function (cb) {
 
 gulp.task('build-demo-vendor', function () {
   return gulp
-    .src(['node_modules/normalize-css/**/*.css'])
+    .src(['node_modules/normalize.css/**/*.css'])
     .pipe(gulp.dest('demo/css/'));
 });
 
