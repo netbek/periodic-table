@@ -42,7 +42,7 @@
     "autoprefixer": "10.5.0",
     "bluebird": "3.7.2",
     "chrys": "4.3.2",
-    "esbuild": "0.28.0",
+    "esbuild": "0.28.1",
     "eslint": "8.57.1",
     "eslint-config-prettier": "9.1.2",
     "eslint-plugin-prettier": "5.5.5",
