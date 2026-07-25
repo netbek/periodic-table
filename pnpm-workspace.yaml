@@ -1,7 +1,7 @@
 allowBuilds:
-  chrys: false
-  es5-ext: true
-  esbuild: true
+  "chrys@4.3.3": false
+  "es5-ext@0.10.64": true
+  "esbuild@0.28.1": true
 
 blockExoticSubdeps: true
 
