@@ -160,8 +160,13 @@ create-release:
 	git fetch --tags;
 
 publish:
+	@PASSWORD=$$(keyring get pypi-chrys __token__); \
+	if [ -z "$$PASSWORD" ]; then \
+		echo "$(RED)Error: PyPI token not found in keyring. Run: keyring set pypi-chrys __token__$(RESET)"; \
+		exit 1; \
+	fi; \
+	TWINE_USERNAME=__token__ TWINE_PASSWORD="$$PASSWORD" twine upload --verbose dist/*; \
 	pnpm publish
-	twine upload --config-file .pypirc --verbose python/dist/*
 
 deploy:
 	node scripts/deploy.js
