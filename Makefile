@@ -165,7 +165,7 @@ publish:
 		echo "$(RED)Error: PyPI token not found in keyring. Run: keyring set pypi-chrys __token__$(RESET)"; \
 		exit 1; \
 	fi; \
-	TWINE_USERNAME=__token__ TWINE_PASSWORD="$$PASSWORD" twine upload --verbose dist/*; \
+	TWINE_USERNAME=__token__ TWINE_PASSWORD="$$PASSWORD" twine upload --verbose python/dist/*; \
 	pnpm publish
 
 deploy:
