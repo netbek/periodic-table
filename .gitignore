@@ -1,5 +1,4 @@
 __pycache__
-.pypirc
 .pytest_cache
 .ruff_cache
 .venv
@@ -19,8 +18,3 @@ nbproject
 
 # GH pages
 .publish
-
-# Dev environment
-.devenv*
-.direnv
-devenv.local.nix
