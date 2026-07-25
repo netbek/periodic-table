@@ -7,6 +7,9 @@ blockExoticSubdeps: true
 
 minimumReleaseAge: 10080
 
+minimumReleaseAgeExclude:
+  - chrys@4.3.3
+
 # Create flat node_modules without symlinks. This is a workaround for chrys@4.3.0 postinstall script
 # that fails without a specific error (presumably from patch-package).
 nodeLinker: hoisted
