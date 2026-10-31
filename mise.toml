@@ -1,11 +1,11 @@
 [tools]
-node = "24"
+node = "26"
 pnpm = "latest"
 pre-commit = "latest"
 python = "3.13"
 ripgrep = "latest"
 trivy = "latest"
-uv = "0.13.5"
+uv = "latest"
 
 [settings]
 lockfile = true
