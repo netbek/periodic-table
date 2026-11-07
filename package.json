@@ -1,27 +1,6 @@
 {
   "name": "@netbek/periodic-table",
   "version": "0.3.4",
-  "browserslist": [
-    "last 5 years",
-    "bb >= 6",
-    "edge >= 16",
-    "ie >= 11",
-    "op_mini all",
-    "samsung >= 5"
-  ],
-  "description": "",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/netbek/periodic-table.git"
-  },
-  "files": [
-    "nunjucks/macros",
-    "src/css"
-  ],
-  "scripts": {
-    "test": "echo test"
-  },
   "author": {
     "name": "Hein Bekker",
     "email": "hein@netbek.co.za",
@@ -31,38 +10,44 @@
   "bugs": {
     "url": "https://github.com/netbek/periodic-table/issues"
   },
-  "dependencies": {
-    "normalize.css": "8.0.1"
+  "type": "module",
+  "browserslist": [
+    "chrome >= 93",
+    "and_chr >= 93",
+    "edge >= 93",
+    "safari >= 15.4",
+    "ios_saf >= 15.4",
+    "firefox >= 92",
+    "and_ff >= 92",
+    "samsung >= 17",
+    "opera >= 79"
+  ],
+  "files": [
+    "src/css"
+  ],
+  "scripts": {
+    "build:demo": "node scripts/build-demo.js",
+    "build": "npm run clean && npm run build:demo",
+    "clean": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\"",
+    "deploy": "node scripts/deploy.js",
+    "lint:fix": "oxlint --fix",
+    "lint": "oxlint",
+    "test": "echo test"
   },
   "devDependencies": {
-    "@babel/core": "7.29.7",
-    "@babel/eslint-parser": "7.29.9",
-    "@typescript-eslint/eslint-plugin": "8.72.1",
-    "@typescript-eslint/parser": "8.72.1",
     "autoprefixer": "10.6.2",
-    "bluebird": "3.7.2",
-    "chrys": "4.3.3",
+    "browserslist": "4.29.5",
+    "chrys": "5.0.0",
     "esbuild": "0.28.2",
-    "eslint": "8.57.1",
-    "eslint-config-prettier": "9.1.2",
-    "eslint-plugin-prettier": "5.5.7",
-    "fs-extra": "11.4.1",
-    "globby": "9.2.0",
-    "gulp": "4.0.2",
-    "gulp-gh-pages": "0.5.4",
-    "gulp-webserver": "0.9.1",
-    "livereload": "0.10.3",
-    "lodash": "4.18.1",
+    "globby": "16.2.4",
+    "js-yaml": "5.5.0",
+    "normalize.css": "8.0.1",
     "npm-check-updates": "23.1.1",
     "nunjucks": "3.2.4",
-    "open": "8.4.2",
+    "oxlint": "1.90.0",
     "patch-package": "8.0.1",
-    "pixrem": "5.0.0",
     "postcss": "8.5.32",
-    "postcss-color-rgba-fallback": "4.0.0",
-    "postcss-opacity": "5.0.0",
     "prettier": "3.9.10",
-    "sass-embedded": "1.107.1",
-    "typescript": "6.0.3"
+    "sass-embedded": "1.107.1"
   }
 }
