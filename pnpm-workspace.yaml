@@ -1,5 +1,6 @@
 allowBuilds:
-  "chrys@4.3.3": false
+  "@parcel/watcher@2.6.0": true
+  "chrys@5.0.0": true
   "es5-ext@0.10.64": true
   "esbuild@0.28.2": true
 
@@ -8,16 +9,10 @@ blockExoticSubdeps: true
 minimumReleaseAge: 10080
 
 minimumReleaseAgeExclude:
-  - chrys@4.3.3
+  - chrys@5.0.0
 
 # Create flat node_modules without symlinks. This is a workaround for chrys@4.3.0 postinstall script
 # that fails without a specific error (presumably from patch-package).
 nodeLinker: hoisted
 
 trustPolicy: no-downgrade
-
-trustPolicyExclude:
-  - chokidar@4.0.3
-  - eslint-config-prettier@9.1.2
-  - semver@5.7.2
-  - semver@6.3.1

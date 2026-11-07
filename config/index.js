@@ -1,9 +1,4 @@
-const {browserslist} = require('./package.json');
-
-module.exports = {
-  autoprefixer: {
-    overrideBrowserslist: browserslist
-  },
+export const config = {
   sass: {
     loadPaths: ['.'],
     outputStyle: 'expanded',
@@ -29,26 +24,5 @@ module.exports = {
       'strict-unary'
       // 'user-authored'
     ]
-  },
-  watchTasks: [
-    {
-      files: ['data/src/**/*', 'src/**/*'],
-      tasks: ['build']
-    }
-  ],
-  webserver: {
-    host: 'localhost',
-    port: 8000,
-    path: '/',
-    livereload: false,
-    directoryListing: false,
-    open: '/demo/',
-    https: false,
-    browsers: {
-      default: 'firefox',
-      darwin: 'google chrome',
-      linux: 'google-chrome',
-      win32: 'chrome'
-    }
   }
 };

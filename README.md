@@ -8,10 +8,11 @@ Periodic table with responsive layout.
 
 ## Integration
 
-Install the package:
+Install the packages:
 
 ```shell
 npm install @netbek/periodic-table
+pip install netbek-periodic-table
 ```
 
 Create a Sass file:
@@ -38,47 +39,46 @@ $nb-periodic-table-cell-border:                   #ccc;
 }
 ```
 
-Create a Nunjucks template:
+Create a Jinja template:
 
-```html
-{%- from "path/to/node_modules/@netbek/periodic-table/nunjucks/macros/nb_pt_legend.njk" import nb_pt_legend %}
-{%- from "path/to/node_modules/@netbek/periodic-table/nunjucks/macros/nb_pt_table_18.njk" import nb_pt_table_18 %}
+```jinja
+{%- from "nb_pt_legend.jinja2" import nb_pt_legend %}
+{%- from "nb_pt_table_18.jinja2" import nb_pt_table_18 %}
+<!DOCTYPE html>
 <html>
   <body>
-    {% set element_columns = {
-        atomic_number: 'Atomic number',
-        symbol: 'Symbol',
-        name: 'Name',
-        atomic_mass: 'Atomic mass',
-        electronegativity: 'Electronegativity'
-    } %}
     {{ nb_pt_legend(elements, categories, element_columns) }}
     {{ nb_pt_table_18(elements, groups) }}
   </body>
 </html>
 ```
 
-Render the Nunjucks template:
+Render the Jinja template:
 
-```js
-import nunjucks from 'nunjucks';
-import periodicTable from '@netbek/periodic-table';
+```python
+from jinja2 import ChoiceLoader, Environment, FileSystemLoader, PackageLoader
 
-async function render() {
-  const categories = await periodicTable.loadCategories();
-  const elements = await periodicTable.loadElements();
-  const groups = await periodicTable.loadGroups();
+from netbek.periodic_table import data
 
-  const data = {
-    categories,
-    elements,
-    groups
-  };
+env = Environment(
+    loader=ChoiceLoader(
+        [
+            FileSystemLoader("path/to/templates"),
+            PackageLoader("netbek.periodic_table", "jinja/macros"),
+        ]
+    ),
+    autoescape=True,
+    # Required by nb_pt_legend.jinja2
+    extensions=["jinja2.ext.do"],
+)
 
-  return nunjucks.render('path/to/template.njk', data);
-}
-
-render();
+template = env.get_template("template.jinja2")
+html = template.render(
+    categories=data.categories,
+    elements=list(data.elements.values()),
+    groups=data.groups,
+    element_columns=data.element_columns,
+)
 ```
 
 ## Development: Installation
@@ -110,12 +110,6 @@ render();
     ```
 
 ## Development: Usage
-
-Automatically build and refresh browser during development:
-
-```shell
-gulp livereload
-```
 
 Build and publish the JavaScript and Python distribution packages:
 

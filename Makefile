@@ -12,6 +12,12 @@ endif
 # DEPENDENCY MANAGEMENT
 # ==============================================================================
 
+install:
+	@echo "$(YELLOW)Installing...$(RESET)"
+	@./scripts/install-node.sh
+	@./scripts/install-python.sh
+	@./scripts/install-precommit.sh
+
 deps-scan:
 	@echo "$(YELLOW)Scanning root lockfiles for vulnerabilities...$(RESET)"
 	trivy fs pnpm-lock.yaml --table-mode detailed
@@ -142,7 +148,7 @@ bump-version:
 
 build:
 	python python/dump.py
-	gulp
+	node scripts/build-demo.js
 	find python/dist -maxdepth 1 ! -name ".gitignore" -type f -exec rm -f {} +
 	uv build -o python/dist --sdist
 	uv build -o python/dist --wheel
@@ -151,7 +157,7 @@ build:
 build-and-commit:
 	@VERSION=$$(uv version --short); \
 	$(MAKE) --no-print-directory build; \
-	git add data demo; \
+	git add data; \
 	git commit -m "Build $$VERSION";
 
 create-release:
