@@ -1,6 +1,11 @@
 {
   "name": "@netbek/periodic-table",
   "version": "0.3.4",
+  "description": "Periodic table with responsive layout",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/netbek/periodic-table.git"
+  },
   "author": {
     "name": "Hein Bekker",
     "email": "hein@netbek.co.za",
