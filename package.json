@@ -44,7 +44,7 @@
     "chrys": "4.3.3",
     "esbuild": "0.28.2",
     "eslint": "8.57.1",
-    "eslint-config-prettier": "9.1.2",
+    "eslint-config-prettier": "10.1.8",
     "eslint-plugin-prettier": "5.5.7",
     "fs-extra": "11.4.1",
     "globby": "9.2.0",
