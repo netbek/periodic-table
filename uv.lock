@@ -532,7 +532,7 @@ wheels = [
 
 [[package]]
 name = "netbek-periodic-table"
-version = "0.3.4"
+version = "1.0.0"
 source = { editable = "." }
 dependencies = [
     { name = "jinja2" },
