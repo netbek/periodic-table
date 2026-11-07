@@ -1,4 +1,5 @@
 [tools]
+gh = "latest"
 node = "26"
 pnpm = "latest"
 pre-commit = "latest"
