@@ -67,8 +67,8 @@ importers:
         specifier: 4.18.1
         version: 4.18.1
       npm-check-updates:
-        specifier: 22.2.9
-        version: 22.2.9
+        specifier: 23.1.1
+        version: 23.1.1
       nunjucks:
         specifier: 3.2.4
         version: 3.2.4
@@ -2290,9 +2290,9 @@ packages:
     resolution: {integrity: sha512-KGvQ0cB70AQfg107Xvs/Fbu+dGmZoTRJp2TaPwcwQm3/7PteUyN2BCgk8KBMPGBUXZdVwyWS8fDCGFygBm19UQ==}
     engines: {node: '>= 0.10'}
 
-  npm-check-updates@22.2.9:
-    resolution: {integrity: sha512-DVeZ0KirHfliSsHuR2o7cHE+tW439sVHfJjF6cGWeDiY0Wyl3BI/jS4zV0eixtcMOquFbcF1Su/FsxOvk5MoYA==}
-    engines: {node: ^20.19.0 || ^22.12.0 || >=24.0.0, npm: '>=10.0.0'}
+  npm-check-updates@23.1.1:
+    resolution: {integrity: sha512-UzYDvvsQRkmXR59g9SqsQxygYp7AhFpfEcOOGOJaB/P7pF/XlaqIYLK3UjUGfMHH1+aS2nZvJRaIsk2nk0z5ag==}
+    engines: {node: ^22.22.2 || ^24.15.0 || >=26.0.0, npm: '>=10.0.0'}
     hasBin: true
 
   number-is-nan@1.0.1:
@@ -5756,7 +5756,7 @@ snapshots:
     dependencies:
       once: 1.4.0
 
-  npm-check-updates@22.2.9: {}
+  npm-check-updates@23.1.1: {}
 
   number-is-nan@1.0.1: {}
 
