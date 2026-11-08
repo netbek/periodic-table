@@ -15,8 +15,8 @@ importers:
         specifier: 4.29.5
         version: 4.29.5
       chrys:
-        specifier: 5.1.0
-        version: 5.1.0
+        specifier: 5.2.0
+        version: 5.2.0
       esbuild:
         specifier: 0.28.2
         version: 0.28.2
@@ -445,6 +445,9 @@ packages:
     resolution: {integrity: sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==}
     engines: {node: '>=8'}
 
+  apca-w3@0.1.9:
+    resolution: {integrity: sha512-Zrf6AeBeQjNe/fxK7U1jCo5zfdjDl6T4/kdw5Xlky3G7u+EJTZkyItjMYQGtwf9pkftsINxcYyOpuLkzKf1ITQ==}
+
   argparse@3.0.4:
     resolution: {integrity: sha512-fwWK3Zq22l4XJJjx5mcBHGikIk+hJqO+32dPm0Jur7+rtG5x1scOjSfdT9ZKeWHPpsya/l0HHK4tDImBkTrtvA==}
 
@@ -502,11 +505,8 @@ packages:
     resolution: {integrity: sha512-TQMmc3w+5AxjpL8iIiwebF73dRDF4fBIieAqGn9RGCWaEVwQ6Fb2cGe31Yns0RRIzii5goJ1Y7xbMwo1TxMplw==}
     engines: {node: '>= 20.19.0'}
 
-  chroma-js@3.2.0:
-    resolution: {integrity: sha512-os/OippSlX1RlWWr+QDPcGUZs0uoqr32urfxESG9U93lhUfbnlyckte84Q8P1UQY/qth983AS1JONKmLS4T0nw==}
-
-  chrys@5.1.0:
-    resolution: {integrity: sha512-ttp/fjiQaBMED8UGHce552Imnz5wUMynvfmm6HLce+0j23HHX/cwlKVnLoSvHVW6mDHOrw9Y+6Y8Qkbt6oTJvg==}
+  chrys@5.2.0:
+    resolution: {integrity: sha512-uqO3DHubT9OtKmAJZ+6MlKqVcO0WmVOExbIB1cAHTXBfuFs4hy/rD8aHEZLC25IzLgbFkK/w2dVbEjpNzM9ZrA==}
 
   ci-info@3.9.0:
     resolution: {integrity: sha512-NIxF55hv4nSqQswkAeiOi1r83xy8JldOFDTWiug55KBu9Jnblncd2U6ViHmYgHf01TPZS77NJBhBMKdWj9HQMQ==}
@@ -521,6 +521,9 @@ packages:
 
   colorjs.io@0.7.1:
     resolution: {integrity: sha512-LY7OHnJZxHwT5UlzNa9bbhHHDbzB6yE5+3MIPwJEQKRvSCt/T4G7epsj+9j2BExUIIfXFIJGsIXUKdfrK9Q5tA==}
+
+  colorparsley@0.1.8:
+    resolution: {integrity: sha512-rObESTTTE6G5qO5WFwFxWPggpw4KfpxnLC6Ssl8bITBnNVRhDsyCeTRAUxWQNVTx2pRknKlO2nddYTxjkdNFaw==}
 
   commander@13.1.0:
     resolution: {integrity: sha512-/rFeCpNJQbhSZjGVwO9RFV3xPqbnERS8MmIQzCtD/zl6gpJuV/bMLuN92oG3F7d8oDEHHRrujSXNUr8fpjntKw==}
@@ -1323,6 +1326,10 @@ snapshots:
     dependencies:
       color-convert: 2.0.1
 
+  apca-w3@0.1.9:
+    dependencies:
+      colorparsley: 0.1.8
+
   argparse@3.0.4: {}
 
   array-union@2.1.0: {}
@@ -1383,11 +1390,9 @@ snapshots:
       readdirp: 5.1.1
     optional: true
 
-  chroma-js@3.2.0: {}
-
-  chrys@5.1.0:
+  chrys@5.2.0:
     dependencies:
-      chroma-js: 3.2.0
+      apca-w3: 0.1.9
       sass-apca: 1.2.0
 
   ci-info@3.9.0: {}
@@ -1399,6 +1404,8 @@ snapshots:
   color-name@1.1.4: {}
 
   colorjs.io@0.7.1: {}
+
+  colorparsley@0.1.8: {}
 
   commander@13.1.0: {}
 
