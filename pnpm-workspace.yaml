@@ -1,6 +1,6 @@
 allowBuilds:
   "@parcel/watcher@2.6.0": true
-  "chrys@5.0.0": true
+  "chrys@5.1.0": true
   "es5-ext@0.10.64": true
   "esbuild@0.28.2": true
 
@@ -9,9 +9,9 @@ blockExoticSubdeps: true
 minimumReleaseAge: 10080
 
 minimumReleaseAgeExclude:
-  - chrys@5.0.0
+  - chrys@5.1.0
 
-# Create flat node_modules without symlinks. This is a workaround for chrys@4.3.0 postinstall script
+# Create flat node_modules without symlinks. This is a workaround for chrys@5.1.0 postinstall script
 # that fails without a specific error (presumably from patch-package).
 nodeLinker: hoisted
 
