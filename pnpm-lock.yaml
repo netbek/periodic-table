@@ -15,8 +15,8 @@ importers:
         specifier: 4.29.5
         version: 4.29.5
       chrys:
-        specifier: 5.2.1
-        version: 5.2.1
+        specifier: 5.4.1
+        version: 5.4.1
       esbuild:
         specifier: 0.28.2
         version: 0.28.2
@@ -505,8 +505,8 @@ packages:
     resolution: {integrity: sha512-TQMmc3w+5AxjpL8iIiwebF73dRDF4fBIieAqGn9RGCWaEVwQ6Fb2cGe31Yns0RRIzii5goJ1Y7xbMwo1TxMplw==}
     engines: {node: '>= 20.19.0'}
 
-  chrys@5.2.1:
-    resolution: {integrity: sha512-crf00Evqrps4esXuyQlB7ck0o+O+NNzriJcbxA09+haLmjGCcRqZTjRFYnm6WVtLivzKDV9A82rSuZ2h7dRhkA==}
+  chrys@5.4.1:
+    resolution: {integrity: sha512-vnXFh9slSNnVwMgM35//TnMKfJ7ouLga9N//ly3j7S7Gl4NJ2wNv5qPEpQaRiQo6RBSk8RJp+ZZYMq7hwcFmPQ==}
 
   ci-info@3.9.0:
     resolution: {integrity: sha512-NIxF55hv4nSqQswkAeiOi1r83xy8JldOFDTWiug55KBu9Jnblncd2U6ViHmYgHf01TPZS77NJBhBMKdWj9HQMQ==}
@@ -1390,7 +1390,7 @@ snapshots:
       readdirp: 5.1.1
     optional: true
 
-  chrys@5.2.1:
+  chrys@5.4.1:
     dependencies:
       apca-w3: 0.1.9
       sass-apca: 1.2.0
