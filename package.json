@@ -54,6 +54,6 @@
     "patch-package": "8.0.1",
     "postcss": "8.5.32",
     "prettier": "3.9.10",
-    "sass-embedded": "1.107.1"
+    "sass-embedded": "1.108.1"
   }
 }
