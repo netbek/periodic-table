@@ -40,7 +40,7 @@
     "test": "echo test"
   },
   "devDependencies": {
-    "autoprefixer": "10.6.2",
+    "autoprefixer": "10.7.0",
     "browserslist": "4.29.6",
     "chrys": "5.4.1",
     "esbuild": "0.28.2",
